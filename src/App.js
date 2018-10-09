@@ -12,8 +12,8 @@ class App extends Component {
       super();
       this.state = {
         currentSlide: 'Slide1',
-        currentTitle: 'Slide 1 example',
-        currentShortTitle: 'Slide 1',
+        currentTitle: 'Setup',
+        currentShortTitle: 'Setup',
         currentNumber: null,
         currentLevel: null,
         currentDetailLink: null,
