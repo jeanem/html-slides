@@ -2,7 +2,7 @@
   "name": "html-slides",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jeanem.github.io/html-slides/",
+  "homepage": "https://jeanem.github.io/html-slides",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
     "@fortawesome/free-solid-svg-icons": "^5.3.1",
