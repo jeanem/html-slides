@@ -1,4 +1,4 @@
-WCAG 2.1 new features
-=====================
+HTML Slides created in React JS
+===============================
 
-See https://jeanem.github.io/wcag-2.1/
+See https://jeanem.github.io/html-slides/
