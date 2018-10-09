@@ -3,7 +3,7 @@ import React from 'react';
 function Slide2(props) {
     return (
             <div>
-                <p>Sample slide 2</p>
+                <p>testing setup</p>
             </div>
         );
     }
