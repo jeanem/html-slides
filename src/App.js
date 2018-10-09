@@ -45,8 +45,8 @@ class App extends Component {
     render () {
       const { currentSlide, currentTitle, currentNumber, currentLevel, currentDetailLink, index } = this.state;
       const slidesInfo = [
-        {'slide': 'Slide1', 'title':'Slide 1 example', 'shortTitle':'Slide 1', 'number':null, 'level':null, 'detailLink':null },
-        {'slide': 'Slide2', 'title':'Slide 2 example', 'shortTitle':'Slide 2', 'number':null, 'level':null, 'detailLink':null },
+        {'slide': 'Slide1', 'title':'Setup', 'shortTitle':'Setup', 'number':null, 'level':null, 'detailLink':null },
+        {'slide': 'Slide2', 'title':'Deploy locally and to Github page', 'shortTitle':'Deploy', 'number':null, 'level':null, 'detailLink':null },
       ];
     
       let prevIndex;
