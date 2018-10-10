@@ -101,7 +101,7 @@ class App extends Component {
               key={ currentSlide }
               tabIndex='-1'
               ref={ this.focusedSlide }
-              >
+            >
               <h2 id={"wid-SlideTitle_" +  currentSlide }>{ currentTitle }</h2>
               <SlideToRender shortWCAGLink={ shortWCAGLink } />
               <p>
