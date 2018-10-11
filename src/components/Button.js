@@ -10,19 +10,19 @@ class Button extends Component {
   }
 
   buttonClicked() {
-    const { slide, title, shortTitle, number, level, detailLink, index, updateState } = this.props;
-    updateState(slide, title, shortTitle, number, level, detailLink, index, true);
+    const { slideNum, title, shortTitle, buttonText, updateState } = this.props;
+    updateState({activeSlideNum: slideNum});
   }
   
   showTip() {
     this.setState ({
-        hidden:false
+      hidden:false
     });
   }
 
   hideTip() {
     this.setState ({
-        hidden:true
+      hidden:true
     }); 
   }
 
@@ -37,9 +37,9 @@ class Button extends Component {
   }
 
   render() {
-    const { slide, shortTitle, buttonText, index, active } = this.props;
+    const { slideNum, shortTitle, buttonText, active, index } = this.props;
     const { hidden } = this.state;
-    const tipID = "wid_ToolTip-" + slide;
+    const tipID = "wid_ToolTip-" + slideNum;
     const tipStyle = { display: hidden ? 'none' : 'block' }
 
     return (
@@ -52,7 +52,7 @@ class Button extends Component {
       >
         <button 
           type="button" 
-          id={"wid_" + slide} 
+          id={"wid_" + slideNum} 
           className={ 
             active === true ? "w-BtnBase w-ToolTipped mod-Active" : "w-BtnBase w-ToolTipped"
           }

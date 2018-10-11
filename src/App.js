@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Slides from './slides/SlideIndex';
-import Button from './components/Button';
+import slidesInfo from './slides/slidesInfo';
+import NavButton from './components/NavButton';
 import PrevNext from './components/PrevNext';
 import './App.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -11,31 +12,19 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentSlide: 'Slide1',
-      currentTitle: 'Setup',
-      currentShortTitle: 'Setup',
-      currentNumber: null,
-      currentLevel: null,
-      currentDetailLink: null,
-      index: 0,
-      slideFocus: false
+      activeSlideNum: 1,
+      focus: false,
     };
     this.updateState = this.updateState.bind(this);
     this.focusedSlide = React.createRef(); //set up to focus slide when nav button clicked
   }
 
-  updateState(currentSlide, currentTitle, currentShortTitle, currentNumber, currentLevel, currentDetailLink, index, slideFocus) {
+  updateState(options) {
     this.setState ({
-      currentSlide: currentSlide,
-      currentTitle: currentTitle,
-      currentShortTitle: currentShortTitle,
-      currentNumber: currentNumber,
-      currentLevel: currentLevel,
-      currentDetailLink: currentDetailLink,
-      index: index,
-      slideFocus: slideFocus
+      activeSlideNum: options.activeSlideNum,
+      focus: options.focus
     });
-    if(slideFocus === true) {//note errored on ternary expression in this context so doing traditional
+    if(options.focus) {//note errored on ternary expression in this context so doing traditional
       this.focusedSlide.current.focus();
     } else {
       return null;
@@ -43,40 +32,38 @@ class App extends Component {
   }
 
   render () {
-    const { currentSlide, currentTitle, currentNumber, currentLevel, currentDetailLink, index } = this.state;
-    const slidesInfo = [
-      {'slide': 'Slide1', 'title':'Setup', 'shortTitle':'Setup', 'number':null, 'level':null, 'detailLink':null },
-      {'slide': 'Slide2', 'title':'Deploy locally and to Github page', 'shortTitle':'Deploy', 'number':null, 'level':null, 'detailLink':null },
-    ];
+    let { activeSlideNum } = this.state;
+    let nextSlideNum = activeSlideNum + 1;
+    let prevSlideNum = activeSlideNum - 1;
+
     const totalSlides = slidesInfo.length;
+    const activeTitle = slidesInfo[activeSlideNum - 1].title;
+    let contentFile = slidesInfo[activeSlideNum - 1].contentFile; 
+    let ActiveSlideContent = require('./slides/' + contentFile).default;
   
-    let prevIndex;
-    let nextIndex;
-
-    index === 0 ? prevIndex = totalSlides - 1 : prevIndex = index - 1
-    index === totalSlides - 1 ? nextIndex = 0 : nextIndex = index + 1
-
-    var WCAGLink = <a href={"https://www.w3.org/WAI/WCAG21/Understanding/" + currentDetailLink}>{currentTitle} {currentNumber} ({currentLevel}) details and exceptions</a>;
-    var shortWCAGLink = "https://www.w3.org/WAI/WCAG21/Understanding/" + currentDetailLink;
-    var SlideToRender = Slides[currentSlide] = require('./slides/' + currentSlide).default;
-    var navList = slidesInfo.map( (slideInfo, index) => {
+    //var ActiveSlideContent = require('./slides/' + activeSlideNum.toString()).default;
+    var navList = slidesInfo.map((slideInfo, index) => {
       return (
-        <li key={slideInfo.slide} className="w-TipContainer">
-          <Button 
-            slide={slideInfo.slide}
+        <li key={slideInfo.slideNum.toString()} className="w-TipContainer">
+          <NavButton 
+            slideNum={slideInfo.slideNum}
             title={slideInfo.title}
             shortTitle={slideInfo.shortTitle}
-            number={slideInfo.number}
-            level={slideInfo.level}
-            detailLink={slideInfo.detailLink}
             index={index}
-            buttonText={index + 1} 
+            buttonText={slideInfo.slideNum} 
             updateState={this.updateState} 
-            active={slideInfo.slide === currentSlide ? true : false}
+            active={slideInfo.slideNum === activeSlideNum ? true : false}
           />
         </li>
       );
     });
+
+    // for next/prev buttons, handle first/last slide cases
+    if (activeSlideNum === totalSlides) {
+      nextSlideNum = 1;
+    } else if (activeSlideNum === 1) {
+      prevSlideNum = totalSlides;
+    } 
 
     return (
       <div>
@@ -85,29 +72,24 @@ class App extends Component {
             <h1>HTML slideshow created with React JS</h1> 
             <nav className="w-SlideNav" aria-label="Slide menu">
               <ul className="w-BtnSet">         
-                { navList }
+                {navList}
               </ul>
             </nav>
           </div>
           <PrevNext 
-            prevSlide={slidesInfo[prevIndex]}
-            nextSlide={slidesInfo[nextIndex]}
-            prevIndex={prevIndex}
-            nextIndex={nextIndex}
-            updateState={ this.updateState }
+            prevSlideNum={prevSlideNum}
+            nextSlideNum={nextSlideNum}
+            updateState={this.updateState}
           />
           <ul className="w-SlidesContainer">
             <li 
-              key={ currentSlide }
+              key={activeSlideNum} 
               tabIndex='-1'
-              ref={ this.focusedSlide }
+              ref={this.focusedSlide}
             >
-              <h2 id={"wid-SlideTitle_" +  currentSlide }>{ currentTitle }</h2>
-              <SlideToRender shortWCAGLink={ shortWCAGLink } />
-              <p>
-                { currentNumber != null ? WCAGLink : null }
-              </p>
-              <span aria-live="polite" aria-atomic="true">Slide { index + 1 } of { totalSlides }</span>
+              <h2 id={"wid-SlideTitle_" + activeSlideNum }>{activeTitle}</h2>
+              <ActiveSlideContent />
+              <span aria-live="polite" aria-atomic="true">Slide {activeSlideNum} of {totalSlides}</span>
             </li>
           </ul>
         </main>
