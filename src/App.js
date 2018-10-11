@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Slides from './slides/SlideIndex';
 import slidesInfo from './slides/slidesInfo';
 import NavButton from './components/NavButton';
 import PrevNext from './components/PrevNext';
