@@ -34,8 +34,9 @@ class App extends Component {
 
   render () {
     let { activeSlideNum } = this.state;
-    const totalSlides = slidesInfo.length;
-    const activeTitle = slidesInfo[activeSlideNum - 1].title;
+    const title = slidesInfo.deck.title;
+    const totalSlides = slidesInfo.slides.length;
+    const slideTitle = slidesInfo.slides[activeSlideNum - 1].title;
 
     let nextSlideNum = activeSlideNum + 1;
     let prevSlideNum = activeSlideNum - 1;
@@ -46,20 +47,20 @@ class App extends Component {
       prevSlideNum = totalSlides;
     } 
 
-    let contentFile = slidesInfo[activeSlideNum - 1].contentFile; 
+    let contentFile = slidesInfo.slides[activeSlideNum - 1].contentFile; 
     let BodyContent = require('./slides/' + contentFile).default;
   
-    var navList = slidesInfo.map((slideInfo, index) => {
+    var navList = slidesInfo.slides.map((slide, index) => {
       return (
-        <li key={slideInfo.slideNum.toString()} className="w-TipContainer">
+        <li key={slide.slideNum.toString()} className="w-TipContainer">
           <NavButton 
-            slideNum={slideInfo.slideNum}
-            title={slideInfo.title}
-            shortTitle={slideInfo.shortTitle}
+            slideNum={slide.slideNum}
+            title={slide.title}
+            shortTitle={slide.shortTitle}
             index={index}
-            buttonText={slideInfo.slideNum} 
+            buttonText={slide.slideNum} 
             updateState={this.updateState} 
-            active={slideInfo.slideNum === activeSlideNum ? true : false}
+            active={slide.slideNum === activeSlideNum ? true : false}
           />
         </li>
       );
@@ -69,7 +70,7 @@ class App extends Component {
       <div>
         <main>
           <div id="wid-HeaderNavBlock">
-            <h1>HTML slideshow created with React JS</h1> 
+            <h1>{title}</h1> 
             <nav className="w-SlideNav" aria-label="Slide menu">
               <ul className="w-BtnSet">         
                 {navList}
@@ -88,7 +89,7 @@ class App extends Component {
               ref={this.focusedSlide}
             >
               <Header 
-                slideTitle={activeTitle} 
+                slideTitle={slideTitle} 
                 slideNum={activeSlideNum}
               />
               <BodyContent />
