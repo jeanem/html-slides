@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Slide2(props) {
+function Slide(props) {
   return (
-    <div>
+    <div className='slideBody'>
       <ul>
         <li>to run locally: npm run start</li>
         <li>to deploy to github page, on the master branch: npm run deploy</li>
@@ -11,5 +11,5 @@ function Slide2(props) {
   );
 }
 
-export default Slide2;
+export default Slide;
 

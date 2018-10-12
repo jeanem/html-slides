@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import slidesInfo from './slides/slidesInfo';
-import Header from './slides/Header';
-import Footer from './slides/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import NavButton from './components/NavButton';
 import PrevNext from './components/PrevNext';
 import './App.css';

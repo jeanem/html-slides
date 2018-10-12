@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Slide1(props) {
+function Slide(props) {
   return (
-    <div>
+    <div className='slideBody'>
       <p>Check that your Node version is >=6</p>
       <ol>
         <li>git clone https://github.com/jeanem/html-slides.git</li>
@@ -12,5 +12,5 @@ function Slide1(props) {
   );
 }
 
-export default Slide1;
+export default Slide;
 
