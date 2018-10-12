@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import ToolTip from './ToolTip';
 
 class Button extends Component {
   constructor(props) {
@@ -10,8 +9,8 @@ class Button extends Component {
   }
 
   buttonClicked() {
-    const { slideNum, title, shortTitle, buttonText, updateState } = this.props;
-    updateState({activeSlideNum: slideNum});
+    const { slideNum, updateState } = this.props;
+    updateState({activeSlideNum: slideNum, focus: true});
   }
   
   showTip() {

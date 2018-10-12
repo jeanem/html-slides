@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import slidesInfo from './slides/slidesInfo';
+import Header from './slides/Header';
+import Footer from './slides/Footer';
 import NavButton from './components/NavButton';
 import PrevNext from './components/PrevNext';
 import './App.css';
@@ -32,15 +34,21 @@ class App extends Component {
 
   render () {
     let { activeSlideNum } = this.state;
-    let nextSlideNum = activeSlideNum + 1;
-    let prevSlideNum = activeSlideNum - 1;
-
     const totalSlides = slidesInfo.length;
     const activeTitle = slidesInfo[activeSlideNum - 1].title;
+
+    let nextSlideNum = activeSlideNum + 1;
+    let prevSlideNum = activeSlideNum - 1;
+    // for next/prev buttons, handle first/last slide cases
+    if (activeSlideNum === totalSlides) {
+      nextSlideNum = 1;
+    } else if (activeSlideNum === 1) {
+      prevSlideNum = totalSlides;
+    } 
+
     let contentFile = slidesInfo[activeSlideNum - 1].contentFile; 
-    let ActiveSlideContent = require('./slides/' + contentFile).default;
+    let BodyContent = require('./slides/' + contentFile).default;
   
-    //var ActiveSlideContent = require('./slides/' + activeSlideNum.toString()).default;
     var navList = slidesInfo.map((slideInfo, index) => {
       return (
         <li key={slideInfo.slideNum.toString()} className="w-TipContainer">
@@ -56,13 +64,6 @@ class App extends Component {
         </li>
       );
     });
-
-    // for next/prev buttons, handle first/last slide cases
-    if (activeSlideNum === totalSlides) {
-      nextSlideNum = 1;
-    } else if (activeSlideNum === 1) {
-      prevSlideNum = totalSlides;
-    } 
 
     return (
       <div>
@@ -86,9 +87,15 @@ class App extends Component {
               tabIndex='-1'
               ref={this.focusedSlide}
             >
-              <h2 id={"wid-SlideTitle_" + activeSlideNum }>{activeTitle}</h2>
-              <ActiveSlideContent />
-              <span aria-live="polite" aria-atomic="true">Slide {activeSlideNum} of {totalSlides}</span>
+              <Header 
+                slideTitle={activeTitle} 
+                slideNum={activeSlideNum}
+              />
+              <BodyContent />
+              <Footer 
+                slideNum={activeSlideNum}
+                totalSlides={totalSlides}
+              />
             </li>
           </ul>
         </main>
