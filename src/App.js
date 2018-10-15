@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import EventListener, {withOptions} from 'react-event-listener';
+import EventListener from 'react-event-listener';
 import slidesInfo from './slides/slidesInfo';
 import Header from './components/Header';
 import Footer from './components/Footer';
