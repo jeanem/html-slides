@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import EventListener, {withOptions} from 'react-event-listener';
 import slidesInfo from './slides/slidesInfo';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -9,11 +10,16 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 library.add(faChevronRight, faChevronLeft)
 
+const totalSlides = slidesInfo.slides.length;
+const deckTitle = slidesInfo.deck.title;
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       activeSlideNum: 1,
+      nextSlideNum: this.getNextSlideNum(1),
+      prevSlideNum: this.getPrevSlideNum(1),
       focus: false,
     };
     this.updateState = this.updateState.bind(this);
@@ -23,6 +29,8 @@ class App extends Component {
   updateState(options) {
     this.setState ({
       activeSlideNum: options.activeSlideNum,
+      nextSlideNum: this.getNextSlideNum(options.activeSlideNum),
+      prevSlideNum: this.getPrevSlideNum(options.activeSlideNum),
       focus: options.focus
     });
     if(options.focus) {//note errored on ternary expression in this context so doing traditional
@@ -32,27 +40,47 @@ class App extends Component {
     }
   }
 
-  render () {
-    let { activeSlideNum } = this.state;
-    const title = slidesInfo.deck.title;
-    const totalSlides = slidesInfo.slides.length;
-    const slideTitle = slidesInfo.slides[activeSlideNum - 1].title;
+  checkKey(e) {
+    // provide keyboard arrow support for slide change
+    if (e.key === 'ArrowLeft') {
+      this.updateState({
+        activeSlideNum: this.state.prevSlideNum
+      })
+    }
+    if (e.key === 'ArrowRight') {
+      this.updateState({
+        activeSlideNum: this.state.nextSlideNum
+      })
+    }
+  }
 
-    let nextSlideNum = activeSlideNum + 1;
-    let prevSlideNum = activeSlideNum - 1;
-    // for next/prev buttons, handle first/last slide cases
+  getNextSlideNum(activeSlideNum) {
     if (activeSlideNum === totalSlides) {
-      nextSlideNum = 1;
-    } else if (activeSlideNum === 1) {
-      prevSlideNum = totalSlides;
+      return 1;
     } 
+    return activeSlideNum + 1;
+  }
 
+  getPrevSlideNum(activeSlideNum) {
+    if (activeSlideNum === 1) {
+      return totalSlides;
+    } 
+    return activeSlideNum - 1;
+  }
+
+  render () {
+    let { prevSlideNum, activeSlideNum, nextSlideNum } = this.state;
+    let slideTitle = slidesInfo.slides[activeSlideNum - 1].title;
     let contentFile = slidesInfo.slides[activeSlideNum - 1].contentFile; 
     let BodyContent = require('./slides/' + contentFile).default;
   
     var navList = slidesInfo.slides.map((slide, index) => {
       return (
         <li key={slide.slideNum.toString()} className="w-TipContainer">
+          <EventListener
+            target="window"
+            onKeyDown={this.checkKey.bind(this)}
+          />
           <NavButton 
             slideNum={slide.slideNum}
             title={slide.title}
@@ -70,7 +98,7 @@ class App extends Component {
       <div>
         <main>
           <div id="wid-HeaderNavBlock">
-            <h1>{title}</h1> 
+            <h1>{deckTitle}</h1> 
             <nav className="w-SlideNav" aria-label="Slide menu">
               <ul className="w-BtnSet">         
                 {navList}
