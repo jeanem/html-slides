@@ -23,7 +23,9 @@
   },
   "devDependencies": {
     "axios": "^0.18.0",
-    "gh-pages": "^1.2.0"
+    "eslint-plugin-prettier": "^3.0.0",
+    "gh-pages": "^1.2.0",
+    "prettier": "1.14.3"
   },
   "browserslist": [
     ">0.2%",
