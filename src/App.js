@@ -22,7 +22,7 @@ class App extends Component {
       activeSlideNum: 1,
       nextSlideNum: this.getNextSlideNum(1),
       prevSlideNum: this.getPrevSlideNum(1),
-      focus: false
+      focusOnSlide: false
     };
     this.updateState = this.updateState.bind(this);
     this.focusedSlide = React.createRef(); //set up to focus slide when nav button clicked
@@ -33,11 +33,12 @@ class App extends Component {
       activeSlideNum: options.activeSlideNum,
       nextSlideNum: this.getNextSlideNum(options.activeSlideNum),
       prevSlideNum: this.getPrevSlideNum(options.activeSlideNum),
-      focus: options.focus
+      focusOnSlide: options.focusOnSlide
     });
-    if (options.focus) {
+    if (options.focusOnSlide) {
       //note errored on ternary expression in this context so doing traditional
-      this.focusedSlide.current.focus();
+      console.warn('do i fire?');
+      //this.focusedSlide.current.focus();
     } else {
       return null;
     }
@@ -108,7 +109,7 @@ class App extends Component {
             updateState={this.updateState}
           />
           <ul className="w-SlidesContainer">
-            <li key={activeSlideNum} tabIndex="-1" ref={this.focusedSlide}>
+            <li key={activeSlideNum} tabIndex="0" ref={this.focusedSlide}>
               <Header slideTitle={slideTitle} slideNum={activeSlideNum} />
               <BodyContent />
               <Footer slideNum={activeSlideNum} totalSlides={totalSlides} />

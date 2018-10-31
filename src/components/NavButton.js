@@ -10,7 +10,7 @@ class Button extends Component {
 
   buttonClicked() {
     const { slideNum, updateState } = this.props;
-    updateState({ activeSlideNum: slideNum, focus: true });
+    updateState({ activeSlideNum: slideNum, focusOnSlide: true });
   }
 
   showTip() {
@@ -45,10 +45,6 @@ class Button extends Component {
     const firstBtn = document.getElementById('wid_1');
     const lastBtn = document.getElementById('wid_2'); // TODO: make length - 1
 
-    console.warn('nextBtn =' + nextBtn);
-    console.warn(thisBtn);
-    console.warn(firstBtn);
-
     //tool tip escape
     if (e.key === 'Escape') {
       e.preventDefault();
@@ -58,10 +54,11 @@ class Button extends Component {
       return false;
     }
 
-    //TODO add behaviour option to activeSlide number to focus only and not return the slide yet
+    //TODO add behaviour option to activeSlide number to focusOnSlide only and not return the slide yet
     // then add first and last behaviour
     if (e.key === 'ArrowRight') {
-      updateState({ activeSlideNum: slideNum + 1, focus: true });
+      updateState({ activeSlideNum: slideNum + 1, focusOnSlide: true });
+      console.warn(this.state.activeSlideNum);
     }
 
     if (e.key === 'ArrowLeft') {
