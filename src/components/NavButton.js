@@ -38,13 +38,14 @@ class Button extends Component {
 
   checkKey(e) {
     // provide keyboard arrow support for slide change
-    const { slideNum } = this.props;
+    const { slideNum, updateState } = this.props;
     const thisBtn = e.target;
     const nextBtn = document.getElementById('wid_' + slideNum + 1);
     const prevBtn = document.getElementById('wid_' + slideNum - 1);
     const firstBtn = document.getElementById('wid_1');
     const lastBtn = document.getElementById('wid_2'); // TODO: make length - 1
 
+    console.warn('nextBtn =' + nextBtn);
     console.warn(thisBtn);
     console.warn(firstBtn);
 
@@ -57,16 +58,10 @@ class Button extends Component {
       return false;
     }
 
+    //TODO add behaviour option to activeSlide number to focus only and not return the slide yet
+    // then add first and last behaviour
     if (e.key === 'ArrowRight') {
-      console.warn('right');
-      thisBtn.tabIndex = -1;
-      if (nextBtn !== null) {
-        nextBtn.focus();
-        nextBtn.tabIndex = 0;
-      } else {
-        firstBtn.focus();
-        firstBtn.tabIndex = 0;
-      }
+      updateState({ activeSlideNum: slideNum + 1, focus: true });
     }
 
     if (e.key === 'ArrowLeft') {
