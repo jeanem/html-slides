@@ -20,12 +20,23 @@ class App extends Component {
     super(props);
     this.state = {
       activeSlideNum: 1,
+      focusOnButton: 1,
       nextSlideNum: this.getNextSlideNum(1),
       prevSlideNum: this.getPrevSlideNum(1),
       focusOnSlide: false
     };
     this.updateState = this.updateState.bind(this);
     this.focusedSlide = React.createRef(); //set up to focus slide when nav button clicked
+  }
+
+  componentDidUpdate() {
+    let { focusOnSlide } = this.state;
+    if (focusOnSlide) {
+      this.focusedSlide.current.focus();
+      //the following will work since there is only one id on the page
+      //but sticking with ref as pattern for referencing rendered nodes
+      //document.getElementById('wid-Slide').focus();
+    }
   }
 
   updateState(options) {
@@ -35,13 +46,6 @@ class App extends Component {
       prevSlideNum: this.getPrevSlideNum(options.activeSlideNum),
       focusOnSlide: options.focusOnSlide
     });
-    if (options.focusOnSlide) {
-      //note errored on ternary expression in this context so doing traditional
-      console.warn('do i fire?');
-      //this.focusedSlide.current.focus();
-    } else {
-      return null;
-    }
   }
 
   getNextSlideNum(activeSlideNum) {
@@ -82,7 +86,6 @@ class App extends Component {
         </li>
       );
     });
-
     return (
       <div>
         <main>
@@ -103,18 +106,23 @@ class App extends Component {
               </ul>
             </nav>
           </div>
-          <PrevNext
-            prevSlideNum={prevSlideNum}
-            nextSlideNum={nextSlideNum}
-            updateState={this.updateState}
-          />
           <ul className="w-SlidesContainer">
-            <li key={activeSlideNum} tabIndex="0" ref={this.focusedSlide}>
+            <li
+              key={activeSlideNum}
+              id="wid-Slide"
+              tabIndex="0"
+              ref={this.focusedSlide}
+            >
               <Header slideTitle={slideTitle} slideNum={activeSlideNum} />
               <BodyContent />
               <Footer slideNum={activeSlideNum} totalSlides={totalSlides} />
             </li>
           </ul>
+          <PrevNext
+            prevSlideNum={prevSlideNum}
+            nextSlideNum={nextSlideNum}
+            updateState={this.updateState}
+          />
         </main>
       </div>
     );

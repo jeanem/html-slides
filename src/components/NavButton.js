@@ -4,8 +4,20 @@ class Button extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hidden: true
+      hidden: true,
+      focusOnButton: 1
     };
+    this.focusedButton = React.createRef(); //set up to focus slide when nav button clicked
+  }
+
+  componentDidUpdate() {
+    const { index } = this.props;
+    const { focusOnButton } = this.state;
+    console.warn(focusOnButton);
+    if (focusOnButton === index + 1) {
+      //this.focusedButton.current.focus();
+    }
+    console.warn(index);
   }
 
   buttonClicked() {
@@ -38,12 +50,7 @@ class Button extends Component {
 
   checkKey(e) {
     // provide keyboard arrow support for slide change
-    const { slideNum, updateState } = this.props;
-    const thisBtn = e.target;
-    const nextBtn = document.getElementById('wid_' + slideNum + 1);
-    const prevBtn = document.getElementById('wid_' + slideNum - 1);
-    const firstBtn = document.getElementById('wid_1');
-    const lastBtn = document.getElementById('wid_2'); // TODO: make length - 1
+    const { slideNum, updateState, index } = this.props;
 
     //tool tip escape
     if (e.key === 'Escape') {
@@ -57,20 +64,10 @@ class Button extends Component {
     //TODO add behaviour option to activeSlide number to focusOnSlide only and not return the slide yet
     // then add first and last behaviour
     if (e.key === 'ArrowRight') {
-      updateState({ activeSlideNum: slideNum + 1, focusOnSlide: true });
-      console.warn(this.state.activeSlideNum);
-    }
-
-    if (e.key === 'ArrowLeft') {
-      console.warn('left');
-      thisBtn.tabIndex = -1;
-      if (prevBtn !== null) {
-        prevBtn.focus();
-        prevBtn.tabIndex = 0;
-      } else {
-        lastBtn.focus();
-        lastBtn.tabIndex = 0;
-      }
+      console.warn('how about me do I fire?');
+      this.setState({
+        focusOnButton: index + 1
+      });
     }
   }
 
@@ -98,6 +95,7 @@ class Button extends Component {
           }
           aria-describedby={tipID}
           onClick={this.buttonClicked.bind(this)}
+          ref={this.focusedButton}
         >
           {buttonText}
         </button>
