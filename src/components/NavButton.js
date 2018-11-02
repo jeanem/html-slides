@@ -4,20 +4,9 @@ class Button extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hidden: true,
-      focusOnButton: 1
+      hidden: true
     };
     this.focusedButton = React.createRef(); //set up to focus slide when nav button clicked
-  }
-
-  componentDidUpdate() {
-    const { index } = this.props;
-    const { focusOnButton } = this.state;
-    console.warn(focusOnButton);
-    if (focusOnButton === index + 1) {
-      //this.focusedButton.current.focus();
-    }
-    console.warn(index);
   }
 
   buttonClicked() {
@@ -50,7 +39,7 @@ class Button extends Component {
 
   checkKey(e) {
     // provide keyboard arrow support for slide change
-    const { slideNum, updateState, index } = this.props;
+    const { slideNum, updateState, index, btnArrowNav } = this.props;
 
     //tool tip escape
     if (e.key === 'Escape') {
@@ -64,10 +53,10 @@ class Button extends Component {
     //TODO add behaviour option to activeSlide number to focusOnSlide only and not return the slide yet
     // then add first and last behaviour
     if (e.key === 'ArrowRight') {
-      console.warn('how about me do I fire?');
-      this.setState({
-        focusOnButton: index + 1
-      });
+      btnArrowNav('right', index);
+    }
+    if (e.key === 'ArrowLeft') {
+      btnArrowNav('left', index);
     }
   }
 

@@ -47,6 +47,10 @@ class App extends Component {
       focusOnSlide: options.focusOnSlide
     });
   }
+  btnArrowNav(direction, index) {
+    console.warn(direction);
+    console.warn(index);
+  }
 
   getNextSlideNum(activeSlideNum) {
     if (activeSlideNum === totalSlides) {
@@ -81,6 +85,7 @@ class App extends Component {
             index={index}
             buttonText={slide.slideNum}
             updateState={this.updateState}
+            btnArrowNav={this.btnArrowNav}
             active={slide.slideNum === activeSlideNum ? true : false}
           />
         </li>
