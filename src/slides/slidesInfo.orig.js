@@ -1,13 +1,13 @@
 const slidesInfo = {
   deck: {
-    title: "CSUN 2019 take-aways"
+    title: "HTML slideshow created with React JS"
   },
   slides: [
     {
       slideNum: 1,
-      title: "Content SVG",
-      shortTitle: "Content SVG",
-      contentFile: "svg1Content"
+      title: "Setup",
+      shortTitle: "Setup",
+      contentFile: "Slide1"
     },
     {
       slideNum: 2,

@@ -4,15 +4,15 @@
   "private": true,
   "homepage": "https://jeanem.github.io/html-slides",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.4",
-    "@fortawesome/free-solid-svg-icons": "^5.3.1",
-    "@fortawesome/react-fontawesome": "^0.1.3",
-    "npm": "^6.4.1",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-event-listener": "^0.6.4",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1"
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "npm": "^6.9.0",
+    "react": "^16.8",
+    "react-dom": "^16.8.6",
+    "react-event-listener": "^0.6.6",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -24,9 +24,9 @@
   },
   "devDependencies": {
     "axios": "^0.18.0",
-    "eslint-plugin-prettier": "^3.0.0",
-    "gh-pages": "^1.2.0",
-    "prettier": "1.14.3"
+    "eslint-plugin-prettier": "^3.0.1",
+    "gh-pages": "^2.0.1",
+    "prettier": "1.16.4"
   },
   "browserslist": [
     ">0.2%",
