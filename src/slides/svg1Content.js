@@ -1,7 +1,5 @@
-// import React from 'react';
 import React, { Component } from 'react';
 import Prism from 'prismjs';
-//import Prism from 'prismjs';
 import '../css/prism.css';
 
 class Slide extends Component {
