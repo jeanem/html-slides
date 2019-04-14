@@ -1,12 +1,7 @@
 import React from 'react';
 
 function Slide(props) {
-  return (
-    <div className='slideBody'>
-      
-    </div>
-  );
+  return <div className="w-SlideBody" />;
 }
 
 export default Slide;
-

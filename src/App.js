@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import Prism from 'prismjs';
+import './css/prism.css';
 import slidesInfo from './slides/slidesInfo';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import NavButton from './components/NavButton';
 import PrevNext from './components/PrevNext';
 import './App.css';
+import 'font-awesome/css/font-awesome.min.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faChevronRight,
@@ -37,6 +40,8 @@ class App extends Component {
       //but sticking with ref as pattern for referencing rendered nodes
       //document.getElementById('wid-Slide').focus();
     }
+    //code snippet highlighter - needs to run with component update
+    Prism.highlightAll();
   }
 
   updateState(options) {
@@ -114,7 +119,8 @@ class App extends Component {
           <ul className="w-SlidesContainer">
             <li
               key={activeSlideNum}
-              id="wid-Slide"
+              id={'wid-Slide-' + activeSlideNum}
+              className="w-Slide"
               tabIndex="0"
               ref={this.focusedSlide}
             >
