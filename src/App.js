@@ -78,20 +78,16 @@ class App extends Component {
     let BodyContent = require('./slides/' + contentFile).default;
     var navList = slidesInfo.slides.map((slide, index) => {
       return (
-        <li
-          key={slide.slideNum.toString()}
-          role="menuitem"
-          className="w-TipContainer"
-        >
+        <li key={index + 1} role="menuitem" className="w-TipContainer">
           <NavButton
-            slideNum={slide.slideNum}
+            slideNum={index + 1}
             title={slide.title}
             shortTitle={slide.shortTitle}
             index={index}
-            buttonText={slide.slideNum}
+            buttonText={index + 1}
             updateState={this.updateState}
             btnArrowNav={this.btnArrowNav}
-            active={slide.slideNum === activeSlideNum ? true : false}
+            active={index + 1 === activeSlideNum ? true : false}
           />
         </li>
       );

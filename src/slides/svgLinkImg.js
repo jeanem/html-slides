@@ -12,14 +12,14 @@ function Slide(props) {
         with an alt attribute as content (no role required).
       </blockquote>
       <div style={centerW}>
-        <a target="_blank" href="https://uw.edu">
+        <a href="https://uw.edu">
           <img src={W_Purple} alt="Go to UW web site" />
         </a>
       </div>
       <pre>
         <code className="language-markup">
           {`
-<a target="_blank" href="https://uw.edu">
+<a href="https://uw.edu">
     <img src="/images/W_Purple.svg" alt="Go to UW web site" />
 </a>
       `}

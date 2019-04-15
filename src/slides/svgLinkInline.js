@@ -12,11 +12,7 @@ function Slide(props) {
         aria-label when SVG used as content.
       </blockquote>
       <div style={centerW}>
-        <a
-          target="_blank"
-          href="https://uw.edu"
-          aria-label="Go to UW's website"
-        >
+        <a href="https://uw.edu" aria-label="Go to UW's website">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 72.62">
             <title>Asset 1</title>
             <g id="Layer_2" data-name="Layer 2">
@@ -33,7 +29,7 @@ function Slide(props) {
       <pre>
         <code className="language-markup">
           {`
-<a target="_blank" href="https://uw.edu" aria-label="Go to UW's website">
+<a href="https://uw.edu" aria-label="Go to UW's website">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 72.62">
     <title>Asset 1</title>
     <g id="Layer_2" data-name="Layer 2">

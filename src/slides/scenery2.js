@@ -6,10 +6,7 @@ function Slide(props) {
       <h3>Resources</h3>
       <ul>
         <li>
-          <a
-            target="_blank"
-            href="https://phet-dev.colorado.edu/html/jg-tests/csun-2019/presentation.html"
-          >
+          <a href="https://phet-dev.colorado.edu/html/jg-tests/csun-2019/presentation.html">
             Slides
           </a>
         </li>
@@ -17,15 +14,10 @@ function Slide(props) {
           Documentation
           <ul>
             <li>
-              <a target="_blank" href="http://phetsims.github.io/scenery/doc/">
-                Scenery API
-              </a>
+              <a href="http://phetsims.github.io/scenery/doc/">Scenery API</a>
             </li>
             <li>
-              <a
-                target="_blank"
-                href="https://docs.google.com/document/d/1Ys1EiwnqQGYuzGOcQSr4uXDes35mF1v1XhMZIl10nk8/edit"
-              >
+              <a href="https://docs.google.com/document/d/1Ys1EiwnqQGYuzGOcQSr4uXDes35mF1v1XhMZIl10nk8/edit">
                 PhET Development Overview
               </a>{' '}
             </li>
@@ -35,20 +27,14 @@ function Slide(props) {
             </li>
             <li>
               {' '}
-              <a
-                href="http://phetsims.github.io/scenery/doc/accessibility.html"
-                target="_blank"
-              >
+              <a href="http://phetsims.github.io/scenery/doc/accessibility.html">
                 Accessibility API
               </a>
             </li>
           </ul>
         </li>
         <li>
-          <a
-            target="_blank"
-            href="https://groups.google.com/forum/?hl=en#!forum/developing-interactive-simulations-in-html5"
-          >
+          <a href="https://groups.google.com/forum/?hl=en#!forum/developing-interactive-simulations-in-html5">
             Google groups
           </a>
           : helpful for troubleshooting setup errors

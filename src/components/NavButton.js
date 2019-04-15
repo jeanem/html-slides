@@ -39,7 +39,7 @@ class Button extends Component {
 
   checkKey(e) {
     // provide keyboard arrow support for slide change
-    const { slideNum, updateState, index, btnArrowNav } = this.props;
+    const { index, btnArrowNav } = this.props;
 
     //tool tip escape
     if (e.key === 'Escape') {

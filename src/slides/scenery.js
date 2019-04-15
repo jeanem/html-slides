@@ -28,10 +28,7 @@ function Slide(props) {
           </a>
         </li>
         <li>
-          <a
-            href="https://phet.colorado.edu/sims/html/friction/latest/friction_en.html"
-            target="_blank"
-          >
+          <a href="https://phet.colorado.edu/sims/html/friction/latest/friction_en.html">
             Friction
           </a>
         </li>
