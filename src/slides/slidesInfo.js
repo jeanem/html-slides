@@ -39,9 +39,19 @@ const slidesInfo = {
       contentFile: 'svgLinkInline'
     },
     {
+      title: 'The future',
+      shortTitle: 'The future',
+      contentFile: 'svgFuture'
+    },
+    {
       title: 'Accessible Names',
       shortTitle: 'Accessible Names',
       contentFile: 'a11yNames'
+    },
+    {
+      title: 'Miscellaneous topics',
+      shortTitle: 'Misc topics',
+      contentFile: 'miscTopics'
     },
     {
       title: 'Accessibility in Single Page Applications (1)',
