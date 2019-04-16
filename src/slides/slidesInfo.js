@@ -4,7 +4,7 @@ const slidesInfo = {
   },
   slides: [
     {
-      title: '34th CSUN Assitive Technology Conference',
+      title: '34th CSUN Assistive Technology Conference',
       shortTitle: 'CSUN intro',
       contentFile: 'Intro'
     },
