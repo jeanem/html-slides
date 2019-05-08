@@ -35,7 +35,7 @@ blockquote {
 
 blockquote::before {
   font-family: 'FontAwesome';
-  content: '\f10d ';
+  content: '\f10d\ ';
 }
 
 blockquote::after {

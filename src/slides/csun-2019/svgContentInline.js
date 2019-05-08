@@ -25,7 +25,7 @@ function Slide(props) {
             cy="50"
             r="40"
             stroke="#4b2e83"
-            stroke-width="3"
+            strokeWidth="3"
             fill="#4b2e83"
           />
         </svg>

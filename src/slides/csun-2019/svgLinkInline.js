@@ -18,7 +18,7 @@ function Slide(props) {
             <g id="Layer_2" data-name="Layer 2">
               <g id="bothell_stacked_large" data-name="bothell stacked large">
                 <path
-                  class="cls-1"
+                  className="cls-1"
                   d="M79.26,0V13.1h9.2L78.19,51.35S65.61.71,65.43,0H52.13L38.33,51.35,28.87,13.1h9.58V0H0V13.1H8.52L23.4,72.62H44c.18-.7,9.85-37.45,9.85-37.45l9.37,37.45H83.89c.19-.7,15.66-59.52,15.66-59.52H108V0Z"
                 />
               </g>

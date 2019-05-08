@@ -24,7 +24,7 @@ function Slide(props) {
       </ul>
       <blockquote>
         Be like a french chef, use ARIA to bring out the natural flavor of HTML{' '}
-        <em class="w-Note">(paraphrased)</em>
+        <em className="w-Note">(paraphrased)</em>
       </blockquote>
     </div>
   );

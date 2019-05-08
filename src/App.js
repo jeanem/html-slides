@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Prism from 'prismjs';
 import './css/prism.css';
-import slidesInfo from './slides/slidesInfo';
+import slidesInfo from './slides/csun-2019/slidesInfo';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import NavButton from './components/NavButton';
@@ -75,7 +75,7 @@ class App extends Component {
     let { prevSlideNum, activeSlideNum, nextSlideNum } = this.state;
     let slideTitle = slidesInfo.slides[activeSlideNum - 1].title;
     let contentFile = slidesInfo.slides[activeSlideNum - 1].contentFile;
-    let BodyContent = require('./slides/' + contentFile).default;
+    let BodyContent = require('./slides/csun-2019/' + contentFile).default;
     var navList = slidesInfo.slides.map((slide, index) => {
       return (
         <li key={index + 1} role="menuitem" className="w-TipContainer">
