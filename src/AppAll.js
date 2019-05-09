@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Prism from 'prismjs';
 import './css/prism.css';
-import slidesInfo from './slides/slidesInfo';
+import SlidesInfo from './slides/wcag-2.1/components/SlidesInfo';
 import Header from './components/Header';
-import './App.css';
+import BodyContent from './slides/wcag-2.1/components/BodyContent';
+import './App.scss';
 import 'font-awesome/css/font-awesome.min.css';
 
-const deckTitle = slidesInfo.deck.title;
+const deckTitle = SlidesInfo.deck.title;
 
 class AppAll extends Component {
   componentDidUpdate() {
@@ -15,14 +16,13 @@ class AppAll extends Component {
   }
 
   render() {
-    var slideList = slidesInfo.slides.map((slide, index) => {
-      let contentFile = slidesInfo.slides[index].contentFile;
-      let BodyContent = require('./slides/' + contentFile).default;
+    var slideList = SlidesInfo.slides.map((slide, index) => {
+      const slideDetails = SlidesInfo.slides[index];
       return (
-        <ul className="w-SlidesContainer">
-          <li key={index} id={'wid-Slide-' + index} className="w-Slide">
+        <ul key={index} className="w-SlidesContainer">
+          <li id={'wid-Slide-' + index} className="w-Slide">
             <Header slideTitle={slide.title} slideNum={index} />
-            <BodyContent />
+            <BodyContent slideDetails={slideDetails} />
           </li>
         </ul>
       );

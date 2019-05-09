@@ -1,3 +1,47 @@
+%nontextOnly-GM-positive {
+  background-color: #e8e3d3;
+  color: #85754d;
+}
+%nontextOnly-GM-negative {
+  background-color: #85754d;
+  color: #e8e3d3;
+}
+%text-WM-positive {
+  background-color: #ffffff;
+  color: #85754d;
+}
+%text-WM-negative {
+  background-color: #85754d;
+  color: #ffffff;
+}
+
+%text-PG-positive {
+  background-color: #e8e3d3;
+  color: #4b2e83;
+  a {
+    //next, why is this not working?
+    color: #21537b;
+    &:hover,
+    &:active,
+    &:visited {
+      color: #4b2e83;
+    }
+  }
+}
+%text-PG-negative {
+  background-color: #4b2e83;
+  color: #e8e3d3;
+}
+
+%text-BG-positive {
+  background-color: #e8e3d3;
+  color: #000;
+}
+%text-BG-negative {
+  background-color: #000;
+  color: #e8e3d3;
+}
+
 body,
 input,
 button {
@@ -7,6 +51,10 @@ button {
   line-height: 1.5em;
   letter-spacing: 0.12em;
   word-spacing: 0.16em;
+}
+
+body {
+  @extend %text-BG-positive;
 }
 
 main {

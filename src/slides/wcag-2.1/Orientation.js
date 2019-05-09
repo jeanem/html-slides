@@ -1,15 +1,8 @@
 import React from 'react';
 
 function Slide(props) {
-  const { shortWCAGLink } = props;
   return (
-    <div className="w-SlideBody">
-      <blockquote cite={shortWCAGLink}>
-        Content does not restrict its view and operation to a single display
-        orientation, such as portrait or landscape, unless a specific display
-        orientation is essential.
-      </blockquote>
-
+    <div>
       <ul>
         <li>
           May be a more common issue currently in native apps, since there are

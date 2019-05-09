@@ -1,15 +1,8 @@
 import React from 'react';
 
 function Slide(props) {
-  const { shortWCAGLink } = props;
   return (
-    <div className="w-SlideBody">
-      <blockquote cite={shortWCAGLink}>
-        Functionality that can be operated by device motion or user motion can
-        also be operated by user interface components and responding to the
-        motion can be disabled to prevent accidental actuation.
-      </blockquote>
-
+    <div>
       <ul>
         <li>
           for example, an action triggered by shaking or tilting can also be

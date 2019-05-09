@@ -1,14 +1,8 @@
 import React from 'react';
 
 function Slide(props) {
-  const { shortWCAGLink } = props;
   return (
-    <div className="w-SlideBody">
-      <blockquote cite={shortWCAGLink}>
-        The visual presentation of the following have a contrast ratio of at
-        least 3:1 against adjacent color(s):
-      </blockquote>
-
+    <div>
       <ul>
         <li>
           User Interface Components

@@ -2,7 +2,7 @@ import React from 'react';
 
 function Slide(props) {
   return (
-    <div className="w-SlideBody">
+    <div>
       <h3>Ways machine learning might impact the future </h3>
       <ul>
         <li>

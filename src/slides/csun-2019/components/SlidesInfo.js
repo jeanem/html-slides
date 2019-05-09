@@ -1,4 +1,4 @@
-const slidesInfo = {
+const SlidesInfo = {
   deck: {
     title: 'CSUN 2019 take-aways'
   },
@@ -81,4 +81,4 @@ const slidesInfo = {
   ]
 };
 
-export default slidesInfo;
+export default SlidesInfo;

@@ -1,14 +1,8 @@
 import React from 'react';
 
 function Slide(props) {
-  const { shortWCAGLink } = props;
   return (
-    <div className="w-SlideBody">
-      <blockquote cite={shortWCAGLink}>
-        Content can be presented without loss of information or functionality,
-        and without requiring scrolling in two dimensions for:{' '}
-      </blockquote>
-
+    <div>
       <ul>
         <li>
           Vertical scrolling content (horizontally written languages like

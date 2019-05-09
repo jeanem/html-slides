@@ -2,7 +2,7 @@ import React from 'react';
 
 function Slide(props) {
   return (
-    <div className="w-SlideBody">
+    <div>
       <h3>ARIA-labelledby, ARIA-label, ARIA-describedby on Static Elements</h3>
       <p>How screen readers handle various label/element combinations</p>
       <ul>

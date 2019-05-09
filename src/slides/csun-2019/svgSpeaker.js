@@ -1,7 +1,7 @@
 import React from 'react';
 function Slide(props) {
   return (
-    <div className="w-SlideBody">
+    <div>
       <ul>
         <li>Dennis Lembree</li>
         <li>

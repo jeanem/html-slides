@@ -1,15 +1,8 @@
 import React from 'react';
 
 function Slide(props) {
-  const { shortWCAGLink } = props;
   return (
-    <div className="w-SlideBody">
-      <blockquote cite={shortWCAGLink}>
-        In content implemented using markup languages that support the following
-        text style properties, no loss of content or functionality occurs by
-        setting all of the following and by changing no other style property:
-      </blockquote>
-
+    <div>
       <ul>
         <li>Line height (line spacing) to at least 1.5 times the font size;</li>
         <li>Spacing following paragraphs to at least 2 times the font size;</li>

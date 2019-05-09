@@ -1,13 +1,8 @@
 import React from 'react';
 
 function Slide(props) {
-  const { shortWCAGLink } = props;
   return (
-    <div className="w-SlideBody">
-      <blockquote cite={shortWCAGLink}>
-        For functionality that can be operated using a single pointer, at least
-        one of the following is true:
-      </blockquote>
+    <div>
       <ul>
         <li>
           There is no down-event, event is only activated on the up event (like

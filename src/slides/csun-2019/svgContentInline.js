@@ -5,7 +5,7 @@ const centerDot = {
 };
 function Slide(props) {
   return (
-    <div className="w-SlideBody">
+    <div>
       <blockquote cite="https://www.dropbox.com/s/3u7rb544l7ir28l/CSUN19-SVG-SR-Test.pptx?dl=0#">
         For content, support for inline SVG is much better [then it use to be].
       </blockquote>

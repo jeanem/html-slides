@@ -1,7 +1,7 @@
 import React from 'react';
 function Slide(props) {
   return (
-    <div className="w-SlideBody">
+    <div>
       <ul>
         <li>SVG Icons and Screen Reader Accessibility</li>
         <li>Accessible names</li>

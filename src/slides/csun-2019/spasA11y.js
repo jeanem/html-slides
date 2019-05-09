@@ -2,7 +2,7 @@ import React from 'react';
 
 function Slide(props) {
   return (
-    <div className="w-SlideBody">
+    <div>
       <ul>
         <li>C. B. Averitt, et al, Deque Systems, presenter</li>
         <li>

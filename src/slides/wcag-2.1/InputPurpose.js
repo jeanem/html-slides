@@ -30,14 +30,8 @@ class InputPurpose extends Component {
     });
   };
   render() {
-    const { shortWCAGLink } = this.props;
     return (
-      <div className="w-SlideBody">
-        <blockquote cite={shortWCAGLink}>
-          The purpose of each input field collecting information about the user
-          can be programmatically determined when:
-        </blockquote>
-
+      <div>
         <ul>
           <li>
             The input field has a purpose listed in the{' '}

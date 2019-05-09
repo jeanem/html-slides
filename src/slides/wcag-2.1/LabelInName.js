@@ -1,14 +1,8 @@
 import React from 'react';
 
 function Slide(props) {
-  const { shortWCAGLink } = props;
   return (
-    <div className="w-SlideBody">
-      <blockquote cite={shortWCAGLink}>
-        For user interface components with labels that include text or images of
-        text, the name contains the text that is presented visually.
-      </blockquote>
-
+    <div>
       <ul>
         <li>
           Name, in this context, is the accessible name <strong>not</strong> the

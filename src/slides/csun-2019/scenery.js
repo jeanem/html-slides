@@ -2,7 +2,7 @@ import React from 'react';
 
 function Slide(props) {
   return (
-    <div className="w-SlideBody">
+    <div>
       <blockquote cite="http://phetsims.github.io/scenery/">
         A 2D scene graph for HTML5 that can be used to display interactive
         graphics using Canvas, SVG & DOM, with partial WebGL support.

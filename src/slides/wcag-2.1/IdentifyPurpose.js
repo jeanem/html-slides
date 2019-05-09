@@ -1,15 +1,8 @@
 import React from 'react';
 
 function Slide(props) {
-  const { shortWCAGLink } = props;
   return (
-    <div className="w-SlideBody">
-      <blockquote cite={shortWCAGLink}>
-        In content implemented using markup languages, the purpose of User
-        Interface Components, icons, and regions can be programmatically
-        determined.
-      </blockquote>
-
+    <div>
       <ul>
         <li>
           includes use of ARIA Landmarks (which is already a required technique

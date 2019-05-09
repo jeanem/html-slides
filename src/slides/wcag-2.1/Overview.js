@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Slide(props) {
   return (
-    <div className="w-SlideBody">
+    <div>
       <p className="w-SiteLink">
         <FontAwesomeIcon icon="chevron-left" /> Follow along at{' '}
         <a href="https://jeanem.github.io/wcag-2.1/">

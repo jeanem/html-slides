@@ -1,15 +1,8 @@
 import React from 'react';
 
 function Slide(props) {
-  const { shortWCAGLink } = props;
   return (
-    <div className="w-SlideBody">
-      <blockquote cite={shortWCAGLink}>
-        Where receiving and then removing pointer hover or keyboard focus
-        triggers additional content to become visible and then hidden, the
-        following are true:
-      </blockquote>
-
+    <div>
       <ul>
         <li>
           User can dismiss without moving the pointer or keyboard focus - e.g.

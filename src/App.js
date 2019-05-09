@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Prism from 'prismjs';
 import './css/prism.css';
-import slidesInfo from './slides/csun-2019/slidesInfo';
+import SlidesInfo from './slides/wcag-2.1/components/SlidesInfo';
 import Header from './components/Header';
+import BodyContent from './slides/wcag-2.1/components/BodyContent';
 import Footer from './components/Footer';
 import NavButton from './components/NavButton';
 import PrevNext from './components/PrevNext';
-import './App.css';
+import './App.scss';
 import 'font-awesome/css/font-awesome.min.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
@@ -15,8 +16,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 library.add(faChevronRight, faChevronLeft);
 
-const totalSlides = slidesInfo.slides.length;
-const deckTitle = slidesInfo.deck.title;
+const totalSlides = SlidesInfo.slides.length;
+const deckTitle = SlidesInfo.deck.title;
 
 class App extends Component {
   constructor(props) {
@@ -73,10 +74,9 @@ class App extends Component {
 
   render() {
     let { prevSlideNum, activeSlideNum, nextSlideNum } = this.state;
-    let slideTitle = slidesInfo.slides[activeSlideNum - 1].title;
-    let contentFile = slidesInfo.slides[activeSlideNum - 1].contentFile;
-    let BodyContent = require('./slides/csun-2019/' + contentFile).default;
-    var navList = slidesInfo.slides.map((slide, index) => {
+    let slideTitle = SlidesInfo.slides[activeSlideNum - 1].title;
+
+    var navList = SlidesInfo.slides.map((slide, index) => {
       return (
         <li key={index + 1} role="menuitem" className="w-TipContainer">
           <NavButton
@@ -92,6 +92,7 @@ class App extends Component {
         </li>
       );
     });
+    const slideDetails = SlidesInfo.slides[activeSlideNum - 1];
     return (
       <div>
         <main>
@@ -121,7 +122,7 @@ class App extends Component {
               ref={this.focusedSlide}
             >
               <Header slideTitle={slideTitle} slideNum={activeSlideNum} />
-              <BodyContent />
+              <BodyContent slideDetails={slideDetails} />
               <Footer slideNum={activeSlideNum} totalSlides={totalSlides} />
             </li>
           </ul>

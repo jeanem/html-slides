@@ -1,24 +1,8 @@
 import React from 'react';
 
 function Slide(props) {
-  const { shortTitle } = props;
-  var WCAGLink = (
-    <a
-      href={'https://www.w3.org/WAI/WCAG21/Understanding/' + currentDetailLink}
-    >
-      {currentTitle} {currentNumber} ({currentLevel}) details and exceptions
-    </a>
-  );
-  var shortWCAGLink =
-    'https://www.w3.org/WAI/WCAG21/Understanding/' + currentDetailLink;
   return (
-    <div className="w-SlideBody">
-      <blockquote cite={WCAGLink}>
-        If a keyboard shortcut is implemented in content using only letter
-        (including upper- and lower-case letters), punctuation, number, or
-        symbol characters, then at least one of the following is true:
-      </blockquote>
-
+    <div>
       <ul>
         <li>Can be turned off</li>
         <li>
@@ -38,7 +22,6 @@ function Slide(props) {
         </li>
         <li>Accesskeys are not affected because they include modifier keys</li>
       </ul>
-      <p>{currentNumber != null ? WCAGLink : null}</p>
     </div>
   );
 }

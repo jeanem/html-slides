@@ -1,7 +1,7 @@
 import React from 'react';
 function Slide(props) {
   return (
-    <div className="w-SlideBody">
+    <div>
       <ul>
         <li>March 9 to March 13, 2020</li>
         <li>Anaheim Marriott</li>

@@ -2,7 +2,7 @@ import React from 'react';
 
 function Slide(props) {
   return (
-    <div className="w-SlideBody">
+    <div>
       <p>
         Main accessibility challenges for SPAs are because of the dynamic
         content injection and changing context so:

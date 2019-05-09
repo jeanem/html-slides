@@ -6,7 +6,7 @@ const centerW = {
 };
 function Slide(props) {
   return (
-    <div className="w-SlideBody">
+    <div>
       <blockquote cite="https://www.dropbox.com/s/3u7rb544l7ir28l/CSUN19-SVG-SR-Test.pptx?dl=0#">
         For content, all combinations support an IMG with an alt attribute and
         role='img' (to support older VO).
