@@ -95,7 +95,7 @@ class Button extends Component {
           className="w-ToolTip"
           style={tipStyle}
         >
-          <span className="w-VisuallyHide">{index}</span>
+          <span className="w-VisuallyHide">{index + 1}</span>
           {shortTitle}
           {active === true ? (
             <span className="w-VisuallyHide">Current slide</span>

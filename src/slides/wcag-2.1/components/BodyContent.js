@@ -23,6 +23,7 @@ function BodyContent(props) {
           number={slideDetails.number}
           level={slideDetails.level}
           detailLink={slideDetails.detailLink}
+          knowabilityLink={slideDetails.knowabilityLink}
         />
       )}
     </div>

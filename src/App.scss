@@ -128,6 +128,9 @@ cite {
 .w-SlideBody {
   /* to make the footer sticky */
   flex-grow: 1;
+  p {
+    margin: 1em 0;
+  }
 }
 
 .w-SlideFooter {
@@ -149,6 +152,19 @@ cite {
 
 .w-SlideControls {
   list-style: none;
+}
+
+.w-SlideReferences {
+  background: #f9f9f9;
+  padding: 0.5em 1em 1em 1em;
+  margin: 2em 0 0 0;
+  font-size: 0.8em;
+  // width: 700px;
+  // height: 150px;
+}
+
+.w-SlideSection {
+  @extend %text-PG-negative;
 }
 
 .w-BtnBase {

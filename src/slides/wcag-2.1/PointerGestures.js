@@ -3,21 +3,23 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
-      <h3>Examples of single pointer</h3>
+      <p>
+        <strong>Single pointer</strong>: one touch point and no movement away
+        from the point
+      </p>
       <ul>
-        <li>Touch screen or touch pad: taps, double taps, long presses</li>
+        <li>Single point touch: taps, double taps, long presses</li>
         <li>
-          Mouse, trackpad, head-pointer: single clicks, click-and-hold and
-          double clicks
+          Single point mouse, trackpad, head-pointer: single clicks,
+          click-and-hold and double clicks
         </li>
       </ul>
-      <h3>Example of checkpoint</h3>
       <p>
-        TODO: rephrase this as it is an exact quote now ENDTODO. A web site
-        includes a map view that supports the pinch gesture to zoom into the map
-        content, and drag gestures to move the visible area. User interface
-        controls offer the operation via [+] and [-] buttons to zoom in and out,
-        and arrow buttons to pan stepwise in all directions.
+        The zooming and panning functionality of online maps are an example.
+        Typically these tasks can be accomplished with multi-point gestures
+        (pinch/zoom, point/drag.) The single point option would be a button for
+        zooming in, another for zooming out and a set of buttons for each
+        direction a map may be panned: up, down, left and right.
       </p>
     </div>
   );

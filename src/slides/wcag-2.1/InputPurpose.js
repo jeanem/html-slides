@@ -1,34 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-
-//https://blog.stvmlbrn.com/2017/04/07/submitting-form-data-with-react.html
-
 class InputPurpose extends Component {
-  constructor() {
-    super();
-    this.state = {
-      fullname: '',
-      fname: '',
-      lname: '',
-      aname: ''
-    };
-  }
-
-  onChange = e => {
-    // Because we named the inputs to match their corresponding values in state, it's
-    // super easy to update the state
-    this.setState({ [e.target.name]: e.target.value });
-  };
-
-  onSubmit = e => {
-    e.preventDefault();
-    // get our form data out of state
-    const { fullname, fname, lname, aname } = this.state;
-
-    axios.post('/', { fullname, fname, lname, aname }).then(result => {
-      //access the results here....
-    });
-  };
   render() {
     return (
       <div>
@@ -45,8 +16,12 @@ class InputPurpose extends Component {
             method. HTML5 does this with the autocomplete attribute.
           </li>
         </ul>
+        <p>
+          TODO: add this link:
+          https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete
+        </p>
         <h3>A sample form</h3>
-        <form method="post" action="" onSubmit={this.onSubmit.bind(this)}>
+        <form method="post" action="">
           <fieldset>
             <legend>Autocomplete = name</legend>
 
@@ -56,7 +31,6 @@ class InputPurpose extends Component {
               type="text"
               name="fullname"
               autoComplete="name"
-              onChange={this.onChange}
             />
           </fieldset>
           <fieldset>

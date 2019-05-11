@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather"
+      rel="stylesheet"
+    />
+    <title>HTML Slideshow</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <!-- <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
+      integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
+      crossorigin="anonymous"
+    ></script> -->
+
+    <link rel="stylesheet" href="prism.css" />
+    <style type="text/css">
+      body,
+      input,
+      button {
+        font-size: 20px;
+        font-family: 'Merriweather', serif;
+        /* 1.4.2 Text Spacing */
+        line-height: 1.5em;
+        letter-spacing: 0.12em;
+        word-spacing: 0.16em;
+      }
+
+      main {
+        padding: 0 2em;
+      }
+      h1 {
+        margin: 0 0 0.2em 1em;
+      }
+
+      h1,
+      h2 {
+        line-height: 1.5em;
+      }
+
+      p,
+      ul,
+      blockquote {
+        margin: 0 0 2em 0;
+      }
+
+      blockquote {
+        background: #f9f9f9;
+        padding: 0.5em 1em 1em 1em;
+        margin: 0 0 2em 0;
+      }
+
+      blockquote::before {
+        font-family: 'FontAwesome';
+        content: '"   ';
+      }
+
+      blockquote::after {
+        font-family: 'FontAwesome';
+        content: ' "';
+      }
+
+      blockquote p {
+        display: inline;
+      }
+      pre,
+      pre[class*='language-'] {
+        margin: 0.5em auto;
+        width: 70%;
+      }
+      cite {
+        display: inline;
+      }
+      .w-VisuallyHide {
+        position: absolute;
+        top: 0;
+        left: -9999px;
+      }
+      /* End Text Spacing */
+
+      .w-SlidesContainer {
+        /* parent ul */
+        list-style: none;
+      }
+
+      .w-Slide {
+        /* the container li */
+        border: solid 4px #ccc;
+        margin: 1em 2em 0 0;
+        padding: 0 2.5em;
+        min-height: 18em;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-align-items: stretch;
+        align-items: stretch;
+      }
+
+      .w-SlideBody {
+        /* to make the footer sticky */
+        -webkit-flex-grow: 1;
+        flex-grow: 1;
+      }
+
+      .w-SlideFooter {
+        margin-top: 2em;
+        color: #a2a2a2;
+      }
+
+      .w-Slide ul {
+        margin: 0 0 2em 0;
+      }
+
+      .w-Slide ul > li,
+      .w-Slide ol > li {
+        margin: 0 0 0.5em 0;
+        padding: 0;
+        border: none;
+        min-height: auto;
+      }
+
+      .w-SlideControls {
+        list-style: none;
+      }
+
+      .w-BtnBase {
+        min-height: 44px;
+        min-width: 44px;
+        font-size: 1em;
+        padding: 0;
+        border: solid 2px #8f8f8f;
+        background-color: #8f8f8f;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .w-BtnBase:focus,
+      .w-BtnBase:active,
+      .w-BtnBase:hover,
+      .mod-Active {
+        background-color: #fff;
+        color: #4b2e83;
+        border: solid 2px #4b2e83;
+      }
+      .w-BtnBase:focus {
+        background-color: #fff;
+        color: #000;
+        border: solid 2px #4b2e83;
+      }
+
+      .w-BtnPrev {
+        position: fixed;
+        left: 0;
+        top: 50%;
+      }
+      .w-BtnNext {
+        position: fixed;
+        right: 0;
+        top: 50%;
+      }
+
+      .w-BtnSet {
+        /* ul */
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        list-style-type: none;
+        margin: 0;
+      }
+
+      .w-BtnSet li {
+        padding: 0.5em 0.5em 0 0;
+      }
+
+      /* forms */
+      fieldset {
+        margin: 0 0 1em 0;
+      }
+      label {
+        display: block;
+        margin: 1.5em 0 0 1em;
+      }
+      input[type='text'] {
+        display: block;
+        max-width: 250px;
+        margin: 0 0 1em 1em;
+      }
+      input[type='submit'] {
+        margin: 1em;
+        padding: 0.5em;
+      }
+
+      /* tool tip */
+
+      .w-ToolTipped {
+      }
+      .w-TipContainer {
+        position: relative;
+        display: inline-block;
+      }
+      .w-TipContainer:hover .w-BtnBase {
+        background-color: #fff;
+        color: #4b2e83;
+        border: solid 2px #4b2e83;
+      }
+      .w-ToolTip {
+        position: absolute;
+        top: 2.7em;
+        left: 0;
+        padding: 10px 10px;
+        color: white;
+        background: #4b2e83;
+        border-top: 4px solid #4b2e83;
+        line-height: 30px;
+        z-index: 999;
+        box-shadow: 05em 0em 05em transparent, 0em 0.2em 5px #ccc,
+          0em 5px 5px #ccc, 0em 5px 5px #ccc;
+      }
+      .w-ToolTip:after {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 1em;
+        margin-left: -8px;
+        width: 0;
+        height: 0;
+        /* the following makes the arrow */
+        border-bottom: 10px solid #4b2e83;
+        border-right: 8px solid transparent;
+        border-left: 8px solid transparent;
+      }
+
+      .w-Note {
+        font-size: 0.9em;
+        color: #444;
+      }
+
+      /* special for intro */
+      .w-Intro {
+        display: -webkit-flex;
+        display: flex;
+        width: 85%;
+        margin: 2em 0 0 0;
+      }
+
+      .w-IntroContent {
+        -webkit-flex-grow: 1;
+        flex-grow: 1;
+        margin: 1em;
+      }
+
+      .w-IntroGraphic {
+        margin: 4em 0 0 1em;
+      }
+
+      .w-IntroGraphic:after {
+        font-family: 'Font Awesome 5 Free';
+        content: ' \F185';
+        font-size: 10em;
+      }
+    </style>
+  </head>
+  <body cz-shortcut-listen="true">
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root">
+      <div>
+        <main>
+          <div id="wid-HeaderNavBlock">
+            <h1>CSUN 2019 take-aways</h1>
+            <ul class="w-SlidesContainer">
+              <li id="wid-Slide-0" class="w-Slide">
+                <div class="w-SlideHeader">
+                  <h2 id="wid-SlideTitle_0">
+                    34th CSUN Assistive Technology Conference
+                  </h2>
+                </div>
+                <div class="w-SlideBody w-Intro">
+                  <div class="w-IntroContent w-IntroColumn">
+                    <ul>
+                      <li>
+                        <a
+                          href="https://www.csun.edu/cod/conference/2019/sessions/index.php"
+                          >2019 information</a
+                        >: list of sessions, links to journal
+                      </li>
+                      <li>
+                        Hosted by California State University Northridge
+                        <a href="https://www.csun.edu/cod/index.php"
+                          >Center on Disabilities</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="w-IntroGraphic w-IntroColumn"></div>
+                </div>
+              </li>
+            </ul>
+            <ul class="w-SlidesContainer">
+              <li id="wid-Slide-1" class="w-Slide">
+                <div class="w-SlideHeader">
+                  <h2 id="wid-SlideTitle_1">Overview</h2>
+                </div>
+                <div class="w-SlideBody">
+                  <ul>
+                    <li>SVG Icons and Screen Reader Accessibility</li>
+                    <li>Accessible names</li>
+                    <li>Miscellaneous topics</li>
+                    <li>SPAs and accessibility</li>
+                    <li>PhET simulations and Scenery</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul class="w-SlidesContainer">
+              <li id="wid-Slide-2" class="w-Slide">
+                <div class="w-SlideHeader">
+                  <h2 id="wid-SlideTitle_2">
+                    SVG Icons and Screen Reader Accessibility
+                  </h2>
+                </div>
+                <div class="w-SlideBody">
+                  <ul>
+                    <li>Dennis Lembree</li>
+                    <li>
+                      <a
+                        href="https://www.dropbox.com/s/3u7rb544l7ir28l/CSUN19-SVG-SR-Test.pptx?dl=0#"
+                        >Slides</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://weboverhauls.github.io/demos/svg/"
+                        >Screenreader test page</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul class="w-SlidesContainer">
+              <li id="wid-Slide-3" class="w-Slide">
+                <div class="w-SlideHeader">
+                  <h2 id="wid-SlideTitle_3">Content SVG Img</h2>
+                </div>
+                <div class="w-SlideBody">
+                  <blockquote
+                    cite="https://www.dropbox.com/s/3u7rb544l7ir28l/CSUN19-SVG-SR-Test.pptx?dl=0#"
+                  >
+                    For content, all combinations support an IMG with an alt
+                    attribute and role='img' (to support older VO).
+                  </blockquote>
+                  <div style="width: 100px; margin: 0px auto;">
+                    <img src="W_Purple.svg" alt="The UW W" role="img" />
+                  </div>
+                  <pre class=" language-markup"><code class=" language-markup">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>../images/W_Purple.svg<span class="token punctuation">"</span></span> 
+<span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>The UW W<span class="token punctuation">"</span></span> 
+<span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>img<span class="token punctuation">"</span></span>
+<span class="token punctuation">/&gt;</span></span>
+      </code></pre>
+                </div>
+              </li>
+            </ul>
+            <ul class="w-SlidesContainer">
+              <li id="wid-Slide-4" class="w-Slide">
+                <div class="w-SlideHeader">
+                  <h2 id="wid-SlideTitle_4">Content SVG Inline</h2>
+                </div>
+                <div class="w-SlideBody">
+                  <blockquote
+                    cite="https://www.dropbox.com/s/3u7rb544l7ir28l/CSUN19-SVG-SR-Test.pptx?dl=0#"
+                  >
+                    For content, support for inline SVG is much better [then it
+                    use to be].
+                  </blockquote>
+                  <div style="width: 100px; margin: 0px auto;">
+                    <svg
+                      role="img"
+                      aria-labelledby="svg-title"
+                      aria-describedby="svg-desc"
+                      viewBox="0 0 100 100"
+                    >
+                      <title id="svg-title">A purple dot</title>
+                      <desc id="svg-desc">
+                        A purple dot rendered in the middle of the page
+                      </desc>
+                      <circle
+                        cx="50"
+                        cy="50"
+                        r="40"
+                        stroke="#4b2e83"
+                        stroke-width="3"
+                        fill="#4b2e83"
+                      ></circle>
+                    </svg>
+                  </div>
+                  <pre class=" language-markup"><code class=" language-markup">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>img<span class="token punctuation">"</span></span> <span class="token attr-name">aria-labelledby</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>svg-title<span class="token punctuation">"</span></span> 
+  <span class="token attr-name">aria-describedby</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>svg-desc<span class="token punctuation">"</span></span> <span class="token attr-name">...</span> <span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>svg-title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A purple dot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>desc</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>svg-desc<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  A purple dot rendered in the middle of the page
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>desc</span><span class="token punctuation">&gt;</span></span>
+&lt;circle ...
+      </code></pre>
+                </div>
+              </li>
+            </ul>
+            <ul class="w-SlidesContainer">
+              <li id="wid-Slide-5" class="w-Slide">
+                <div class="w-SlideHeader">
+                  <h2 id="wid-SlideTitle_5">Link SVG Img</h2>
+                </div>
+                <div class="w-SlideBody">
+                  <blockquote
+                    cite="https://www.dropbox.com/s/3u7rb544l7ir28l/CSUN19-SVG-SR-Test.pptx?dl=0#"
+                  >
+                    For links and buttons, all combinations except Narrator
+                    support an IMG with an alt attribute as content (no role
+                    required).
+                  </blockquote>
+                  <div style="width: 100px; margin: 0px auto;">
+                    <a href="https://uw.edu"
+                      ><img src="W_Purple.svg" alt="Go to UW web site"
+                    /></a>
+                  </div>
+                  <pre class=" language-markup"><code class=" language-markup">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://uw.edu<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/images/W_Purple.svg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Go to UW web site<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+      </code></pre>
+                </div>
+              </li>
+            </ul>
+            <ul class="w-SlidesContainer">
+              <li id="wid-Slide-6" class="w-Slide">
+                <div class="w-SlideHeader">
+                  <h2 id="wid-SlideTitle_6">Link SVG Inline</h2>
+                </div>
+                <div class="w-SlideBody">
+                  <blockquote
+                    cite="https://www.dropbox.com/s/3u7rb544l7ir28l/CSUN19-SVG-SR-Test.pptx?dl=0#"
+                  >
+                    For links and buttons, all combinations except Narrator
+                    support aria-label when SVG used as content.
+                  </blockquote>
+                  <div style="width: 100px; margin: 0px auto;">
+                    <a href="https://uw.edu" aria-label="Go to UW's website"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 108 72.62"
+                      >
+                        <title>Asset 1</title>
+                        <g id="Layer_2" data-name="Layer 2">
+                          <g
+                            id="bothell_stacked_large"
+                            data-name="bothell stacked large"
+                          >
+                            <path
+                              class="cls-1"
+                              d="M79.26,0V13.1h9.2L78.19,51.35S65.61.71,65.43,0H52.13L38.33,51.35,28.87,13.1h9.58V0H0V13.1H8.52L23.4,72.62H44c.18-.7,9.85-37.45,9.85-37.45l9.37,37.45H83.89c.19-.7,15.66-59.52,15.66-59.52H108V0Z"
+                            ></path>
+                          </g>
+                        </g></svg
+                    ></a>
+                  </div>
+                  <pre class=" language-markup"><code class=" language-markup">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://uw.edu<span class="token punctuation">"</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Go to UW's website<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.w3.org/2000/svg<span class="token punctuation">"</span></span> <span class="token attr-name">viewBox</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0 0 108 72.62<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Asset 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>g</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Layer_2<span class="token punctuation">"</span></span> <span class="token attr-name">data-name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Layer 2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>g</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bothell_stacked_large<span class="token punctuation">"</span></span> <span class="token attr-name">data-name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bothell stacked large<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        &lt;path ...
+      </code></pre>
+                </div>
+              </li>
+            </ul>
+            <ul class="w-SlidesContainer">
+              <li id="wid-Slide-7" class="w-Slide">
+                <div class="w-SlideHeader">
+                  <h2 id="wid-SlideTitle_7">The future</h2>
+                </div>
+                <div class="w-SlideBody">
+                  <ul>
+                    <li>Better semanitic support</li>
+                    <li>
+                      <a href="https://weboverhauls.github.io/demos/svg/"
+                        >WAI-ARIA Graphics Module</a
+                      >: "...core roles specific to web graphics."
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul class="w-SlidesContainer">
+              <li id="wid-Slide-8" class="w-Slide">
+                <div class="w-SlideHeader">
+                  <h2 id="wid-SlideTitle_8">Accessible Names</h2>
+                </div>
+                <div class="w-SlideBody">
+                  <h3>
+                    ARIA-labelledby, ARIA-label, ARIA-describedby on Static
+                    Elements
+                  </h3>
+                  <p>
+                    How screen readers handle various label/element combinations
+                  </p>
+                  <ul>
+                    <li>
+                      David MacDonald -
+                      <a href="http://davidmacd.com/">CanAdapt</a>
+                    </li>
+                    <li>
+                      Editor of
+                      <a href="https://www.w3.org/TR/using-aria/"
+                        >W3C Using ARIA working draft</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.w3.org/TR/using-aria/#practical-support-aria-label-aria-labelledby-and-aria-describedby"
+                        >Summary of findings</a
+                      >
+                      for static and interactive elements
+                    </li>
+                  </ul>
+                  <blockquote>
+                    Be like a french chef, use ARIA to bring out the natural
+                    flavor of HTML <em class="w-Note">(paraphrased)</em>
+                  </blockquote>
+                </div>
+              </li>
+            </ul>
+            <ul class="w-SlidesContainer">
+              <li id="wid-Slide-9" class="w-Slide">
+                <div class="w-SlideHeader">
+                  <h2 id="wid-SlideTitle_9">Miscellaneous topics</h2>
+                </div>
+                <div class="w-SlideBody">
+                  <h3>Ways machine learning might impact the future</h3>
+                  <ul>
+                    <li>
+                      Alistair Garrison -
+                      <a href="https://www.levelaccess.com/">Level Access</a>
+                    </li>
+                    <li>Narrow AI with scoped focus</li>
+                    <li>
+                      Machine learning in a web page generator or in AT? - AT
+                      will probably have most impact
+                    </li>
+                  </ul>
+                  <h3><a href="https://www.deque.com/axe/">Axecore</a></h3>
+                  <ul>
+                    <li>accessibility tools for developers</li>
+                    <li>can incorporate into Chrome dev tools</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul class="w-SlidesContainer">
+              <li id="wid-Slide-10" class="w-Slide">
+                <div class="w-SlideHeader">
+                  <h2 id="wid-SlideTitle_10">
+                    Accessibility in Single Page Applications (1)
+                  </h2>
+                </div>
+                <div class="w-SlideBody">
+                  <ul>
+                    <li>C. B. Averitt, et al, Deque Systems, presenter</li>
+                    <li>
+                      Also see: Marcy Sutton's
+                      <a
+                        href="https://www.deque.com/blog/accessibility-tips-in-single-page-applications/"
+                        >Accessibility Tips in Single-Page Applications</a
+                      >
+                    </li>
+                    <li>
+                      and
+                      <a href="https://reactjs.org/docs/accessibility.html"
+                        >React's accessibility guide</a
+                      >
+                      for an example of specific framework techniques
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul class="w-SlidesContainer">
+              <li id="wid-Slide-11" class="w-Slide">
+                <div class="w-SlideHeader">
+                  <h2 id="wid-SlideTitle_11">
+                    Accessibility in Single Page Applications (2)
+                  </h2>
+                </div>
+                <div class="w-SlideBody">
+                  <p>
+                    Main accessibility challenges for SPAs are because of the
+                    dynamic content injection and changing context so:
+                  </p>
+                  <ul>
+                    <li>Communicate each new visual page via routing</li>
+                    <li>
+                      Ensure keyboard navigation makes sense with injected
+                      content
+                    </li>
+                    <li>
+                      Focus management, take care it is not lost or placed
+                      unexpectedly - use framework specific methods
+                    </li>
+                    <li>
+                      Aria-live and tabindex: use correctly and don't over-use
+                    </li>
+                    <li>
+                      Take care when incorporating a third-party pre-made UI
+                      component/modules: notoriously not accessible
+                    </li>
+                  </ul>
+                  <blockquote>
+                    Like any application with a user interface, SPA developers
+                    also need to be schooled in WAI-ARIA and accessible
+                    development - Jeane
+                  </blockquote>
+                </div>
+              </li>
+            </ul>
+            <ul class="w-SlidesContainer">
+              <li id="wid-Slide-12" class="w-Slide">
+                <div class="w-SlideHeader">
+                  <h2 id="wid-SlideTitle_12">
+                    Using Scenery and the Parallel DOM (1)
+                  </h2>
+                </div>
+                <div class="w-SlideBody">
+                  <blockquote cite="http://phetsims.github.io/scenery/">
+                    A 2D scene graph for HTML5 that can be used to display
+                    interactive graphics using Canvas, SVG &amp; DOM, with
+                    partial WebGL support.
+                  </blockquote>
+                  <p>
+                    Presented by Jesse Greenberg, Michael Kauzmann, and Emily
+                    Moore University of Colorado Boulder
+                  </p>
+                  <h3>PhET simulations</h3>
+                  <ul>
+                    <li>Physics Education Technology</li>
+                    <li>
+                      Simulations started in 2002 at University of Colorado
+                      Boulder
+                    </li>
+                    <li>Elementary through university level simulations</li>
+                    <li>
+                      <a href="https://phet.colorado.edu/"
+                        >https://phet.colorado.edu/</a
+                      >
+                    </li>
+                  </ul>
+                  <h3>Examples</h3>
+                  <ul>
+                    <li>
+                      <a
+                        href="https://phet-dev.colorado.edu/html/jg-tests/csun-2019/shapes-example.html"
+                        >Simple shapes</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://phet.colorado.edu/sims/html/friction/latest/friction_en.html"
+                        >Friction</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul class="w-SlidesContainer">
+              <li id="wid-Slide-13" class="w-Slide">
+                <div class="w-SlideHeader">
+                  <h2 id="wid-SlideTitle_13">
+                    Using Scenery and the Parallel DOM (2)
+                  </h2>
+                </div>
+                <div class="w-SlideBody">
+                  <h3>Resources</h3>
+                  <ul>
+                    <li>
+                      <a
+                        href="https://phet-dev.colorado.edu/html/jg-tests/csun-2019/presentation.html"
+                        >Slides</a
+                      >
+                    </li>
+                    <li>
+                      Documentation
+                      <ul>
+                        <li>
+                          <a href="http://phetsims.github.io/scenery/doc/"
+                            >Scenery API</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://docs.google.com/document/d/1Ys1EiwnqQGYuzGOcQSr4uXDes35mF1v1XhMZIl10nk8/edit"
+                            >PhET Development Overview</a
+                          >
+                        </li>
+                        <li>
+                          Note that there are setup instructions in both
+                          documents. The PhET Development Overview appears to be
+                          the most current
+                        </li>
+                        <li>
+                          <a
+                            href="http://phetsims.github.io/scenery/doc/accessibility.html"
+                            >Accessibility API</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a
+                        href="https://groups.google.com/forum/?hl=en#!forum/developing-interactive-simulations-in-html5"
+                        >Google groups</a
+                      >: helpful for troubleshooting setup errors
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul class="w-SlidesContainer">
+              <li id="wid-Slide-14" class="w-Slide">
+                <div class="w-SlideHeader">
+                  <h2 id="wid-SlideTitle_14">Next conference</h2>
+                </div>
+                <div class="w-SlideBody">
+                  <ul>
+                    <li>March 9 to March 13, 2020</li>
+                    <li>Anaheim Marriott</li>
+                    <li>Anaheim, CA 92802</li>
+                  </ul>
+                  <h3>General &amp; Exhibitor Call for Papers</h3>
+                  <p>
+                    Thursday, September 12, 2019 to Tuesday, October 1, 2019 at
+                    3:00 PM (PDT)
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

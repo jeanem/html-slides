@@ -74,7 +74,10 @@ class App extends Component {
 
   render() {
     let { prevSlideNum, activeSlideNum, nextSlideNum } = this.state;
-    let slideTitle = SlidesInfo.slides[activeSlideNum - 1].title;
+    let currentSlideIndex = activeSlideNum - 1;
+    let slideTitle = SlidesInfo.slides[currentSlideIndex].title;
+    let sectionSlide = SlidesInfo.slides[currentSlideIndex].sectionSlide;
+    const slideDetails = SlidesInfo.slides[currentSlideIndex];
 
     var navList = SlidesInfo.slides.map((slide, index) => {
       return (
@@ -92,7 +95,7 @@ class App extends Component {
         </li>
       );
     });
-    const slideDetails = SlidesInfo.slides[activeSlideNum - 1];
+
     return (
       <div>
         <main>
@@ -117,7 +120,9 @@ class App extends Component {
             <li
               key={activeSlideNum}
               id={'wid-Slide-' + activeSlideNum}
-              className="w-Slide"
+              className={
+                sectionSlide === true ? 'w-Slide w-SlideSection' : 'w-Slide'
+              }
               tabIndex="0"
               ref={this.focusedSlide}
             >
