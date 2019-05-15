@@ -1,8 +1,8 @@
 {
-  "name": "html-slides",
+  "name": "wcag-2.1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jeanem.github.io/html-slides",
+  "homepage": "https://jeanem.github.io/wcag-2.1",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-solid-svg-icons": "^5.8.1",

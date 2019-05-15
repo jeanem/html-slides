@@ -1,8 +1,18 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Slide(props) {
-  return <div>INPUT</div>;
+  return (
+    <div>
+      <ul>
+        <li>Pointer gestures</li>
+        <li>Pointer cancelation</li>
+        <li>Target size</li>
+        <li>Label in name</li>
+        <li>Character Key Shortcuts</li>
+        <li>Input purpose</li>
+      </ul>
+    </div>
+  );
 }
 
 export default Slide;

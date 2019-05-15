@@ -3,11 +3,8 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
-      <ul>
-        <li>Orientation</li>
-        <li>Reflow</li>
-        <li>Motion actuation</li>
-      </ul>
+      <p>Jeane Marty, Senior Front-end Software Engineer</p>
+      <p>UW Bothell IT</p>
     </div>
   );
 }

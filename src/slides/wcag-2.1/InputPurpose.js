@@ -16,60 +16,29 @@ class InputPurpose extends Component {
             method. HTML5 does this with the autocomplete attribute.
           </li>
         </ul>
-        <p>
-          TODO: add this link:
-          https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete
-        </p>
+        <hr />
         <h3>A sample form</h3>
-        <form method="post" action="">
+        <form method="post" action="/">
           <fieldset>
             <legend>Autocomplete = name</legend>
 
             <label htmlFor="wid-FullName1">Full name </label>
-            <input
-              id="wid-FullName1"
-              type="text"
-              name="fullname"
-              autoComplete="name"
-            />
-          </fieldset>
-          <fieldset>
-            <legend>
-              Autocomplete is <strong>off</strong>
-            </legend>
-            <label htmlFor="wid-FullName_AutoOff">Enter full name again </label>
-            <input
-              id="wid-FullName_AutoOff"
-              type="text"
-              name="fullname"
-              autoComplete="off"
-              onChange={this.onChange}
-            />
-          </fieldset>
-          <fieldset>
-            <legend>Another field with autocomplete = name </legend>
-            <label htmlFor="wid-FullName2">Enter full name a third time</label>
-            <input
-              id="wid-FullName2"
-              type="text"
-              name="fullname"
-              autoComplete="name"
-              onChange={this.onChange}
-            />
+            <input id="wid-FullName1" type="text" autoComplete="name" />
           </fieldset>
           <fieldset>
             <legend>Autocomplete = family-name</legend>
             <label htmlFor="wid-FamilyName">Family name (or last name)</label>
-            <input
-              id="wid-FamilyName"
-              type="text"
-              name="lname"
-              autoComplete="family-name"
-              onChange={this.onChange}
-            />
+            <input id="wid-FamilyName" type="text" autoComplete="family-name" />
           </fieldset>
           <input type="submit" className="w-BtnBase" value="Submit" />
         </form>
+        <hr />
+        <h3>Autocomplete markup</h3>
+        <pre>
+          <code className="language-markup">
+            {`<input type="text" autocomplete="family-name" />`}
+          </code>
+        </pre>
       </div>
     );
   }

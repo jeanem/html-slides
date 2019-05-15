@@ -1,10 +1,26 @@
 import React from 'react';
 const baseLink = 'https://www.w3.org/WAI/WCAG21/Understanding/';
 function WCAGCites(props) {
-  const { title, number, level, detailLink, knowabilityLink } = props;
+  const {
+    title,
+    number,
+    level,
+    detailLink,
+    knowabilityLink,
+    furtherReading
+  } = props;
+  var furtherReadingItems = furtherReading.map((item, index) => {
+    console.warn(item.link);
+    return (
+      <li key={index + 1}>
+        <a href={item.link}>{item.title}</a>
+      </li>
+    );
+  });
+
   return (
     <div className="w-SlideReferences">
-      <h3>References</h3>
+      <h3>References and further reading</h3>
       <ul>
         <li>
           <a href={baseLink + detailLink}>
@@ -17,6 +33,7 @@ function WCAGCites(props) {
           </a>
         </li>
       </ul>
+      {furtherReading.length === 0 ? '' : <ul>{furtherReadingItems}</ul>}
     </div>
   );
 }

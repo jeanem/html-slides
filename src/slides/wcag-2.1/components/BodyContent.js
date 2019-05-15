@@ -15,6 +15,7 @@ function BodyContent(props) {
         />
       )}
       <Content />
+      <hr />
       {slideDetails.number === null ? (
         ''
       ) : (
@@ -24,6 +25,7 @@ function BodyContent(props) {
           level={slideDetails.level}
           detailLink={slideDetails.detailLink}
           knowabilityLink={slideDetails.knowabilityLink}
+          furtherReading={slideDetails.furtherReading}
         />
       )}
     </div>

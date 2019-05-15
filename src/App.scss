@@ -1,47 +1,4 @@
-%nontextOnly-GM-positive {
-  background-color: #e8e3d3;
-  color: #85754d;
-}
-%nontextOnly-GM-negative {
-  background-color: #85754d;
-  color: #e8e3d3;
-}
-%text-WM-positive {
-  background-color: #ffffff;
-  color: #85754d;
-}
-%text-WM-negative {
-  background-color: #85754d;
-  color: #ffffff;
-}
-
-%text-PG-positive {
-  background-color: #e8e3d3;
-  color: #4b2e83;
-  a {
-    //next, why is this not working?
-    color: #21537b;
-    &:hover,
-    &:active,
-    &:visited {
-      color: #4b2e83;
-    }
-  }
-}
-%text-PG-negative {
-  background-color: #4b2e83;
-  color: #e8e3d3;
-}
-
-%text-BG-positive {
-  background-color: #e8e3d3;
-  color: #000;
-}
-%text-BG-negative {
-  background-color: #000;
-  color: #e8e3d3;
-}
-
+@import 'ContrastPallette';
 body,
 input,
 button {
@@ -54,21 +11,24 @@ button {
 }
 
 body {
-  @extend %text-BG-positive;
+  @include text-BlackGold-positive();
 }
 
-main {
-  padding: 0 2em;
-}
 h1 {
   margin: 0 0 0.2em 1em;
 }
-
 h1,
-h2 {
+h2,
+h3 {
   line-height: 1.5em;
 }
-
+h3 {
+  margin: 1em 0 0.5em;
+}
+hr {
+  border: solid 1px #85754d;
+  margin: 2em 0 1em;
+}
 p,
 ul,
 blockquote {
@@ -76,7 +36,7 @@ blockquote {
 }
 
 blockquote {
-  background: #f9f9f9;
+  @include text-BlackWhite-positive();
   padding: 0.5em 1em 1em 1em;
   margin: 0 0 2em 0;
 }
@@ -96,7 +56,7 @@ blockquote p {
 }
 pre,
 pre[class*='language-'] {
-  margin: 0.5em auto;
+  margin: 0;
   width: 70%;
 }
 cite {
@@ -107,35 +67,46 @@ cite {
   top: 0;
   left: -9999px;
 }
-/* End Text Spacing */
+main {
+  padding: 0 1.5em;
+}
+@media all and (min-width: 420px) {
+  main {
+    padding: 0 2em;
+  }
+}
 
 .w-SlidesContainer {
   /* parent ul */
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .w-Slide {
   /* the container li */
-  border: solid 4px #ccc;
-  margin: 1em 2em 0 0;
-  padding: 0 2.5em;
+  //border: solid 4px #ccc;
   min-height: 18em;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  margin: 1em 0 0 0;
+  padding: 0 0.5em;
+}
+
+@media all and (min-width: 420px) {
+  .w-Slide {
+    padding: 0 2.5em;
+  }
 }
 
 .w-SlideBody {
   /* to make the footer sticky */
   flex-grow: 1;
-  p {
-    margin: 1em 0;
-  }
 }
 
 .w-SlideFooter {
   margin-top: 2em;
-  color: #a2a2a2;
 }
 
 .w-Slide ul {
@@ -154,27 +125,25 @@ cite {
   list-style: none;
 }
 
+.w-SlideSection {
+  @include text-MetallicWhite-negative();
+}
 .w-SlideReferences {
-  background: #f9f9f9;
+  @include text-BlackWhite-positive();
   padding: 0.5em 1em 1em 1em;
   margin: 2em 0 0 0;
   font-size: 0.8em;
+
   // width: 700px;
   // height: 150px;
 }
-
-.w-SlideSection {
-  @extend %text-PG-negative;
-}
-
 .w-BtnBase {
   min-height: 44px;
   min-width: 44px;
   font-size: 1em;
   padding: 0;
   border: solid 2px #8f8f8f;
-  background-color: #8f8f8f;
-  color: #fff;
+  @include text-MetallicWhite-negative();
   cursor: pointer;
 }
 
@@ -278,7 +247,7 @@ input[type='submit'] {
   color: #444;
 }
 
-/* special for intro */
+/* special for csun intro */
 .w-Intro {
   display: flex;
   width: 85%;
@@ -298,4 +267,46 @@ input[type='submit'] {
   font-family: 'FontAwesome';
   content: ' \f185';
   font-size: 10em;
+}
+
+/* special for wcag 2.1 slides */
+.unHappy {
+  color: #fff;
+  background-color: #e8e3d3;
+  border: solid 2px #e8e3d3;
+  padding: 0.2em;
+  &:hover,
+  &:active,
+  &:focus {
+    color: #e8e3d3;
+    background-color: #ffffff;
+    border: solid 2px #fff;
+    outline: solid 5px #e8e3d3;
+  }
+}
+.notQuite {
+  color: #fff;
+  background-color: #e8e3d3;
+  border: solid 2px #85754d;
+  padding: 0.2em;
+  &:hover,
+  &:active,
+  &:focus {
+    color: #e8e3d3;
+    background-color: #ffffff;
+    border: solid 2px #000;
+  }
+}
+.happy {
+  color: #e8e3d3;
+  background-color: #85754d;
+  border: solid 2px #85754d;
+  padding: 0.2em;
+  &:hover,
+  &:active,
+  &:focus {
+    color: #85754d;
+    background-color: #e8e3d3;
+    border: solid 2px #85754d;
+  }
 }

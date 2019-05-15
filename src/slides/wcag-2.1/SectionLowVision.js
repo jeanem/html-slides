@@ -4,9 +4,8 @@ function Slide(props) {
   return (
     <div>
       <ul>
-        <li>Orientation</li>
-        <li>Reflow</li>
-        <li>Motion actuation</li>
+        <li>Non text contrast</li>
+        <li>Text spacing</li>
       </ul>
     </div>
   );
