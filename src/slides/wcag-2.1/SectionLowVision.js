@@ -4,8 +4,8 @@ function Slide(props) {
   return (
     <div>
       <ul>
-        <li>Non text contrast</li>
         <li>Text spacing</li>
+        <li>Non text contrast</li>
       </ul>
     </div>
   );

@@ -2,8 +2,10 @@ import React from 'react';
 const exampleContainer = {
   display: 'flex',
   flexWrap: 'wrap',
-  margin: '2em 0 0 0'
+  margin: '2em 0 0 0',
+  maxWidth: '90%'
 };
+const example = { flex: '1' };
 const origBox = {
   margin: '0 2em 0 0',
   padding: '1em',
@@ -60,7 +62,7 @@ function Slide(props) {
       <hr />
       <h3>Examples</h3>
       <div style={exampleContainer}>
-        <div>
+        <div style={example}>
           <h4>Page styles</h4>
           <div style={origBox}>
             <p style={noMargin}> A fixed height and width.</p>{' '}
@@ -70,14 +72,14 @@ function Slide(props) {
           </div>
         </div>
 
-        <div>
+        <div style={example}>
           <h4>User styles</h4>
           <div style={textSpacingApplied}>
             <p>A fixed height and width.</p>{' '}
             <p>Fuga odit enim ab unde omnis laborum iure alias.</p>
           </div>
         </div>
-        <div>
+        <div style={example}>
           <h4>Page styles</h4>
           <div style={origBox2}>
             <p style={noMargin}>No fixed height or width.</p>{' '}
@@ -86,7 +88,7 @@ function Slide(props) {
             </p>
           </div>
         </div>
-        <div>
+        <div style={example}>
           <h4>User styles</h4>
           <div style={betterBox}>
             <p>No fixed height or width</p>{' '}
