@@ -15,7 +15,7 @@ function BodyContent(props) {
         />
       )}
       <Content />
-      <hr />
+      {slideDetails.number === null ? '' : <hr />}
       {slideDetails.number === null ? (
         ''
       ) : (

@@ -1,142 +1,59 @@
 import React, { Component } from 'react';
-import Prism from 'prismjs';
-import './css/prism.css';
 import SlidesInfo from './slides/wcag-2.1/components/SlidesInfo';
-import Header from './components/Header';
-import BodyContent from './slides/wcag-2.1/components/BodyContent';
-import Footer from './components/Footer';
-import NavButton from './components/NavButton';
-import PrevNext from './components/PrevNext';
+import SlideView from './components/SlideView';
+import PrintView from './components/PrintView';
 import './App.scss';
 import 'font-awesome/css/font-awesome.min.css';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import {
-  faChevronRight,
-  faChevronLeft
-} from '@fortawesome/free-solid-svg-icons';
-library.add(faChevronRight, faChevronLeft);
-
-const totalSlides = SlidesInfo.slides.length;
-const deckTitle = SlidesInfo.deck.title;
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeSlideNum: 1,
-      focusOnButton: 1,
-      nextSlideNum: this.getNextSlideNum(1),
-      prevSlideNum: this.getPrevSlideNum(1),
-      focusOnSlide: false
+      viewSlides: true
     };
-    this.updateState = this.updateState.bind(this);
-    this.focusedSlide = React.createRef(); //set up to focus slide when nav button clicked
+    this.toggleView = this.toggleView.bind(this);
   }
 
-  componentDidUpdate() {
-    let { focusOnSlide } = this.state;
-    if (focusOnSlide) {
-      this.focusedSlide.current.focus();
-      //the following will work since there is only one id on the page
-      //but sticking with ref as pattern for referencing rendered nodes
-      //document.getElementById('wid-Slide').focus();
+  toggleView() {
+    var viewType;
+    this.setState(prevState => ({
+      viewSlides: !prevState.viewSlides
+    }));
+    if (this.state.viewSlides) {
+      viewType = <SlideView slides={SlidesInfo.slides} />;
+    } else {
+      viewType = <PrintView slides={SlidesInfo.slides} />;
     }
-    //code snippet highlighter - needs to run with component update
-    Prism.highlightAll();
-  }
-
-  updateState(options) {
-    this.setState({
-      activeSlideNum: options.activeSlideNum,
-      nextSlideNum: this.getNextSlideNum(options.activeSlideNum),
-      prevSlideNum: this.getPrevSlideNum(options.activeSlideNum),
-      focusOnSlide: options.focusOnSlide
-    });
-  }
-  btnArrowNav(direction, index) {
-    console.warn(direction);
-    console.warn(index);
-  }
-
-  getNextSlideNum(activeSlideNum) {
-    if (activeSlideNum === totalSlides) {
-      return 1;
-    }
-    return activeSlideNum + 1;
-  }
-
-  getPrevSlideNum(activeSlideNum) {
-    if (activeSlideNum === 1) {
-      return totalSlides;
-    }
-    return activeSlideNum - 1;
+    return viewType;
   }
 
   render() {
-    let { prevSlideNum, activeSlideNum, nextSlideNum } = this.state;
-    let currentSlideIndex = activeSlideNum - 1;
-    let slideTitle = SlidesInfo.slides[currentSlideIndex].title;
-    let sectionSlide = SlidesInfo.slides[currentSlideIndex].sectionSlide;
-    const slideDetails = SlidesInfo.slides[currentSlideIndex];
-
-    var navList = SlidesInfo.slides.map((slide, index) => {
-      return (
-        <li key={index + 1} role="menuitem" className="w-TipContainer">
-          <NavButton
-            slideNum={index + 1}
-            title={slide.title}
-            shortTitle={slide.shortTitle}
-            index={index}
-            buttonText={index + 1}
-            updateState={this.updateState}
-            btnArrowNav={this.btnArrowNav}
-            active={index + 1 === activeSlideNum ? true : false}
-          />
-        </li>
-      );
-    });
-
+    const deckTitle = SlidesInfo.deck.title;
+    var toggleIcon;
+    var toggleText;
+    if (!this.state.viewButton) {
+      toggleIcon = 'fa-print';
+      toggleText = 'Print view';
+    } else {
+      toggleIcon = 'fa-slideshare';
+      toggleText = 'Slide view';
+    }
     return (
       <div>
-        <main>
-          <div id="wid-HeaderNavBlock">
+        <div id="wid-HeaderNavBlock" role="banner">
+          <div className="w-BannerAndTools">
             <h1>{deckTitle}</h1>
-            <nav
-              id="wid-SlideNav"
-              className="w-SlideNav"
-              aria-label="Slide menu"
+            <button
+              type="button"
+              className="w-ToolLink"
+              onClick={this.toggleView}
             >
-              <ul
-                className="w-BtnSet"
-                role="menubar"
-                aria-labelledby="wid-SlideNav"
-              >
-                {' '}
-                {navList}
-              </ul>
-            </nav>
+              <i className={'fa ' + toggleIcon} aria-hidden="true" />
+              {toggleText}
+            </button>
           </div>
-          <ul className="w-SlidesContainer">
-            <li
-              key={activeSlideNum}
-              id={'wid-Slide-' + activeSlideNum}
-              className={
-                sectionSlide === true ? 'w-Slide w-SlideSection' : 'w-Slide'
-              }
-              tabIndex="0"
-              ref={this.focusedSlide}
-            >
-              <Header slideTitle={slideTitle} slideNum={activeSlideNum} />
-              <BodyContent slideDetails={slideDetails} />
-              <Footer slideNum={activeSlideNum} totalSlides={totalSlides} />
-            </li>
-          </ul>
-          <PrevNext
-            prevSlideNum={prevSlideNum}
-            nextSlideNum={nextSlideNum}
-            updateState={this.updateState}
-          />
-        </main>
+        </div>
+        {this.viewType}
       </div>
     );
   }

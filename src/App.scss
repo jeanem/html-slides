@@ -13,9 +13,15 @@ button {
 body {
   @include text-BlackGold-positive();
 }
-
-h1 {
-  margin: 0 0 0.2em 1em;
+@media print {
+  a[href]:after {
+    content: ' (' attr(href) ')';
+  }
+}
+@media all and (min-width: 420px) {
+  h1 {
+    margin: 0 0 0.2em 1em;
+  }
 }
 h1,
 h2,
@@ -59,6 +65,12 @@ pre[class*='language-'] {
   margin: 0;
   width: 70%;
 }
+@media print {
+  pre,
+  pre[class*='language-'] {
+    width: 100%;
+  }
+}
 cite {
   display: inline;
 }
@@ -67,6 +79,35 @@ cite {
   top: 0;
   left: -9999px;
 }
+.w-BannerAndTools {
+  display: flex;
+  flex-wrap: wrap;
+  .w-ToolLink {
+    margin: 0 0 1.5em 0;
+    padding: 0.2em;
+    &:hover,
+    &:active,
+    &:focus {
+      color: #85754d;
+      background-color: #fff;
+    }
+  }
+}
+
+@media all and (min-width: 420px) {
+  .w-BannerAndTools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2em 0 0;
+  }
+}
+@media print {
+  .w-ToolLink {
+    display: none;
+  }
+}
+
 main {
   padding: 0 1.5em;
 }
@@ -81,6 +122,13 @@ main {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+.w-AppAll {
+  .w-SlidesContainer {
+    @include text-BlackWhite-positive();
+    border: solid 3px #000;
+    margin: 1em 0;
+  }
 }
 
 .w-Slide {
