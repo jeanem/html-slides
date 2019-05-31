@@ -19,7 +19,7 @@ See https://jeanem.github.io/html-slides/
 
 Replace the name of the slide deck in the BodyContent and SlidesInfo imports in four spots within the App.js, components/PrintView.js and the components/SlideView.js
 
-## Building to place in another spot
+## Building to place slides in another hosting spot
 
 -   replace "html-slides" in two spots in package.json with slideshow name
 -   in the public/index.html replace "HTML Slides" in the title tag with the slideshow display name
