@@ -2,6 +2,12 @@
 
 See https://jeanem.github.io/html-slides/
 
+## Description
+
+The idea behind this HTML slide show is to create an accessible slide deck and be able to demonstrate coding techniques right within the slides.
+
+To that end, each slide is an individual React component with JSX which will render into markup. Slide creation and editing is done directly in the code as there is not a GUI attached.
+
 ## Setup
 
 -   Check that your Node version is Node 8 (LTS) or later
@@ -43,4 +49,4 @@ These are the two major views and pull in other components in that folder like t
 
 These files are kept at the slide deck level so they can be customized for the presentation -- e.g. the WCAG 2.1 has consistent resource links that warranted a resource section on each slide whereas the CSUN 2019 deck did not.
 
-Individual slides are wrapped within the BodyContent and for the most part are simple components to return markup, but be more complex if needed.
+Individual slides are wrapped within the BodyContent and for the most part are simple components to return markup, but can be more complex if needed.
