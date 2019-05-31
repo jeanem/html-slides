@@ -92,12 +92,12 @@ cite {
     padding: 0.3em 0.5em;
     font-size: 0.8em;
     border: solid 2px #8f8f8f;
-    @include text-MetallicWhite-positive();
+    @include text-MetallicWhite-negative();
     cursor: pointer;
     &:hover,
     &:active,
     &:focus {
-      @include text-MetallicWhite-negative();
+      @include text-MetallicWhite-positive();
     }
   }
 }

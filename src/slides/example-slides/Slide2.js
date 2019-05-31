@@ -4,8 +4,8 @@ function Slide(props) {
   return (
     <div>
       <ul>
-        <li>to run locally: npm run start</li>
-        <li>to deploy to github page, on the master branch: npm run deploy</li>
+        <li>a test</li>
+        <li>slide number 2</li>
       </ul>
     </div>
   );
