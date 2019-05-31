@@ -1,0 +1,70 @@
+//Link combos
+@mixin darkLinks() {
+  color: #21537b;
+  &:hover,
+  &:active,
+  &:visited,
+  &:focus {
+    color: #4b2e83;
+    text-decoration: none;
+    outline: auto;
+  }
+}
+@mixin lightLinks() {
+  color: #fff;
+  &:hover,
+  &:active,
+  &:visited,
+  &:focus {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: dashed 2px #fff;
+    outline: solid 2px #fff;
+  }
+}
+
+//background / text combos
+@mixin text-MetallicWhite-negative() {
+  background-color: #85754d;
+  color: #fff;
+  & a {
+    @include lightLinks();
+  }
+}
+@mixin text-MetallicWhite-positive() {
+  background-color: #fff;
+  color: #85754d;
+  & a {
+    @include lightLinks();
+  }
+}
+@mixin text-PurpleGold-negative() {
+  background-color: #4b2e83;
+  color: #e8e3d3;
+  & a {
+    @include lightLinks();
+  }
+}
+
+@mixin text-BlackGold-positive() {
+  background-color: #e8e3d3;
+  color: #000;
+  & a {
+    @include darkLinks();
+  }
+}
+@mixin text-BlackGold-negative() {
+  background-color: #000;
+  color: #e8e3d3;
+  & a {
+    @include lightLinks();
+  }
+}
+
+@mixin text-BlackWhite-positive() {
+  background-color: #fff;
+  color: #000;
+  & a {
+    @include darkLinks();
+  }
+}
