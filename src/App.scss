@@ -60,15 +60,20 @@ blockquote::after {
 blockquote p {
   display: inline;
 }
-pre,
-pre[class*='language-'] {
+pre {
+  background-color: #fff;
+  padding: 1em;
+}
+code {
   margin: 0;
-  width: 70%;
+  color: #000;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 @media print {
   pre,
-  pre[class*='language-'] {
-    width: 100%;
+  code {
+    color: #000;
   }
 }
 cite {
@@ -82,14 +87,17 @@ cite {
 .w-BannerAndTools {
   display: flex;
   flex-wrap: wrap;
-  .w-ToolLink {
+  .w-ToolBtn {
     margin: 0 0 1.5em 0;
-    padding: 0.2em;
+    padding: 0.3em 0.5em;
+    font-size: 0.8em;
+    border: solid 2px #8f8f8f;
+    @include text-MetallicWhite-positive();
+    cursor: pointer;
     &:hover,
     &:active,
     &:focus {
-      color: #85754d;
-      background-color: #fff;
+      @include text-MetallicWhite-negative();
     }
   }
 }
@@ -103,7 +111,7 @@ cite {
   }
 }
 @media print {
-  .w-ToolLink {
+  .w-ToolBtn {
     display: none;
   }
 }
@@ -111,9 +119,14 @@ cite {
 main {
   padding: 0 1.5em;
 }
-@media all and (min-width: 420px) {
+@media screen and (min-width: 420px) {
   main {
     padding: 0 2em;
+  }
+}
+@media print {
+  main {
+    padding: 0;
   }
 }
 
@@ -123,7 +136,7 @@ main {
   margin: 0;
   padding: 0;
 }
-.w-AppAll {
+.w-PrintView {
   .w-SlidesContainer {
     @include text-BlackWhite-positive();
     border: solid 3px #000;
@@ -176,6 +189,11 @@ main {
 .w-SlideSection {
   @include text-MetallicWhite-negative();
 }
+@media print {
+  .w-SlideSection {
+    @include text-BlackWhite-positive();
+  }
+}
 .w-SlideReferences {
   @include text-BlackWhite-positive();
   padding: 0.5em 1em 1em 1em;
@@ -219,6 +237,13 @@ main {
   right: 0;
   top: 50%;
 }
+@media print {
+  .w-BtnPrev,
+  .w-BtnNext,
+  .w-SlideNav {
+    display: none;
+  }
+}
 
 .w-BtnSet {
   /* ul */
@@ -242,7 +267,7 @@ label {
 }
 input[type='text'] {
   display: block;
-  max-width: 250px;
+  max-width: 10em;
   margin: 0 0 1em 1em;
 }
 input[type='submit'] {

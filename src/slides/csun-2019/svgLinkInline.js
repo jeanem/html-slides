@@ -27,7 +27,7 @@ function Slide(props) {
         </a>
       </div>
       <pre>
-        <code className="language-markup">
+        <code>
           {`
 <a href="https://uw.edu" aria-label="Go to UW's website">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 72.62">

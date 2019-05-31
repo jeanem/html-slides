@@ -1,16 +1,8 @@
 import React, { Component } from 'react';
-import Prism from 'prismjs';
-import '../css/prism.css';
-
 import BodyContent from '../slides/wcag-2.1/components/BodyContent';
 import Header from './Header';
 
 class PrintView extends Component {
-  componentDidUpdate() {
-    //code snippet highlighter - needs to run with component update
-    Prism.highlightAll();
-  }
-
   render() {
     const { slides } = this.props;
     var slideList = slides.map((slide, index) => {
@@ -25,7 +17,7 @@ class PrintView extends Component {
       );
     });
     return (
-      <div className="w-AppAll">
+      <div className="w-PrintView">
         <main>{slideList}</main>
       </div>
     );

@@ -15,7 +15,7 @@ function Slide(props) {
         Showing 9 of 35 results
       </p>
       <pre>
-        <code className="language-markup">{`<p aria-atomic="true" aria-live="polite">
+        <code>{`<p aria-atomic="true" aria-live="polite">
         Showing 9 of 35 results
       </p>`}</code>
       </pre>

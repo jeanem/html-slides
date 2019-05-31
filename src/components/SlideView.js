@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Prism from 'prismjs';
-import '../css/prism.css';
 import SlidesInfo from '../slides/wcag-2.1/components/SlidesInfo';
 import BodyContent from '../slides/wcag-2.1/components/BodyContent';
 import Header from './Header';
@@ -15,7 +13,6 @@ import {
 library.add(faChevronRight, faChevronLeft);
 
 const totalSlides = SlidesInfo.slides.length;
-const deckTitle = SlidesInfo.deck.title;
 
 class SlideView extends Component {
   constructor(props) {
@@ -39,8 +36,6 @@ class SlideView extends Component {
       //but sticking with ref as pattern for referencing rendered nodes
       //document.getElementById('wid-Slide').focus();
     }
-    //code snippet highlighter - needs to run with component update
-    Prism.highlightAll();
   }
 
   updateState(options) {
@@ -96,25 +91,17 @@ class SlideView extends Component {
 
     return (
       <div>
-        <div id="wid-HeaderNavBlock" role="banner">
-          <div className="w-BannerAndTools">
-            <h1>{deckTitle}</h1>
-            <a href="/print" className="w-ToolLink">
-              <i class="fa fa-print" aria-hidden="true" />
-              Print view
-            </a>
-          </div>
-          <nav id="wid-SlideNav" className="w-SlideNav" aria-label="Slide menu">
-            <ul
-              className="w-BtnSet"
-              role="menubar"
-              aria-labelledby="wid-SlideNav"
-            >
-              {' '}
-              {navList}
-            </ul>
-          </nav>
-        </div>
+        <nav id="wid-SlideNav" className="w-SlideNav" aria-label="Slide menu">
+          <ul
+            className="w-BtnSet"
+            role="menubar"
+            aria-labelledby="wid-SlideNav"
+          >
+            {' '}
+            {navList}
+          </ul>
+        </nav>
+
         <main>
           <ul className="w-SlidesContainer">
             <li

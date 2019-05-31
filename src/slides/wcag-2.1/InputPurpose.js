@@ -35,9 +35,7 @@ class InputPurpose extends Component {
         <hr />
         <h3>Autocomplete markup</h3>
         <pre>
-          <code className="language-markup">
-            {`<input type="text" autocomplete="family-name" />`}
-          </code>
+          <code>{`<input type="text" autocomplete="family-name" />`}</code>
         </pre>
       </div>
     );

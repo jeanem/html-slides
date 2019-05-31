@@ -15,7 +15,7 @@ function Slide(props) {
         <img src={W_Purple} alt="The UW W" role="img" />
       </div>
       <pre>
-        <code className="language-markup">
+        <code>
           {`
 <img src="images/W_Purple.svg" 
 alt="The UW W" 

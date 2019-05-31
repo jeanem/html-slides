@@ -31,7 +31,7 @@ function Slide(props) {
         </svg>
       </div>
       <pre>
-        <code className="language-markup">
+        <code>
           {`
 <svg role="img" aria-labelledby="svg-title" 
   aria-describedby="svg-desc" ... >

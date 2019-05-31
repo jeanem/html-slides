@@ -17,7 +17,7 @@ function Slide(props) {
         </a>
       </div>
       <pre>
-        <code className="language-markup">
+        <code>
           {`
 <a href="https://uw.edu">
     <img src="/images/W_Purple.svg" alt="Go to UW web site" />

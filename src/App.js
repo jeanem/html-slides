@@ -9,34 +9,30 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      viewSlides: true
+      slideView: true
     };
     this.toggleView = this.toggleView.bind(this);
   }
 
   toggleView() {
-    var viewType;
     this.setState(prevState => ({
-      viewSlides: !prevState.viewSlides
+      slideView: !prevState.slideView
     }));
-    if (this.state.viewSlides) {
-      viewType = <SlideView slides={SlidesInfo.slides} />;
-    } else {
-      viewType = <PrintView slides={SlidesInfo.slides} />;
-    }
-    return viewType;
   }
 
   render() {
     const deckTitle = SlidesInfo.deck.title;
     var toggleIcon;
     var toggleText;
-    if (!this.state.viewButton) {
+    var viewType;
+    if (this.state.slideView) {
       toggleIcon = 'fa-print';
       toggleText = 'Print view';
+      viewType = <SlideView slides={SlidesInfo.slides} />;
     } else {
       toggleIcon = 'fa-slideshare';
       toggleText = 'Slide view';
+      viewType = <PrintView slides={SlidesInfo.slides} />;
     }
     return (
       <div>
@@ -45,7 +41,7 @@ class App extends Component {
             <h1>{deckTitle}</h1>
             <button
               type="button"
-              className="w-ToolLink"
+              className="w-ToolBtn"
               onClick={this.toggleView}
             >
               <i className={'fa ' + toggleIcon} aria-hidden="true" />
@@ -53,7 +49,7 @@ class App extends Component {
             </button>
           </div>
         </div>
-        {this.viewType}
+        {viewType}
       </div>
     );
   }

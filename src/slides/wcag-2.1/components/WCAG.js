@@ -10,7 +10,6 @@ function WCAGCites(props) {
     furtherReading
   } = props;
   var furtherReadingItems = furtherReading.map((item, index) => {
-    console.warn(item.link);
     return (
       <li key={index + 1}>
         <a href={item.link}>{item.title}</a>
