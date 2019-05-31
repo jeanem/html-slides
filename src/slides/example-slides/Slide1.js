@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Slide(props) {
+function Slide() {
   return (
     <div>
-      <ol>
+      <ul>
         <li>a test</li>
         <li>slide number 1</li>
-      </ol>
+      </ul>
     </div>
   );
 }
