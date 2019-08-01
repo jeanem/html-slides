@@ -1,6 +1,6 @@
 # HTML Slides created in React JS
 
-See https://jeanem.github.io/html-slides/
+For a demo, see https://jeanem.github.io/wcag-2.1/
 
 ## Description
 
