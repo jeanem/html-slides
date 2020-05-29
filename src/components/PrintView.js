@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BodyContent from '../slides/wcag-2.1/components/BodyContent';
+import BodyContent from '../slides/js-session-1/components/BodyContent';
 import Header from './Header';
 
 class PrintView extends Component {

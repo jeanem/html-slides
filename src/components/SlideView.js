@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import SlidesInfo from '../slides/wcag-2.1/components/SlidesInfo';
-import BodyContent from '../slides/wcag-2.1/components/BodyContent';
+import SlidesInfo from '../slides/js-session-1/components/SlidesInfo';
+import BodyContent from '../slides/js-session-1/components/BodyContent';
 import Header from './Header';
 import Footer from './Footer';
 import NavButton from './NavButton';

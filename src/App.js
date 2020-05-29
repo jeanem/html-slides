@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SlidesInfo from './slides/wcag-2.1/components/SlidesInfo';
+import SlidesInfo from './slides/js-session-1/components/SlidesInfo';
 import SlideView from './components/SlideView';
 import PrintView from './components/PrintView';
 import './App.scss';
