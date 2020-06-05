@@ -63,12 +63,16 @@ blockquote p {
 pre {
   background-color: #fff;
   padding: 1em;
+  margin:0 0 2em 0;
 }
 code {
   margin: 0;
   color: #000;
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+.w-CodeCaption {
+  margin:0 0 .5em 0;
 }
 @media print {
   pre,
@@ -319,6 +323,7 @@ input[type='submit'] {
   font-size: 0.9em;
   color: #444;
 }
+
 
 /* special for csun intro */
 .w-Intro {

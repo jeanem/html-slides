@@ -4,24 +4,24 @@ const SlidesInfo = {
   },
   slides: [
     {
+      title: 'Front-end Technologies Community of Practice',
+      shortTitle: 'Welcome',
+      contentFile: 'Welcome'
+    },
+    {
+      title: 'Overview',
+      shortTitle: 'Overview',
+      contentFile: 'Overview'
+    },
+    {
       title: 'Setup',
       shortTitle: 'Setup',
-      contentFile: 'Slide1'
+      contentFile: 'Setup'
     },
     {
-      title: 'Deploy locally and to Github page',
-      shortTitle: 'Deploy',
-      contentFile: 'Slide2'
-    },
-    {
-      title: 'Test slide 3',
-      shortTitle: 'Test 3',
-      contentFile: 'Slide3'
-    },
-    {
-      title: 'Test slide 4',
-      shortTitle: 'Test 4',
-      contentFile: 'Slide4'
+      title: 'Strings',
+      shortTitle: 'Strings',
+      contentFile: 'Strings'
     }
   ]
 };
