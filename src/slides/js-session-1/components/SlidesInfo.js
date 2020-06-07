@@ -9,19 +9,14 @@ const SlidesInfo = {
       contentFile: 'Welcome',
     },
     {
-      title: 'Overview',
-      shortTitle: 'Overview',
-      contentFile: 'Overview',
-    },
-    {
       title: 'Setup',
       shortTitle: 'Setup',
       contentFile: 'Setup',
     },
     {
-      title: 'Strings',
-      shortTitle: 'Strings',
-      contentFile: 'Strings',
+      title: 'Overview',
+      shortTitle: 'Overview',
+      contentFile: 'Overview',
     },
     {
       title: 'Bits',
@@ -47,6 +42,46 @@ const SlidesInfo = {
       title: 'Numbers',
       shortTitle: 'Numbers',
       contentFile: 'Numbers',
+    },
+    {
+      title: 'Strings',
+      shortTitle: 'Strings',
+      contentFile: 'Strings',
+    },
+    {
+      title: 'Booleans',
+      shortTitle: 'Booleans',
+      contentFile: 'Booleans',
+    },
+    {
+      title: 'Empty values',
+      shortTitle: 'Empty values',
+      contentFile: 'EmptyValues',
+    },
+    {
+      title: 'Operators',
+      shortTitle: 'Operators',
+      contentFile: 'Operators',
+    },
+    {
+      title: 'Unary operators',
+      shortTitle: 'Unary operators',
+      contentFile: 'UnaryOperators',
+    },
+    {
+      title: 'Binary operators',
+      shortTitle: 'Binary operators',
+      contentFile: 'BinaryOperators',
+    },
+    {
+      title: 'Ternary operator',
+      shortTitle: 'Ternary operator',
+      contentFile: 'TernaryOperator',
+    },
+    {
+      title: 'Exercises, part 1',
+      shortTitle: 'Exercises, part 1',
+      contentFile: 'Part1Exercises',
     },
   ],
 };

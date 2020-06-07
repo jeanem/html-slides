@@ -3,15 +3,19 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
-      <h3>Part 1</h3>
+      <p>
+        With Marijn Haverbeke's book,{' '}
+        <a href="https://eloquentjavascript.net/">Eloquent Javascript</a>, as a
+        guide we will explore:
+      </p>
+      <h3>Part 1: atomic elements</h3>
       <ul>
-        <li>Setup and intro to the book</li>
         <li>Bits and values</li>
         <li>Value (data) types</li>
         <li>Operators</li>
         <li>Break into groups for exercises</li>
       </ul>
-      <h3>Part 2</h3>
+      <h3>Part 2: program stucture</h3>
       <ul>
         <li>Statements and expressions</li>
         <li>Flow control</li>
