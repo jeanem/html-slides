@@ -17,7 +17,7 @@ function Slide(props) {
         <li>Flow control</li>
         <li>State</li>
         <li>Bindings</li>
-        <li>Functions</li>
+        <li>Introduction to functions</li>
         <li>Break into groups for exercises</li>
       </ul>
     </div>
