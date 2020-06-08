@@ -83,6 +83,41 @@ const SlidesInfo = {
       shortTitle: 'Exercises, part 1',
       contentFile: 'Part1Exercises',
     },
+    {
+      title: 'Part 2: Program structure',
+      shortTitle: 'Program structure',
+      contentFile: 'OverviewPart2',
+    },
+    {
+      title: 'Expressions and statements',
+      shortTitle: 'Expressions and statements',
+      contentFile: 'ExpressionStatements',
+    },
+    {
+      title: 'Bindings and state',
+      shortTitle: 'Bindings and state',
+      contentFile: 'BindingsState',
+    },
+    {
+      title: 'Control flow',
+      shortTitle: 'Control flow',
+      contentFile: 'ControlFlow',
+    },
+    {
+      title: 'Functions',
+      shortTitle: 'Functions',
+      contentFile: 'Functions',
+    },
+    {
+      title: 'Exercises, part 2',
+      shortTitle: 'Exercises, part 2',
+      contentFile: 'Part2Exercises',
+    },
+    {
+      title: 'References',
+      shortTitle: 'References',
+      contentFile: 'References',
+    },
   ],
 };
 

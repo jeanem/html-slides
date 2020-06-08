@@ -13,17 +13,16 @@ function Slide(props) {
         <li>Bits and values</li>
         <li>Value (data) types</li>
         <li>Operators</li>
-        <li>Break into groups for exercises</li>
       </ul>
+      <p>Break into groups for exercises</p>
       <h3>Part 2: program stucture</h3>
       <ul>
-        <li>Statements and expressions</li>
+        <li>Expressions and statements</li>
         <li>Flow control</li>
-        <li>State</li>
-        <li>Bindings</li>
+        <li>State annd Bindings</li>
         <li>Introduction to functions</li>
-        <li>Break into groups for exercises</li>
       </ul>
+      <p>Break into groups for exercises</p>
     </div>
   );
 }
