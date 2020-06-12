@@ -10,9 +10,9 @@ function Slide(props) {
 
       <p className="w-CodeCaption">A statement performs an action</p>
       <pre>
-        <code>{`If (2 + 3 = 5 ){ alert("I equal five") }`}</code>
+        <code>{`if (2 + 3 === 5 ){ alert("I equal five") }`}</code>
       </pre>
-      <p>And a statment</p>
+      <p>And a statement</p>
       <ul>
         <li>may contain more statements</li>
         <li>or contain expressions</li>

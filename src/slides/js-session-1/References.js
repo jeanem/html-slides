@@ -6,7 +6,8 @@ function Slide(props) {
       <p>
         The bulk of the material for this presentation is from the book{' '}
         <a href="https://eloquentjavascript.net">Eloquent Javascript</a> by
-        Marijn Haverbeke, Third Edition, 2019
+        Marijn Haverbeke, Third Edition, 2019. See individual slides for section
+        references.
       </p>
       <p>Other references and further reading</p>
       <ul>
