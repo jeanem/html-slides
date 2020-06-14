@@ -15,11 +15,11 @@ function Slide(props) {
         <li>Operators</li>
       </ul>
       <p>Break into groups for exercises</p>
-      <h3>Part 2: program stucture</h3>
+      <h3>Part 2: program structure</h3>
       <ul>
         <li>Expressions and statements</li>
         <li>Flow control</li>
-        <li>State annd Bindings</li>
+        <li>Bindings and state</li>
         <li>Introduction to functions</li>
       </ul>
       <p>Break into groups for exercises</p>

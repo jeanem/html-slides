@@ -19,7 +19,7 @@ function Slide(props) {
         </li>
         <li>
           <p className="w-CodeCaption">
-            So the primative number type can represent about 18 quintillion
+            So the primitive number type can represent about 18 quintillion
             different numbers
           </p>
         </li>

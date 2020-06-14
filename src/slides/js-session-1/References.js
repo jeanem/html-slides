@@ -9,13 +9,22 @@ function Slide(props) {
         Marijn Haverbeke, Third Edition, 2019. See individual slides for section
         references.
       </p>
-      <p>Other references and further reading</p>
+      <p>
+        Additional material from{' '}
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+          MDN articles on JavaScript.
+        </a>
+      </p>
+      <h3>Thank-you</h3>
+      <p>
+        Please let us know if you have questions or feedback on this or future
+        sessions
+      </p>
       <ul>
-        <li>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">
-            MDN Expressions and Operators
-          </a>
-        </li>
+        <li>Jeane Marty, jeanem@uw.edu</li>
+        <li>Teri Shelton, tjshelt@uw.edu</li>
+        <li>Tiffany Sevareid, tlb3@uw.edu</li>
+        <li>Griffin Wesler, wesler@uw.edu</li>
       </ul>
     </div>
   );

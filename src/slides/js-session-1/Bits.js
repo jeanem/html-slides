@@ -7,7 +7,7 @@ function Slide(props) {
         Bits: two valued things. Discrete information reduced to a sequence of
         zeros and ones.
       </p>
-      <p>Book example: binary version of 13</p>
+      <p className="w-CodeCaption">Book example: binary version of 13</p>
       <table className="w-CodeTable">
         <tbody>
           <tr>

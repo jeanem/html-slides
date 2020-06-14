@@ -5,7 +5,8 @@ function Slide(props) {
     <div>
       <ol>
         <li>
-          Open the slides <strong>url for slides</strong>
+          Open the slides{' '}
+          <strong>https://uw-cop-frontend.github.io/js-session-1/</strong>
         </li>
         <li>
           On that page open the web console

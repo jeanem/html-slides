@@ -88,6 +88,14 @@ code {
 .w-CodeCaption {
   margin: 0 0 0.5em 0;
 }
+figure {
+  display: inline-block;
+}
+figcaption {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  text-align: center;
+}
 @media print {
   pre,
   code {
@@ -217,6 +225,10 @@ main {
   padding: 0.5em 1em 1em 1em;
   margin: 2em 0 0 0;
   font-size: 0.8em;
+  &.mod-Minimal {
+    background-color: transparent;
+    border-top: solid 1px #85754d;
+  }
 
   // width: 700px;
   // height: 150px;

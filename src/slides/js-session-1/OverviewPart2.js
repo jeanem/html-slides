@@ -6,7 +6,7 @@ function Slide(props) {
       <ul>
         <li>Expressions and statements</li>
         <li>Flow control</li>
-        <li>State annd Bindings</li>
+        <li>Bindings and state</li>
         <li>Introduction to functions</li>
         <li>Break into groups for exercises</li>
       </ul>

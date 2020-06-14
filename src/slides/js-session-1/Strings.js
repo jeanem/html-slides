@@ -5,7 +5,7 @@ function Slide() {
     <div>
       <p className="w-CodeCaption">
         The string type represents text and is enclosed in double quotes, single
-        quotes or backticks
+        quotes or back ticks
       </p>
       <pre>
         <code>{`"I am a string"
@@ -13,7 +13,9 @@ function Slide() {
 \`Also a string\``}</code>
       </pre>
 
-      <p className="w-CodeCaption">Backticks allow newlines without escaping</p>
+      <p className="w-CodeCaption">
+        Back ticks allow newlines without escaping
+      </p>
       <pre>
         <code>{`\`Line one
 Line two\``}</code>
