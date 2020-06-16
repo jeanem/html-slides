@@ -6,7 +6,11 @@ function Slide(props) {
       <ol>
         <li>
           Open the slides{' '}
-          <strong>https://uw-cop-frontend.github.io/js-session-1/</strong>
+          <strong>
+            <a href="https://uw-cop-frontend.github.io/js-session-1/">
+              https://uw-cop-frontend.github.io/js-session-1/
+            </a>
+          </strong>
         </li>
         <li>
           On that page open the web console
@@ -22,9 +26,11 @@ function Slide(props) {
         </li>
         <li>
           In another tab open up{' '}
-          <a href="https://eloquentjavascript.net/01_values.html">
-            Eloquent Javascript chapter 1
-          </a>
+          <strong>
+            <a href="https://eloquentjavascript.net/01_values.html">
+              Eloquent Javascript chapter 1
+            </a>
+          </strong>
         </li>
         <li>Following along interactively</li>
       </ol>

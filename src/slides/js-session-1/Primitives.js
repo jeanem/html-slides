@@ -8,8 +8,11 @@ function Slide(props) {
         <li>numbers</li>
         <li>strings</li>
         <li>boolean</li>
-        <li>null and undefined</li>
+        <li>undefined</li>
+        <li>and null (seemingly primitive)</li>
       </ul>
+      <p>Primitive values are immutable, that is, they cannot be changed.</p>
+      <p></p>
     </div>
   );
 }

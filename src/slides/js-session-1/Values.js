@@ -9,9 +9,9 @@ function Slide(props) {
         may be working with.
       </p>
       <ul>
+        <li>A value is created by calling its name</li>
         <li>Each value has a type</li>
         <li>And that type determines the role</li>
-        <li>A value is created by invoking its name</li>
       </ul>
     </div>
   );

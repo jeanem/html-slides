@@ -14,18 +14,28 @@ function Slide() {
       </pre>
 
       <p className="w-CodeCaption">
-        Back ticks allow newlines without escaping
+        Strings that have back ticks are called template literals. You can embed
+        an expression within them that resolves to a string.
+      </p>
+      <pre>
+        <code>{`\`I am holding $\{3 + 5} apples\``}</code>
+      </pre>
+      <p>Produces:</p>
+      <pre>
+        <code>{`\`I am holding ${3 + 5} apples\``}</code>
+      </pre>
+      <p className="w-CodeCaption">
+        Template literals also allow you to create multi-line strings without
+        using a newline character.
       </p>
       <pre>
         <code>{`\`Line one
-Line two\``}</code>
+ Line two\``}</code>
       </pre>
-      <p className="w-CodeCaption">
-        Otherwise you need to use the newline characters "\n"
-      </p>
+      <p className="w-CodeCaption">Rather than:</p>
       <pre>
         <code>{`"Line one \\n
-Line two"`}</code>
+ Line two"`}</code>
       </pre>
     </div>
   );

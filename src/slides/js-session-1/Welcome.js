@@ -14,10 +14,15 @@ function Slide() {
       <ul>
         <li>
           Slide deck:{' '}
-          <strong>https://uw-cop-frontend.github.io/js-session-1/</strong>
+          <a href="https://uw-cop-frontend.github.io/js-session-1/">
+            <strong>https://uw-cop-frontend.github.io/js-session-1/</strong>
+          </a>
         </li>
         <li>
-          Eloquent JavaScript: <strong>https://eloquentjavascript.net</strong>
+          Eloquent JavaScript:{' '}
+          <a href="https://eloquentjavascript.net">
+            <strong>https://eloquentjavascript.net</strong>
+          </a>
         </li>
       </ul>
     </div>
