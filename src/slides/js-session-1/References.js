@@ -26,6 +26,13 @@ function Slide(props) {
         <li>Tiffany Sevareid, tlb3@uw.edu</li>
         <li>Griffin Wesler, wesler@uw.edu</li>
       </ul>
+      <p>
+        To find out about future meetings,{' '}
+        <a href="http://mailman12.u.washington.edu/mailman/listinfo/frontenddev">
+          join our mailing list
+        </a>{' '}
+        (For UW staff/students only)
+      </p>
     </div>
   );
 }
