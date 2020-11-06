@@ -9,14 +9,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      slideView: true
+      slideView: true,
     };
     this.toggleView = this.toggleView.bind(this);
   }
 
   toggleView() {
-    this.setState(prevState => ({
-      slideView: !prevState.slideView
+    this.setState((prevState) => ({
+      slideView: !prevState.slideView,
     }));
   }
 
