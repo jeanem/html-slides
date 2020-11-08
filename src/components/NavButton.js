@@ -4,7 +4,7 @@ class Button extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hidden: true
+      hidden: true,
     };
     this.focusedButton = React.createRef(); //set up to focus slide when nav button clicked
   }
@@ -16,13 +16,13 @@ class Button extends Component {
 
   showTip() {
     this.setState({
-      hidden: false
+      hidden: false,
     });
   }
 
   hideTip() {
     this.setState({
-      hidden: true
+      hidden: true,
     });
   }
 
@@ -45,7 +45,7 @@ class Button extends Component {
     if (e.key === 'Escape') {
       e.preventDefault();
       this.setState({
-        hidden: true
+        hidden: true,
       });
       return false;
     }

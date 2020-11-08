@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import SlidesInfo from '../slides/js-session-1/components/SlidesInfo';
-import BodyContent from '../slides/js-session-1/components/BodyContent';
+import SlidesInfo from '../slides/js-session-2/components/SlidesInfo';
+import BodyContent from '../slides/js-session-2/components/BodyContent';
 import Header from './Header';
 import Footer from './Footer';
 import NavButton from './NavButton';
@@ -8,7 +8,7 @@ import PrevNext from './PrevNext';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faChevronRight,
-  faChevronLeft
+  faChevronLeft,
 } from '@fortawesome/free-solid-svg-icons';
 library.add(faChevronRight, faChevronLeft);
 
@@ -22,7 +22,7 @@ class SlideView extends Component {
       focusOnButton: 1,
       nextSlideNum: this.getNextSlideNum(1),
       prevSlideNum: this.getPrevSlideNum(1),
-      focusOnSlide: false
+      focusOnSlide: false,
     };
     this.updateState = this.updateState.bind(this);
     this.focusedSlide = React.createRef(); //set up to focus slide when nav button clicked
@@ -43,7 +43,7 @@ class SlideView extends Component {
       activeSlideNum: options.activeSlideNum,
       nextSlideNum: this.getNextSlideNum(options.activeSlideNum),
       prevSlideNum: this.getPrevSlideNum(options.activeSlideNum),
-      focusOnSlide: options.focusOnSlide
+      focusOnSlide: options.focusOnSlide,
     });
   }
   btnArrowNav(direction, index) {
