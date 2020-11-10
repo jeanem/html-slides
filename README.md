@@ -19,8 +19,9 @@ To that end, each slide is an individual React component with JSX which will ren
 
 ## Contributing to multi-presenter slide decks
 
+-   create a new branch `git checkout -b my-branch`
 -   under `src\slides` find the presentation slide deck (e.g. `js-session-2`)
--   and the part that you will contribute to (e.g. `intro, part-1`, etc.)
+-   and the section folder that you will contribute to (e.g. `intro, part-1`, etc.)
 -   each section is composed of slides and a list to track their order and meta-data
 -   to create a new slide
     -   duplicate one of the example slides in your folder and rename it with your slide name
@@ -37,7 +38,7 @@ To that end, each slide is an individual React component with JSX which will ren
     },
     ```
     -   the order of slide in this list determines the order in the presentation
--   edit your slide by adding content between the <div> tag -
+-   edit your slide by adding content between the `<div> tag` -
     ```
     function Slide(props) {
     return (
@@ -49,6 +50,8 @@ To that end, each slide is an individual React component with JSX which will ren
     ```
     -   the format is JSX which is similar to HTML but has some exceptions like attribute names, e.g. instead of `class` it is `className` - [this article](https://medium.com/@wilstaley/jsx-vs-html-3aeb55ed6ee4) explains it
     -   note that all tags need to be closed or the program will error
+-   push your commits and branch to GitHub
+    -   `git push origin my-branch`
 
 ### Deck setup
 
