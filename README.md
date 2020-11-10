@@ -50,10 +50,11 @@ To that end, each slide is an individual React component with JSX which will ren
     ```
     -   the format is JSX which is similar to HTML but has some exceptions like attribute names, e.g. instead of `class` it is `className` - [this article](https://medium.com/@wilstaley/jsx-vs-html-3aeb55ed6ee4) explains it
     -   note that all tags need to be closed or the program will error
+-   verify the slide(s) display correctly by running the slides locally (see section above)
 -   push your commits and branch to GitHub
     -   `git push origin my-branch`
 
-### Deck setup
+## Deck setup
 
 ### Pointing to other slide decks
 
