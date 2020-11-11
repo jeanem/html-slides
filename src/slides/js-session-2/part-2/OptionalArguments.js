@@ -10,13 +10,14 @@ function Slide(props) {
       </p>
 
       <p>
-        Downside: You will likely pass the incorrect number of arguments to a
-        function and not know it. JavaScript won’t give you an error or warning.
+        <strong>Downside:</strong> You will likely pass the incorrect number of
+        arguments to a function and not know it. JavaScript won’t give you an
+        error or warning.
       </p>
 
       <p>
-        Upside: This can allow a function to be called with different numbers of
-        arguments for broader usage.
+        <strong>Upside:</strong> This can allow a function to be called with
+        different numbers of arguments for broader usage.
       </p>
 
       <p>We can also set default arguments.</p>
