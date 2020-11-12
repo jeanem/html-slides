@@ -13,6 +13,7 @@ To that end, each slide is an individual React component with JSX which will ren
 -   Check that your Node version is Node 8 (LTS) or later
 -   git clone https://github.com/uw-cop-frontend/html-slides.git
 -   `npm install`
+    -   note if errors happen initially with the install you may need to delete the package-lock.json and rerun
 -   to run locally: `npm run start`
     -   if you get a node-sass error you may need to install it separately
     -   `npm install node-sass --save`

@@ -41,6 +41,10 @@ blockquote {
   margin: 0 0 2em 0;
 }
 
+q {
+  font-style: italic;
+}
+
 blockquote {
   @include text-BlackWhite-positive();
   padding: 0.5em 1em 1em 1em;
