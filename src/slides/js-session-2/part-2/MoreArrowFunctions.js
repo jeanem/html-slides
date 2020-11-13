@@ -43,11 +43,17 @@ let b = 2;
       `}
         </code>
       </pre>
+
       <p>
         Example source:
         <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">
           MDN
         </a>
+      </p>
+
+      <p>
+        Note: Anonymous functions are unnamed functions. Literally, any name is
+        omitted, as seen in the examples above.
       </p>
     </div>
   );

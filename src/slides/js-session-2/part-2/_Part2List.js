@@ -80,15 +80,15 @@ const _Part2List = [
   //   detailLink: null,
   //   linkTitle: null,
   // },
-  // {
-  //   title: 'Part 2 Exercises',
-  //   shortTitle: 'Part 2 Exercises',
-  //   directory: 'part-2',
-  //   contentFile: 'Exercises',
-  //   baseURL: null,
-  //   detailLink: null,
-  //   linkTitle: null,
-  // },
+  {
+    title: 'Part 2 Exercise',
+    shortTitle: 'Part 2 Exercise',
+    directory: 'part-2',
+    contentFile: 'Exercises',
+    baseURL: null,
+    detailLink: null,
+    linkTitle: null,
+  },
 ];
 
 export default _Part2List;
