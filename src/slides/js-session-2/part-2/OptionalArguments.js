@@ -20,13 +20,15 @@ function Slide(props) {
         different numbers of arguments for broader usage.
       </p>
 
-      <p>We can also set default arguments.</p>
+      <p>
+        We can also set <em>default arguments</em>.
+      </p>
 
       <h3>Example</h3>
       <pre>
         <code>
           {`
-function power(base, exponent = 2) {
+function powerNew(base, exponent = 2) {
   let result = 1;
   for (let count = 0; count < exponent; count++) {
     result *= base;
@@ -34,8 +36,8 @@ function power(base, exponent = 2) {
   return result;
 }
 
-console.log(power(4));
-console.log(power(2, 6));
+powerNew(4);
+powerNew(2, 6);
           `}
         </code>
       </pre>

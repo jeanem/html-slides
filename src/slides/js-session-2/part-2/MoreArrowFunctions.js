@@ -17,6 +17,7 @@ function Slide(props) {
 
       <h3>Example</h3>
       <p>Let's compare traditional functions and arrow functions.</p>
+
       <pre>
         <code>
           {`

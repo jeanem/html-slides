@@ -9,11 +9,16 @@ function Slide(props) {
       <ul>
         <li>
           Every time a function is called, the current context is stored at the
-          top of the call stack.
+          top of the call stack and then the function is carried out.
         </li>
         <li>
-          When the function returns, it removes the top context and uses that
-          context to continue execution.
+          Any functions that are called by that function are added to the top of
+          the call stack and run where their calls are reached.
+        </li>
+        <li>
+          When the current function returns (finishes), the function is removed
+          from the stack and the current context is used to continue execution
+          where it left off in the last code listing.
         </li>
       </ul>
 
@@ -27,8 +32,21 @@ function Slide(props) {
       </p>
 
       <p>
-        Storing the stack requires memory; I think we’ve all experienced running
-        out of memory, whether from an accidental infinite loop or otherwise.
+        If the stack takes up more space than it had assigned to it, it results
+        in a "stack overlow" error.
+      </p>
+
+      <p>
+        Also, storing the stack requires memory. If the stack grows too big, the
+        computer will fail with an error such as "out of stack space" or "too
+        much recursion".
+      </p>
+
+      <p>
+        Partial Source:
+        <a href="https://developer.mozilla.org/en-US/docs/Glossary/Call_stack">
+          MDN
+        </a>
       </p>
     </div>
   );

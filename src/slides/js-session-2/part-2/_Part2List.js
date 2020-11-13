@@ -62,6 +62,15 @@ const _Part2List = [
     detailLink: null,
     linkTitle: null,
   },
+  {
+    title: 'Part 2: Immediately Invoked Function Expressions',
+    shortTitle: 'IIFE',
+    directory: 'part-2',
+    contentFile: 'IIFE',
+    baseURL: null,
+    detailLink: null,
+    linkTitle: null,
+  },
   // {
   //   title: 'Example ASCII illustration',
   //   shortTitle: 'Example',

@@ -3,7 +3,13 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
+      <p>Something about IIFE...</p>
       <p>
+        An IIFE (Immediately Invoked Function Expression - pronounced
+        <em>iffy</em>) is a JavaScript function that runs as soon as it is
+        defined.
+      </p>
+      {/* <p>
         Arrow functions use the <code>{`=>`}</code> (arrow) syntax instead of
         the <code>{`function`}</code> keyword.
       </p>
@@ -32,7 +38,11 @@ const power = (base, exponent) => {
 power(10, 5);
         `}
         </code>
-      </pre>
+      </pre> */}
+      <p>
+        Source:
+        <a href="https://developer.mozilla.org/en-US/docs/Glossary/IIFE">MDN</a>
+      </p>
     </div>
   );
 }

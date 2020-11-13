@@ -4,16 +4,22 @@ function Slide(props) {
   return (
     <div>
       <ul>
-        <li>Cannot be used as a constructor.</li>
         <li>
-          Does not have its own bindings to this or super, and should not be
-          used as methods.
+          Cannot be used as a <code>{`constructor`}</code>.
         </li>
         <li>
-          Not suitable for call, apply and bind methods (usually rely on
-          establishing scope).
+          Does not have its own bindings to <code>{`this`}</code> or
+          <code>{`super`}</code>, and should not be used as
+          <code>{`methods`}</code>.
         </li>
-        <li>Can't use yield keyword within the body.</li>
+        <li>
+          Not suitable for <code>{`call`}</code>, <code>{`apply`}</code> and
+          <code>{`bind`}</code> methods (usually rely on establishing
+          <code>{`scope`}</code>).
+        </li>
+        <li>
+          Can't use the <code>{`yield`}</code> keyword within the body.
+        </li>
       </ul>
 
       <p>
