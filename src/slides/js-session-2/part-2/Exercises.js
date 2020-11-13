@@ -11,13 +11,12 @@ function Slide(props) {
         characters there are in the string.
       </p>
 
-      <h4>If time or for more challenge</h4>
+      <h4>If time or for more challenge:</h4>
       <p>
         Write a function called <code>{`countChar`}</code> that behaves like
         <code>{`countBs`}</code>, except it takes a second argument that
         indicates the character that is to be counted (rather than counting only
-        uppercase “B” characters). Rewrite <code>{`countBs`}</code> to make use
-        of this new function.
+        uppercase “B” characters).
       </p>
 
       <p>Full details of the exercise and hints are at the source below.</p>

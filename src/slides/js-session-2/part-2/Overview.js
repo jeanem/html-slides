@@ -8,6 +8,7 @@ function Slide(props) {
         <li>Arrow Functions</li>
         <li>The Call Stack</li>
         <li>Optional Arguments</li>
+        <li>Immediately Invoked Function Expression (IIFE)</li>
       </ul>
     </div>
   );

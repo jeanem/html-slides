@@ -33,13 +33,13 @@ function Slide(props) {
 
       <p>
         If the stack takes up more space than it had assigned to it, it results
-        in a "stack overlow" error.
+        in a "stack overflow" error.
       </p>
 
       <p>
         Also, storing the stack requires memory. If the stack grows too big, the
         computer will fail with an error such as "out of stack space" or "too
-        much recursion".
+        much recursion."
       </p>
 
       <p>
