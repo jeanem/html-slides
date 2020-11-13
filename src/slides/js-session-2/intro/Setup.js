@@ -11,7 +11,11 @@ function Slide(props) {
           On that page open the web console
           <ul>
             <li>
-              Chrome: <code>Ctrl Shift J (Windows) or Ctrl Option J (Mac)</code>
+              Chrome:{' '}
+              <code>
+                <script>alert()</script>Ctrl Shift J (Windows) or Ctrl Option J
+                (Mac)
+              </code>
             </li>
             <li>
               Firefox:

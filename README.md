@@ -14,6 +14,13 @@ To that end, each slide is an individual React component with JSX which will ren
 -   git clone https://github.com/uw-cop-frontend/html-slides.git
 -   `npm install`
     -   note if errors happen initially with the install you may need to delete the package-lock.json and rerun
+-   in VS Code, install the Prettier extension
+
+    -   to enable go in the upper left go to `Code > Preferences > Settings`
+    -   search for the word `format`
+    -   find `Editor: Default Formatter` and in the dropdown select `esbenp.prettier-vscode`
+    -   find `Format On Save` and ensure it is checked
+
 -   to run locally: `npm run start`
     -   if you get a node-sass error you may need to install it separately
     -   `npm install node-sass --save`
@@ -54,6 +61,15 @@ To that end, each slide is an individual React component with JSX which will ren
 -   verify the slide(s) display correctly by running the slides locally (see section above)
 -   push your commits and branch to GitHub
     -   `git push origin my-branch`
+
+## Format options
+
+Code examples
+
+-   for plain rendering (small snippets): <br />
+    `` <code>{`<script>alert();</script>`}</code> ``
+-   for larger blocks add a white background: <br />
+    `` <pre> <code> {`<script>alert();</script>`} </code> </pre> ``
 
 ## Deck setup
 

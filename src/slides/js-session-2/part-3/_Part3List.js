@@ -18,6 +18,15 @@ const _Part3List = [
     linkTitle: null,
   },
   {
+    title: 'Recursion',
+    shortTitle: 'Recursion',
+    directory: 'part-3',
+    contentFile: 'Recursion',
+    baseURL: null,
+    detailLink: null,
+    linkTitle: null,
+  },
+  {
     title: 'Naming Functions',
     shortTitle: 'Naming Functions',
     directory: 'part-3',
