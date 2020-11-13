@@ -1,3 +1,23 @@
+// // [2]
+// var outerValue = 'oranges';
+
+// // [1]
+// function myFunction() {
+// // [3]
+//   console.log('I can see the external outerValue: ' + outerValue);
+// }
+
+function outerFunction() {
+  var innerValue = 'apples';
+  function innerFunction(innerParameter) {
+    console.log('I can see the innerValue: ', innerValue);
+    console.log('But now I am hungry for:', innerParameter);
+  }
+  return innerFunction;
+}
+
+let nowImHungryFor = outerFunction();
+
 // function multiplier(factor1) {
 //   function calculateProduct(factor2) {
 //     return factor1 * factor2;

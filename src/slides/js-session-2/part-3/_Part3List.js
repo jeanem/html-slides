@@ -14,8 +14,8 @@ const _Part3List = [
     directory: 'part-3',
     contentFile: 'Closure',
     baseURL: null,
-    detailLink: null,
-    linkTitle: null,
+    detailLink: 'https://www.manning.com/books/secrets-of-the-javascript-ninja',
+    linkTitle: 'Secrets of the JavaScript Ninja',
   },
   {
     title: 'Recursion',

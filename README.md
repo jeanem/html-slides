@@ -64,12 +64,45 @@ To that end, each slide is an individual React component with JSX which will ren
 
 ## Format options
 
-Code examples
+### Code examples
 
 -   for plain rendering (small snippets): <br />
     `` <code>{`<script>alert();</script>`}</code> ``
 -   for larger blocks add a white background: <br />
     `` <pre> <code> {`<script>alert();</script>`} </code> </pre> ``
+
+### Quotes
+
+-   Using the `<blockquote>` tag will add the large quotes:
+
+```
+<blockquote cite="Secrets of the JavaScript Ninja, page 90">A closure is [2] the scope created when [1] a function is declared that [3] allows the function to access and manipulate variables that are external to that function.</blockquote>
+```
+
+-   `<q>` for inline quotes adds italics
+
+### Reference links
+
+If the content on a slide is from a predominate source you want to reference, adding the link and title will add it to the bottom of the slide:
+
+```
+    {
+      title: 'Primitives',
+      shortTitle: 'Primitives',
+      contentFile: 'Primitives',
+      baseURL: '',
+      detailLink: 'https://developer.mozilla.org/en-US/docs/Glossary/Primitive',
+      linkTitle: 'MDN article: Primitives',
+    },
+    {
+      title: 'Numbers',
+      shortTitle: 'Numbers',
+      contentFile: 'Numbers',
+      baseURL: 'https://eloquentjavascript.net/01_values.html',
+      detailLink: '#h_flOCH3CuFg',
+      linkTitle: 'Eloquent JavaScript: Numbers',
+    },
+```
 
 ## Deck setup
 
