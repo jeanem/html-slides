@@ -20,7 +20,7 @@ function Slide(props) {
   if (n > 1) {
     picnic = createPicnic(n - 1) + ' 🐜 ';
   } else {
-    picnic = '🧺  🐜 ';
+    picnic = '🧺 🥪 🍎   🐜 ';
   }
   return picnic;
 }

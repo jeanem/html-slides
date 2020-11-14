@@ -11,8 +11,8 @@ function Slide(props) {
       </blockquote>
       <ul>
         <li>
-          break up large functions with long awkward names into single purpose
-          functions with concise descriptive names
+          break up large functions into single purpose functions with concise
+          descriptive names
         </li>
         <li>
           but resist the urge to make a function overly versatile if not needed
@@ -22,9 +22,6 @@ function Slide(props) {
           self) can follow what is happening
         </li>
       </ul>
-      <p>
-        <code>Here is my example</code>
-      </p>
     </div>
   );
 }

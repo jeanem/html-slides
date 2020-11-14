@@ -4,20 +4,30 @@ function Slide(props) {
   return (
     <div>
       <p>Functions can ...</p>
-      <ul>
-        <li>
-          produce a side effect which does something
-          <code>Here is my example</code>
-        </li>
-        <li>
-          or return a value
-          <code>Here is my example</code>
-        </li>
-        <li>
-          or do both
-          <code>Here is my example</code>
-        </li>
-      </ul>
+
+      <p>produce a side effect which does something</p>
+      <pre>
+        <code>{`function sideEffect(){
+  console.log(🖋️ I am writing to the JavaScript console)
+}`}</code>
+      </pre>
+
+      <p>return a value</p>
+      <pre>
+        <code>{`function returnValue(){
+  let penquin = '🐧'
+  return penquin;
+}`}</code>
+      </pre>
+
+      <p>or do both</p>
+      <pre>
+        <code>{`function both(){
+  let penquin = '🐧'
+  console.log(🖋️ I am writing to the console and returning a penquin)
+  return penquin;
+}`}</code>
+      </pre>
 
       <blockquote cite="https://eloquentjavascript.net/03_functions.html">
         Functions that create values are easier to combine in new ways than

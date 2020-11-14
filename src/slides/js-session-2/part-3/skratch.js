@@ -14,9 +14,8 @@ function createPicnic(n) {
   } else {
     picnic = '🧺  🐜 ';
   }
-  return picnic;
+  return picnic; // returns 🧺  🐜  🐜  🐜 ';
 }
-createPicnic(3);
 // let sometimeLater;
 
 // function outerFunction() {

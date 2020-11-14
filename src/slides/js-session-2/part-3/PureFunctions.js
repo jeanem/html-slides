@@ -11,9 +11,16 @@ function Slide(props) {
         <li>always produces the same code when called with same arguments</li>
       </ul>
 
-      <p>
-        <code>Here is my example</code>
-      </p>
+      <pre>
+        <code>
+          {`function emojiMixer(emoji1, emoji2){
+  together = emoji1 + ' and ' + emoji2
+  return together;
+}
+emojiMixer('🐝','🐞');
+        `}
+        </code>
+      </pre>
     </div>
   );
 }
