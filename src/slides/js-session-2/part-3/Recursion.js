@@ -5,15 +5,27 @@ function Slide(props) {
     <div>
       <ul>
         <li>A function that calls itself</li>
-        <li>May communictate concept better than more efficient loops</li>
         <li>
-          May also have a benefit of exploring several branches which might
-          branch out into more branches
+          Useful walking tree structures where depth and is unknown or multiple
+          branches
+        </li>
+        <li>
+          Loops work well with highly structured data and are more efficient
         </li>
       </ul>
-      <p>
-        <code>Here is my example</code>
-      </p>
+
+      <pre>
+        <code>{`function createPicnic(n) {
+  let picnic;
+  if (n > 1) {
+    picnic = createPicnic(n - 1) + ' 🐜 ';
+  } else {
+    picnic = '🧺  🐜 ';
+  }
+  return picnic;
+}
+picnic(3);`}</code>
+      </pre>
     </div>
   );
 }

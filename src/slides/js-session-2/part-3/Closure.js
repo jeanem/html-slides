@@ -8,44 +8,36 @@ function Slide(props) {
         [3] allows the function to access and manipulate variables that are
         external to that function.
       </blockquote>
-      <p>Simple closure</p>
+      <h3>A closure</h3>
 
       <pre>
         <code>
-          {`let outerValue = 'oranges';
+          {`let outerValue = 'strawberry 🍓'; 
 function myFunction() {
-  console.log('I can see the external outerValue: ' + outerValue);
+ console.log('The external outerValue is: ' + outerValue); // 
 }
 myFunction();
 `}
         </code>
       </pre>
-      <pre>
-        <code>
-          {`[2] let outerValue = 'oranges';
-[1] function myFunction() {
-  [3] console.log('I can see the external outerValue: ' + outerValue);
-}
-myFunction();
-  `}
-        </code>
-      </pre>
+
+      <h3>A closure with a function scope</h3>
       <p>
         An inner function can access the value in the outer function that cannot
         be accessed globally, in essence it will be private.
       </p>
       <pre>
         <code>
-          {`function outerFunction() {
-  let innerValue = 'apples';
+          {`let sometimeLater;
+function outerFunction() {
+  let outerValue = 'pineapple 🍍';
   function innerFunction() {
-    console.log('When this all started I was hungry for: ', innerValue);
+    console.log(' The external outerValue is: ' + outerValue);
   }
-  return innerFunction;
+  sometimeLater = innerFunction;
 }
-
-let myNewFunction = outerFunction();
-myNewFunction();
+outerFunction();
+sometimeLater();
 `}
         </code>
       </pre>
