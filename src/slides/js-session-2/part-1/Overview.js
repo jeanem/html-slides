@@ -3,7 +3,13 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
-      <p>Overview of this section</p>
+      <ul>
+        <li>Introduction</li>
+        <li>Defining</li>
+        <li>Bindings and scopes</li>
+        <li>Functions as values</li>
+        <li>Declaration notation</li>
+      </ul>
     </div>
   );
 }
