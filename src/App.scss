@@ -78,6 +78,17 @@ code {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
+p,
+li {
+  code {
+    line-height: 1.25;
+    display: inline;
+    background: white;
+    padding: 5px;
+  }
+}
+
 .w-CodeTable {
   background-color: #fff;
   margin: 0 0 2em 0;
