@@ -66,9 +66,9 @@ To that end, each slide is an individual React component with JSX which will ren
 
 ### Code examples
 
--   for plain rendering (small snippets): <br />
+-   for plain rendering inline with white background (small snippets): <br />
     `` <code>{`<script>alert();</script>`}</code> ``
--   for larger blocks add a white background: <br />
+-   for larger blocks with white background: <br />
     `` <pre> <code> {`<script>alert();</script>`} </code> </pre> ``
 
 ### Quotes
