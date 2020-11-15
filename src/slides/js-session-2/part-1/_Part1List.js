@@ -23,8 +23,8 @@ const _Part1List = [
     directory: 'part-1',
     contentFile: 'Introduction2',
     baseURL: null,
-    detailLink: null,
-    linkTitle: null,
+    detailLink: 'https://developer.mozilla.org/en-US/docs/Glossary/Function',
+    linkTitle: 'Mozilla Developer Network - Functions',
   },
   {
     title: 'Defining a Function',
@@ -32,9 +32,9 @@ const _Part1List = [
     directory: 'part-1',
     contentFile: 'Defining',
     baseURL: null,
-    detailLink: 'Tania Rascia',
-    linkTitle:
-      'https://www.taniarascia.com/understanding-arrow-functions-in-javascript/',
+    detailLink:
+      'https://www.taniarascia.com/understanding-arrow-functions-in-javascript/#defining-functions',
+    linkTitle: 'Tania Rascia - Functions',
   },
   {
     title: 'Bindings and Scopes',
@@ -42,8 +42,6 @@ const _Part1List = [
     directory: 'part-1',
     contentFile: 'BindingsAndScope',
     baseURL: null,
-    detailLink: null,
-    linkTitle: null,
   },
   {
     title: 'Bindings and Scopes',
