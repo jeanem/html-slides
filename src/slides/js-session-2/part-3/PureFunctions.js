@@ -14,7 +14,7 @@ function Slide(props) {
       <pre>
         <code>
           {`function emojiMixer(emoji1, emoji2){
-  together = emoji1 + ' and ' + emoji2
+  let together = emoji1 + ' and ' + emoji2
   return together;
 }
 emojiMixer('🐝','🐞');

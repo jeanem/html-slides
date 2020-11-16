@@ -8,7 +8,7 @@ function Slide(props) {
       <p>produce a side effect which does something</p>
       <pre>
         <code>{`function sideEffect(){
-  console.log(🖋️ I am writing to the JavaScript console)
+  console.log('🖋️ I am writing to the JavaScript console')
 }`}</code>
       </pre>
 
@@ -24,7 +24,7 @@ function Slide(props) {
       <pre>
         <code>{`function both(){
   let penquin = '🐧'
-  console.log(🖋️ I am writing to the console and returning a penquin)
+  console.log('🖋️ I am writing to the console and returning a penquin')
   return penquin;
 }`}</code>
       </pre>

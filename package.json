@@ -1,8 +1,8 @@
 {
-  "name": "js-session-1",
+  "name": "js-session-2-functions",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jeanem.github.io/js-session-1",
+  "homepage": "https://uw-frontend-cop.github.io/js-session-2-functions",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",

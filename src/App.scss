@@ -80,7 +80,9 @@ code {
 }
 
 p,
-li {
+li li {
+  /* the outer li is the container for the slide which may hold block code
+      the li li ensures the inline applies to children li's */
   code {
     line-height: 1.25;
     display: inline;

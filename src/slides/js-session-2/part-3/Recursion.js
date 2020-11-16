@@ -6,25 +6,23 @@ function Slide(props) {
       <ul>
         <li>A function that calls itself</li>
         <li>
-          Useful walking tree structures where depth and is unknown or multiple
-          branches
+          Useful for walking thru tree structures where depth is unknown or
+          there are multiple branches
         </li>
-        <li>
-          Loops work well with highly structured data and are more efficient
-        </li>
+        <li>If data is highly structured, loops are more efficient option</li>
       </ul>
 
       <pre>
-        <code>{`function createPicnic(n) {
+        <code>{`function inviteFriends(n) {
   let picnic;
   if (n > 1) {
-    picnic = createPicnic(n - 1) + ' 🐜 ';
+    picnic = inviteFriends(n - 1) + ' 🐜 ';
   } else {
     picnic = '🧺 🥪 🍎   🐜 ';
   }
   return picnic;
 }
-picnic(3);`}</code>
+inviteFriends(3);`}</code>
       </pre>
     </div>
   );
