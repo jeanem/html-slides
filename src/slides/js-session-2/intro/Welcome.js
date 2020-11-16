@@ -1,12 +1,17 @@
 import React from 'react';
-
+import Img from '../images/cover.jpg';
 function Slide() {
   return (
     <div>
       <p>November 17, 2020</p>
+
+      <img src={Img} alt="test" width="25%" align="right" />
       <p>
-        <strong>Welcome to today's session. We will begin momentarily.</strong>
+        <strong>
+          Welcome to Front End Tech Book Club! We will begin momentarily.{' '}
+        </strong>
       </p>
+
       <p>
         In the meantime, please open the following in two separate tabs in your
         browser
