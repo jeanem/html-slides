@@ -3,8 +3,7 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
-      <h2>Programs</h2>
-      <h3>Control the flow </h3>
+      <h2>Control the flow </h2>
       <p>
         Statements are executed from top to bottom. You can change the flow of
         execution by using conditional (if, else, and switch) and looping
