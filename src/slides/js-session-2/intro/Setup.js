@@ -5,17 +5,18 @@ function Slide(props) {
     <div>
       <ol>
         <li>
-          Open the slides <strong>TODO: updated link when ready</strong>
+          Open the slides{' '}
+          <strong>
+            <a href="https://uw-cop-frontend.github.io/js-session-2/">
+              https://uw-cop-frontend.github.io/js-session-2/
+            </a>
+          </strong>
         </li>
         <li>
           On that page open the web console
           <ul>
             <li>
-              Chrome:{' '}
-              <code>
-                <script>alert()</script>Ctrl Shift J (Windows) or Ctrl Option J
-                (Mac)
-              </code>
+              Chrome: <code>Ctrl Shift J (Windows) or Ctrl Option J (Mac)</code>
             </li>
             <li>
               Firefox:
@@ -26,12 +27,12 @@ function Slide(props) {
         <li>
           In another tab open up{' '}
           <strong>
-            <a href="https://eloquentjavascript.net/01_values.html">
-              Eloquent Javascript chapter 1
+            <a href="https://eloquentjavascript.net/03_functions.html">
+              Eloquent Javascript chapter 3
             </a>
           </strong>
         </li>
-        <li>Following along interactively</li>
+        <li>Following along interactively!</li>
       </ol>
     </div>
   );

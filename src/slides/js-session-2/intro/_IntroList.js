@@ -1,6 +1,6 @@
 const _IntroList = [
   {
-    title: 'Front-end old Community of Practice',
+    title: 'Front-end Tech Community of Practice',
     shortTitle: 'Welcome',
     directory: 'intro',
     contentFile: 'Welcome',
