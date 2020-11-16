@@ -9,7 +9,7 @@ const _Part2List = [
     linkTitle: null,
   },
   {
-    title: 'Part 2: Arrow Functions Basics',
+    title: 'Arrow Functions Basics',
     shortTitle: 'Arrow Functions',
     directory: 'part-2',
     contentFile: 'ArrowFunctions',
@@ -18,7 +18,7 @@ const _Part2List = [
     linkTitle: null,
   },
   {
-    title: 'Part 2: Arrow Functions Basics, continued',
+    title: 'Arrow Functions Basics, continued',
     shortTitle: 'Arrow Functions Cont.',
     directory: 'part-2',
     contentFile: 'ArrowFunctions2',
@@ -27,7 +27,7 @@ const _Part2List = [
     linkTitle: null,
   },
   {
-    title: 'Part 2: More about Arrow Functions',
+    title: 'More about Arrow Functions',
     shortTitle: 'More Arrow Functions',
     directory: 'part-2',
     contentFile: 'MoreArrowFunctions',
@@ -36,7 +36,7 @@ const _Part2List = [
     linkTitle: null,
   },
   {
-    title: 'Part 2: When should I not use Arrow Functions?',
+    title: 'When should I not use Arrow Functions?',
     shortTitle: 'Arrow Functions caveats',
     directory: 'part-2',
     contentFile: 'WhenNotArrowFunctions',
@@ -45,7 +45,7 @@ const _Part2List = [
     linkTitle: null,
   },
   {
-    title: 'Part 2: The Call Stack',
+    title: 'The Call Stack',
     shortTitle: 'Call Stack',
     directory: 'part-2',
     contentFile: 'CallStack',
@@ -54,7 +54,7 @@ const _Part2List = [
     linkTitle: null,
   },
   {
-    title: 'Part 2: Optional Arguments',
+    title: 'Optional Arguments',
     shortTitle: 'Optional Arguments',
     directory: 'part-2',
     contentFile: 'OptionalArguments',
@@ -63,7 +63,7 @@ const _Part2List = [
     linkTitle: null,
   },
   {
-    title: 'Part 2: Immediately Invoked Function Expressions',
+    title: 'Immediately Invoked Function Expressions',
     shortTitle: 'IIFE',
     directory: 'part-2',
     contentFile: 'IIFE',
@@ -81,8 +81,8 @@ const _Part2List = [
   //   linkTitle: null,
   // },
   {
-    title: 'Part 2 Exercise',
-    shortTitle: 'Part 2 Exercise',
+    title: 'Bean Counting Exercise',
+    shortTitle: 'Bean Counting Exercise',
     directory: 'part-2',
     contentFile: 'Exercises',
     baseURL: null,

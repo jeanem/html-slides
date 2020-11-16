@@ -3,7 +3,6 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
-      <h2>Programs</h2>
       <h3>Control the flow </h3>
       <p>
         Statements are executed from top to bottom. You can change the flow of

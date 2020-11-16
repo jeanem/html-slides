@@ -1,7 +1,7 @@
 const _ReviewSession1List = [
   {
-    title: 'Chapter 1 review',
-    shortTitle: 'Chapter 1 review',
+    title: 'Review: Values',
+    shortTitle: 'Review: Values',
     directory: 'review-session-1',
     contentFile: 'values',
     baseURL: null,
@@ -9,8 +9,8 @@ const _ReviewSession1List = [
     linkTitle: null,
   },
   {
-    title: 'Chapter 1 review',
-    shortTitle: 'Chapter 1 Overview',
+    title: 'Review: Operators',
+    shortTitle: 'Review: Operators',
     directory: 'review-session-1',
     contentFile: 'operators',
     baseURL: null,
@@ -19,8 +19,8 @@ const _ReviewSession1List = [
   },
 
   {
-    title: 'Chapter 2 review',
-    shortTitle: 'Chapter 2 review',
+    title: 'Review: Expressions and Statements',
+    shortTitle: 'Review: Expressions and Statements',
     directory: 'review-session-1',
     contentFile: 'expressions',
     baseURL: null,
@@ -29,8 +29,8 @@ const _ReviewSession1List = [
   },
 
   {
-    title: 'Chapter 2 review',
-    shortTitle: 'Chapter 2 review',
+    title: 'Review: Bindings',
+    shortTitle: 'Review: Bindings',
     directory: 'review-session-1',
     contentFile: 'bindings',
     baseURL: null,
@@ -39,8 +39,8 @@ const _ReviewSession1List = [
   },
 
   {
-    title: 'Chapter 2 review',
-    shortTitle: 'Chapter 2 review',
+    title: 'Review: Program Control',
+    shortTitle: 'Review: Program Control',
     directory: 'review-session-1',
     contentFile: 'control',
     baseURL: null,
@@ -49,8 +49,8 @@ const _ReviewSession1List = [
   },
 
   {
-    title: 'Chapter 2 review',
-    shortTitle: 'Chapter 2 review',
+    title: 'Review: Functions',
+    shortTitle: 'Review: Functions',
     directory: 'review-session-1',
     contentFile: 'functions',
     baseURL: null,

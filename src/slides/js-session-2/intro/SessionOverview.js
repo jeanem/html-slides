@@ -12,11 +12,11 @@ function Slide(props) {
       <ul>
         <li>Review of the last JavaScript session </li>
         <li>Part 1: Introduction to functions</li>
-        <li>Breakout groups: Exercise 1 </li>
+        <li>Breakout groups: Minimum exercise </li>
         <li>Part 2: Arrow functions and other concepts</li>
-        <li>Breakout groups: Exercise 3 </li>
+        <li>Breakout groups: Bean counting exercise </li>
         <li>Part 3: Closure, recursion and other concepts </li>
-        <li>Breakout groups: Exercise 2</li>
+        <li>Breakout groups: Recursion exercise</li>
       </ul>
     </div>
   );

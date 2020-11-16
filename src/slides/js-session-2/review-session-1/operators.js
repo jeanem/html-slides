@@ -3,8 +3,6 @@ import React from 'react';
 function Slide() {
   return (
     <div>
-      <h2>Values and Operators</h2>
-      <h3>Operators</h3>
       <p>Use operators to transform values</p>
       <ul>
         <li>

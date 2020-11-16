@@ -19,8 +19,10 @@ function Slide() {
       <ul>
         <li>
           Slide deck:{' '}
-          <a href="https://uw-cop-frontend.github.io/js-session-2/">
-            <strong>https://uw-cop-frontend.github.io/js-session-2/</strong>
+          <a href="https://uw-cop-frontend.github.io/js-session-2-functions/">
+            <strong>
+              https://uw-cop-frontend.github.io/js-session-2-functions/
+            </strong>
           </a>
         </li>
         <li>

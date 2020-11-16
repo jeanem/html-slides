@@ -3,8 +3,6 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
-      <h2>Programs</h2>
-      <h3>Expressions and Statements</h3>
       <p>
         A fragment of code that produces a value is called an{' '}
         <strong>expression</strong>:

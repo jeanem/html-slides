@@ -3,7 +3,6 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
-      <h2>Values and Operators</h2>
       <h3>Four types of values: </h3>
       <ul>
         <li>Numbers</li>

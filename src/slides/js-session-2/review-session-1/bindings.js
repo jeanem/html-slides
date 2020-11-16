@@ -3,8 +3,6 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
-      <h2>Programs</h2>
-      <h3>Bindings</h3>
       <p>
         How can we use the values created in our expressions? <br></br>A
         <strong> binding</strong>, or variable, can grab the new value and store

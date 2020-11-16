@@ -7,8 +7,8 @@ function Slide(props) {
         <li>
           Open the slides{' '}
           <strong>
-            <a href="https://uw-cop-frontend.github.io/js-session-2/">
-              https://uw-cop-frontend.github.io/js-session-2/
+            <a href="https://uw-cop-frontend.github.io/js-session-2-functions/">
+              https://uw-cop-frontend.github.io/js-session-2-functions/
             </a>
           </strong>
         </li>
@@ -19,7 +19,7 @@ function Slide(props) {
               Chrome: <code>Ctrl Shift J (Windows) or Ctrl Option J (Mac)</code>
             </li>
             <li>
-              Firefox:
+              Firefox:{' '}
               <code>Ctrl Shift K (Windows) or Command Option K (Mac)</code>
             </li>
           </ul>
