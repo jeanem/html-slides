@@ -10,8 +10,9 @@ function Slide(props) {
           verbose way
         </li>
         <li>
-          No deep reason to have both arrow functions and traditional functions,
-          except there are times you cannot use arrow functions (next).
+          No deep reason to have both arrow functions and traditional functions
+          at this point, except there are times you cannot use arrow functions
+          (next).
         </li>
       </ul>
 
@@ -52,8 +53,8 @@ let b = 2;
       </p>
 
       <p>
-        Note: Anonymous functions are unnamed functions. Literally, any name is
-        omitted, as seen in the examples above.
+        Note: Anonymous functions are unnamed functions. Any name is omitted, as
+        seen in the examples above.
       </p>
     </div>
   );

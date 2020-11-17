@@ -33,6 +33,17 @@ function Slide(props) {
         </li>
       </ol>
 
+      <p>
+        IIFEs were more common before 2015 when block-level scoping was
+        introduced with <code>{`let`}</code> and <code>{`const`}</code>. There
+        are a lot of opinions about them and you can learn more about the
+        history from
+        <a href="https://medium.com/@mikkanthrope/iife-a-mini-lesson-in-javascript-history-feecdd9c02ad">
+          IIFE: A mini-lesson in Javascript history
+        </a>
+        .
+      </p>
+
       <h3>Examples</h3>
       <pre>
         <code>
