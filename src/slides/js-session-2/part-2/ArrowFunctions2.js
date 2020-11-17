@@ -11,7 +11,7 @@ function Slide(props) {
       <p>
         If the body is a <em>single expression</em> (rather than a block with
         braces), that expression will be returned from the function.
-        <em> Note: single-line only statements.</em>
+        <em> Note: Must be single-line only statements.</em>
       </p>
 
       <h3>Example</h3>
