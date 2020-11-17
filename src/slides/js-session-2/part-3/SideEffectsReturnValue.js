@@ -9,7 +9,8 @@ function Slide(props) {
       <pre>
         <code>{`function sideEffect(){
   console.log('🖋️ I am writing to the JavaScript console')
-}`}</code>
+}
+sideEffect(); `}</code>
       </pre>
 
       <p>return a value</p>
@@ -17,8 +18,14 @@ function Slide(props) {
         <code>{`function returnValue(){
   let penquin = '🐧'
   return penquin;
-}`}</code>
+}  
+returnValue();`}</code>
       </pre>
+
+      <blockquote cite="https://eloquentjavascript.net/03_functions.html">
+        Functions that create values are easier to combine in new ways than
+        functions that directly perform side effects.
+      </blockquote>
 
       <p>or do both</p>
       <pre>
@@ -26,13 +33,9 @@ function Slide(props) {
   let penquin = '🐧'
   console.log('🖋️ I am writing to the console and returning a penquin')
   return penquin;
-}`}</code>
+}
+both();`}</code>
       </pre>
-
-      <blockquote cite="https://eloquentjavascript.net/03_functions.html">
-        Functions that create values are easier to combine in new ways than
-        functions that directly perform side effects.
-      </blockquote>
     </div>
   );
 }
