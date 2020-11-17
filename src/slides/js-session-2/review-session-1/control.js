@@ -16,7 +16,8 @@ function Slide(props) {
           {`if (hour < 18) {
   greeting = "Good day";
 } else {
-  greeting = "Good evening";`}
+  greeting = "Good evening";
+}`}
         </code>
       </pre>
       <br></br>

@@ -21,24 +21,25 @@ function Slide(props) {
       </pre>
 
       <p>
-        Bindings can be created using the keywords <strong>let</strong>,{' '}
-        <strong>var</strong>, or <strong>const</strong>.{' '}
+        Bindings can be created using the keywords <code>let</code>, or{' '}
+        <code>const</code>, or <code>var</code>.{' '}
       </p>
       <p>
         <strong>What are the differences?</strong>
       </p>
       <ul>
         <li>
-          var bindings are globally scoped or function/locally scoped. They can
-          also be re-declared and updated<br></br>
+          a <code>let</code> binding declared in a block of code is only
+          available for use within that block. It can only be updated, not
+          re-declared
         </li>
         <li>
-          a let binding declared in a block of code is only available for use
-          within that block. It can only be updated, not re-declared.
+          a binding using <code>const</code> is similar to one declared with{' '}
+          <code>let</code>, but will hold the same value for as long as it lives
         </li>
         <li>
-          A binding using <strong>const</strong> is similar to one declared with
-          let, but will hold the same value for as long as it lives.
+          <code>var</code> bindings are globally scoped or function/locally
+          scoped. They can also be re-declared and updated
         </li>
       </ul>
       <p></p>

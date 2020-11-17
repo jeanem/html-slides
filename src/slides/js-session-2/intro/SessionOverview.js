@@ -3,21 +3,30 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
-      <p>
-        With Marijn Haverbeke's book,{''}{' '}
-        <a href="https://eloquentjavascript.net/"> Eloquent Javascript </a>, as
-        a guide we will explore:
-      </p>
-      <h3>Session outline</h3>
-      <ul>
+      <ol>
         <li>Review of the last JavaScript session </li>
-        <li>Part 1: Introduction to functions</li>
-        <li>Breakout groups: Minimum exercise </li>
-        <li>Part 2: Arrow functions and other concepts</li>
-        <li>Breakout groups: Bean counting exercise </li>
-        <li>Part 3: Closure, recursion and other concepts </li>
-        <li>Breakout groups: Recursion exercise</li>
-      </ul>
+        <li>
+          Introduction to functions
+          <ul>
+            <li>Breakout groups: Minimum exercise </li>
+          </ul>
+        </li>
+
+        <li>
+          Arrow functions and other concepts
+          <ul>
+            <li>Breakout groups: Bean counting exercise </li>
+          </ul>
+        </li>
+        <li>
+          Wrap-up: Function best practices, further reading on advanced concepts
+        </li>
+      </ol>
+      <p>
+        Marijn Haverbeke's book,{''}{' '}
+        <a href="https://eloquentjavascript.net/">Eloquent Javascript</a> is our
+        guide.
+      </p>
     </div>
   );
 }

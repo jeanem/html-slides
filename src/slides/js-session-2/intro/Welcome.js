@@ -8,7 +8,7 @@ function Slide() {
       <img src={Img} alt="test" width="25%" align="right" />
       <p>
         <strong>
-          Welcome to Front End Tech Book Club! We will begin momentarily.{' '}
+          Welcome to the Front-end Tech Book Club! We will begin momentarily.{' '}
         </strong>
       </p>
 

@@ -13,6 +13,9 @@ function Slide(props) {
           {`{
     return a * b;
  }`}
+          <br></br>
+          myFunction(3,5); <br></br>
+          {`//`}returns 15
         </code>
       </pre>
     </div>

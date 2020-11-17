@@ -45,15 +45,6 @@ const _Part2List = [
     linkTitle: null,
   },
   {
-    title: 'The Call Stack',
-    shortTitle: 'Call Stack',
-    directory: 'part-2',
-    contentFile: 'CallStack',
-    baseURL: null,
-    detailLink: null,
-    linkTitle: null,
-  },
-  {
     title: 'Optional Arguments',
     shortTitle: 'Optional Arguments',
     directory: 'part-2',

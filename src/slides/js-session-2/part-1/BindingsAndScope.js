@@ -17,10 +17,15 @@ function Slide(props) {
       </p>
       <h3>Keyword Behavior</h3>
       <ul>
-        <li>Let - Scoped to block</li>
-        <li>Const - Scoped to block</li>
         <li>
-          Var - Older style binding are either scoped globally or function
+          <code>let</code> - scoped to block
+        </li>
+        <li>
+          <code>const</code> - scoped to block
+        </li>
+        <li>
+          <code>var</code> - older style binding are either scoped globally or
+          function
         </li>
       </ul>
       <pre>
