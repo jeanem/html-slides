@@ -1,5 +1,5 @@
 {
-  "name": "js-session-2-functions",
+  "name": "js-session-3",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://uw-frontend-cop.github.io/js-session-2-functions",
@@ -11,7 +11,7 @@
     "react": "^17.0",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.2"
+    "react-scripts": "4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
