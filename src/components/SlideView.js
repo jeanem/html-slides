@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import SlidesInfo from '../slides/js-session-2/components/SlidesInfo';
-import BodyContent from '../slides/js-session-2/components/BodyContent';
+import SlidesInfo from '../slides/js-session-3/components/SlidesInfo';
+import BodyContent from '../slides/js-session-3/components/BodyContent';
 import Header from './Header';
 import Footer from './Footer';
 import NavButton from './NavButton';

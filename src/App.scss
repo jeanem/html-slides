@@ -41,6 +41,10 @@ blockquote {
   margin: 0 0 2em 0;
 }
 
+q {
+  font-style: italic;
+}
+
 blockquote {
   @include text-BlackWhite-positive();
   padding: 0.5em 1em 1em 1em;
@@ -74,6 +78,20 @@ code {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
+p,
+blockquote,
+li li {
+  /* the outer li is the container for the slide which may hold block code
+      the li li ensures the inline applies to children li's */
+  code {
+    line-height: 1.25;
+    display: inline;
+    background: white;
+    padding: 5px;
+  }
+}
+
 .w-CodeTable {
   background-color: #fff;
   margin: 0 0 2em 0;
@@ -198,6 +216,18 @@ main {
 
 .w-Slide ul {
   margin: 0 0 2em 0;
+  ul,
+  ol {
+    margin: 0 0 1em 0;
+  }
+}
+
+.w-Slide ol {
+  margin: 0 0 2em 0;
+  ul,
+  ol {
+    margin: 0 0 1em 0;
+  }
 }
 
 .w-Slide ul > li,

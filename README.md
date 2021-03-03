@@ -13,6 +13,14 @@ To that end, each slide is an individual React component with JSX which will ren
 -   Check that your Node version is Node 8 (LTS) or later
 -   git clone https://github.com/uw-cop-frontend/html-slides.git
 -   `npm install`
+    -   note if errors happen initially with the install you may need to delete the package-lock.json and rerun
+-   in VS Code, install the Prettier extension
+
+    -   to enable go in the upper left go to `Code > Preferences > Settings`
+    -   search for the word `format`
+    -   find `Editor: Default Formatter` and in the dropdown select `esbenp.prettier-vscode`
+    -   find `Format On Save` and ensure it is checked
+
 -   to run locally: `npm run start`
     -   if you get a node-sass error you may need to install it separately
     -   `npm install node-sass --save`
@@ -53,6 +61,48 @@ To that end, each slide is an individual React component with JSX which will ren
 -   verify the slide(s) display correctly by running the slides locally (see section above)
 -   push your commits and branch to GitHub
     -   `git push origin my-branch`
+
+## Format options
+
+### Code examples
+
+-   for plain rendering inline with white background (small snippets): <br />
+    `` <code>{`<script>alert();</script>`}</code> ``
+-   for larger blocks with white background: <br />
+    `` <pre> <code> {`<script>alert();</script>`} </code> </pre> ``
+
+### Quotes
+
+-   Using the `<blockquote>` tag will add the large quotes:
+
+```
+<blockquote cite="Secrets of the JavaScript Ninja, page 90">A closure is [2] the scope created when [1] a function is declared that [3] allows the function to access and manipulate variables that are external to that function.</blockquote>
+```
+
+-   `<q>` for inline quotes adds italics
+
+### Reference links
+
+If the content on a slide is from a predominate source you want to reference, adding the link and title will add it to the bottom of the slide:
+
+```
+    {
+      title: 'Primitives',
+      shortTitle: 'Primitives',
+      contentFile: 'Primitives',
+      baseURL: '',
+      detailLink: 'https://developer.mozilla.org/en-US/docs/Glossary/Primitive',
+      linkTitle: 'MDN article: Primitives',
+    },
+    {
+      title: 'Numbers',
+      shortTitle: 'Numbers',
+      contentFile: 'Numbers',
+      baseURL: 'https://eloquentjavascript.net/01_values.html',
+      detailLink: '#h_flOCH3CuFg',
+      linkTitle: 'Eloquent JavaScript: Numbers',
+    },
+```
 
 ## Deck setup
 
