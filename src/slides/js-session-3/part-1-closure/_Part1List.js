@@ -27,6 +27,15 @@ const _Part1List = [
     linkTitle: null,
   },
   {
+    title: 'Closure example',
+    shortTitle: 'Closure example',
+    directory: 'part-1-closure',
+    contentFile: 'ClosureExample-1',
+    baseURL: null,
+    detailLink: null,
+    linkTitle: null,
+  },
+  {
     title: 'Closures',
     shortTitle: 'Closures',
     directory: 'part-1-closure',
