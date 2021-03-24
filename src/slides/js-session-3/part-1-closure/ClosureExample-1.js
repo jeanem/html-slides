@@ -5,22 +5,18 @@ var icons = {
 function Slide(props) {
   return (
     <div>
-      <p>
-        TODO: change scenario to first person "I want a function that will ...",
-        I want my robot 🤖, add line breaks to messages (`?) for readibility and
-        create image to break apart pieces, add attribution to pack your bag
-        article, remove location and keep it focused on weather
-      </p>
+      <p>TODO: add attribution to pack your bag article</p>
       <h3>Scenario</h3>
       <p>
         A journalist is frequently called on to travel at a minute's notice to
-        known and unknown places to report on the news.
+        places all over the country to report on the news.
       </p>
       <p>
-        They would like to have a set of Go Bags <span style={icons}>🎒</span>{' '}
-        prepacked with weather or location related clothes and gear.{' '}
+        She would like to program her robot <span style={icons}>🤖 </span>{' '}
+        prepack a set of Go Bags <span style={icons}>🎒</span> with weather
+        related clothes and gear.{' '}
       </p>
-      <p>For example they may have a bag prepacked for a </p>
+      <p>For example she may have a bag prepacked for a </p>
       <ul>
         <li>
           a cold location <span style={icons}>🎒 + ❄</span>
@@ -40,54 +36,55 @@ function Slide(props) {
           <span style={icons}>🎽 🩳 🩱 👒 🕶 </span>
         </li>
       </ul>
-      <p>Let's create a function to do this:</p>
+      <p>Let's create a function that will program the robot to do that: </p>
       <pre>
         <code>
           {`
 function goBag(basics) {
-  message = 'A Go Bag 🎒 is prepacked with: ' + basics;
+  // ... 🤖 packing ...
+  message = 'Go Bag 🎒 prepacked with: ' + basics;
   return message;
 }
 
 goBag('🧥 👢 👚 👖');
-
+// returns: "Go Bag 🎒 prepacked with: 🧥 👢 👚 👖"
 
 `}
         </code>
       </pre>
-      <p>However they find that</p>
+      <p>However</p>
       <ul>
         <li>
-          they want to have several of the same location based pre-packed bags,
-          but don't want to type in the same items each time
+          she knows same weather-based pre-packed bags, but doesn't want to tell
+          the robot which basics to include with every one
         </li>
-        <li>and they want to add items at the last minute</li>
+        <li>
+          and she wants the robot to be able to throw in last-minute items
+        </li>
       </ul>
       <pre>
         <code>
           {`
 
 function goBag(label, basics) {
-  let message = 'My  ' + label + ' Go Bag 🎒 is prepacked with: ' + basics + '.';
-  console.log(message)
+  // ... 🤖 packing ...
+  let message1 = label + ' Go Bag 🎒 is prepacked with: ' + basics;
+  console.log(message1)
+
   function addItemsLater(itemsToAdd) {
-    message =  'These items: ' + itemsToAdd + ' have been added to my ' + label + ' Go Bag 🎒!';
-    console.log(message);
+    // ... 🤖 throwing in last minute items ...
+    let message2 =  '. Last-minute items include: ' + itemsToAdd;
+    console.log(message1 + message2);
   }
   return addItemsLater;
 }
 
-let winterGoBag = goBag('Winter', '🧥 👢 👚 👖');
-let summerGoBag = goBag('Summer', '🎽 🩳 🩱 👒 🕶');
+let coldGoBag = goBag('Cold Weather', '🧥 👢 👚 👖');
+let warmGoBag = goBag('Warm Weather', '🎽 🩳 🩱 👒 🕶');
 
-winterGoBag('📷 📘 🖊');
-summerGoBag('💻 👗 👡');
-winterGoBag('💻 🧣 🧤 🥾');
-
-
-
-// const items = '🧢 🎽 👖 🧦 👟 📘 🖊';
-
+coldGoBag('📷 📘 🖊');
+warmGoBag('💻 👗 👡');
+coldGoBag('💻 🧣 🧤 🥾');
 
 `}
         </code>
