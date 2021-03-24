@@ -6,7 +6,7 @@ function Slide(props) {
       <ul>
         <li>
           Infinite loop or infinite recursion &mdash; always make sure you have
-          a case that will be met.
+          a case that will be met, or an exit point.
         </li>
         <li>
           If the stack takes up more space than it had assigned to it, it

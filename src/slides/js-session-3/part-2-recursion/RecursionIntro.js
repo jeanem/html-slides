@@ -5,16 +5,17 @@ function Slide(props) {
     <div>
       <ul>
         <li>
-          A function that calls itself a condition is met is called recursive.
+          A function that calls itself until a condition is met is called
+          recursive.
         </li>
         <li>
-          Sometimes better than looping, recursive functions are a good tool
-          when necessary.
+          Functionally similar to looping, recursive functions are sometimes
+          better. We’ll discuss this in more detail later.
         </li>
         <li>A “base case” is the condition that stops recursion.</li>
         <li>
           If it doesn’t stop, it’ll run forever (until the program crashes),
-          just like an infinite loop.
+          just like an infinite loop. (Recall our overview of the call stack.)
         </li>
       </ul>
     </div>

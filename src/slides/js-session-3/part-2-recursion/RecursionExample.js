@@ -3,7 +3,7 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
-      <p>Let's look at an example of the call stack.</p>
+      <p>Let's look at an example of recursion.</p>
       <p>
         Paste this code into your console and watch the Sources tab in Chrome or
         the Debugger tab in Firefox.
@@ -11,19 +11,16 @@ function Slide(props) {
       <pre>
         <code>
           {`
-function countDownFrom(number) {
-	if (number === 0) {
-		return;
+function inviteFriends(n) {
+	let picnic;
+	if (n >= 1) {
+		picnic = inviteFriends(n - 1) + ' 🐜 ';
+	} else {
+		picnic = '🧺 🥪 🍎   🐜 ';
 	}
-
-	console.log(number);
-
-	debugger;
-
-	countDownFrom(number - 1);
+	return picnic;
 }
-
-countDownFrom(12);
+inviteFriends(3);
          `}
         </code>
       </pre>

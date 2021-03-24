@@ -11,6 +11,8 @@ function Slide(props) {
           In a loop, there are extra variables to track progress (i, j, k). In
           recursion, an extra variable is not needed (call stack).
         </li>
+        <li>Recursion is usually shorter than iterative (loops).</li>
+        <li>Loops are easier to write and maintain.</li>
       </ul>
     </div>
   );

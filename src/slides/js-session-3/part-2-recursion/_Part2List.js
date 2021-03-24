@@ -54,6 +54,15 @@ const _Part2List = [
     linkTitle: null,
   },
   {
+    title: 'Recursion Example',
+    shortTitle: 'Recursion Example',
+    directory: 'part-2-recursion',
+    contentFile: 'RecursionExample',
+    baseURL: null,
+    detailLink: null,
+    linkTitle: null,
+  },
+  {
     title: 'Recursion Exercise',
     shortTitle: 'Recursion Exercise',
     directory: 'part-2-recursion',
