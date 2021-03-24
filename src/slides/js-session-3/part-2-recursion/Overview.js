@@ -3,13 +3,12 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
-      <p>Recursion overview</p>
       <ul>
         <li>Call stack</li>
         <li>Recursion</li>
         <li>Examples</li>
       </ul>
-      <p>objectives (?)</p>
+      <p>Objectives (?)</p>
       <ul>
         <li>text</li>
         <li>text</li>
