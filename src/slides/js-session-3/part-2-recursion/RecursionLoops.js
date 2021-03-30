@@ -4,18 +4,17 @@ function Slide(props) {
   return (
     <div>
       <ul>
-        <li>
-          Recursion is essentially the same as for/while loops but it is
-          sometimes more elegant.
-        </li>
+        <li>Recursion is essentially the same as for/while loops.</li>
         <li>
           In a loop, there are extra variables to track progress (i). With
-          recursion, an extra variable is not needed (call stack).
+          recursion, an extra variable is not needed (uses the call stack).
         </li>
-        <li>Recursion is usually shorter than iterative (loops).</li>
+        <li>Recursion is usually shorter and more elegant than loops.</li>
         <li>Loops are easier to write and maintain (human-friendly).</li>
+        <li>Some problems are easier to solve with recursion.</li>
       </ul>
-      <h3>Example of loops vs recursion</h3>
+      <h3>Example of loop vs recursion</h3>
+      <p>These two functions return the same results.</p>
       <div className="cols">
         <div className="col">
           <p>Loop:</p>
@@ -64,7 +63,7 @@ countDownFrom(5);
         </div>
       </div>
       <p>
-        Examples source:
+        Example source:
         <a href="https://www.freecodecamp.org/news/quick-intro-to-recursion/">
           freeCodeCamp
         </a>

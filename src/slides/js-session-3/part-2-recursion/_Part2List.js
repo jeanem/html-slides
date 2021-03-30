@@ -36,7 +36,7 @@ const _Part2List = [
     linkTitle: null,
   },
   {
-    title: 'Recursion Intro',
+    title: 'Introduction to Recursion',
     shortTitle: 'Recursion',
     directory: 'part-2-recursion',
     contentFile: 'RecursionIntro',

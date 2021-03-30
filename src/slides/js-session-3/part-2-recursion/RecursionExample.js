@@ -3,7 +3,7 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
-      <p>Let's look at an example of recursion.</p>
+      <p>Let's go a little deeper into recursion with this example.</p>
       <p>
         We're going to invite some friends to a picnic. If we are inviting one
         friend or more to our picnic, we we gather our friends. So if we are
