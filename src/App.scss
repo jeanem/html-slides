@@ -443,3 +443,18 @@ input[type='submit'] {
     border: solid 2px #85754d;
   }
 }
+
+@media (min-width: 1024px) {
+  .cols {
+    display: flex;
+    flex-direction: row;
+
+    .col {
+      width: 48%;
+    }
+  }
+}
+
+.emoji {
+  font-size: 40px;
+}

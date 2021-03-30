@@ -8,11 +8,11 @@ function Slide(props) {
         <li>Recursion</li>
         <li>Examples</li>
       </ul>
-      <p>Objectives (?)</p>
+      <p>Objectives (? - these need work)</p>
       <ul>
-        <li>text</li>
-        <li>text</li>
-        <li>text</li>
+        <li>Understand how the call stack works in JavaScript</li>
+        <li>Identify when to use recursion vs looping</li>
+        <li>Recognize recursion in practice</li>
       </ul>
     </div>
   );

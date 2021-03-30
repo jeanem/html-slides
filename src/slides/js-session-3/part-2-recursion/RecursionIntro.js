@@ -10,7 +10,7 @@ function Slide(props) {
         </li>
         <li>
           Functionally similar to looping, recursive functions are sometimes
-          better. We’ll discuss this in more detail later.
+          better. - WHY?
         </li>
         <li>A “base case” is the condition that stops recursion.</li>
         <li>

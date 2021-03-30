@@ -3,10 +3,13 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
-      <p>Let's look at an example of the call stack.</p>
       <p>
-        Paste this code into your console and watch the Sources tab in Chrome or
-        the Debugger tab in Firefox.
+        Before we switch focus to recursion, let's look at an example of the
+        call stack.
+      </p>
+      <p>
+        Follow along: Paste this code into your browser console and watch the
+        Sources tab in Chrome or the Debugger tab in Firefox.
       </p>
       <pre>
         <code>
@@ -27,6 +30,12 @@ countDownFrom(12);
          `}
         </code>
       </pre>
+      <p>
+        Example source:
+        <a href="https://www.freecodecamp.org/news/quick-intro-to-recursion/">
+          freeCodeCamp
+        </a>
+      </p>
     </div>
   );
 }
