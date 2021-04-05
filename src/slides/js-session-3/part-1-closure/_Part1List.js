@@ -30,7 +30,7 @@ const _Part1List = [
     title: 'Closure example',
     shortTitle: 'Closure example',
     directory: 'part-1-closure',
-    contentFile: 'ClosureExample-1',
+    contentFile: 'ClosureExample-1-explained',
     baseURL: null,
     detailLink: null,
     linkTitle: null,
@@ -39,11 +39,12 @@ const _Part1List = [
     title: 'Closure example',
     shortTitle: 'Closure example',
     directory: 'part-1-closure',
-    contentFile: 'ClosureExample-1-explained',
+    contentFile: 'ClosureExample-1',
     baseURL: null,
     detailLink: null,
     linkTitle: null,
   },
+
   {
     title: 'Closures',
     shortTitle: 'Closures',

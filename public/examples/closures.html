@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Closure example</title>
+    <meta name="description" content="The HTML5 Herald" />
+    <meta name="author" content="SitePoint" />
+  </head>
+
+  <body>
+    <button id="seattle-bag">Seattle bag with 📷 📘 🖊 🌂</button>
+    <button id="florida-bag">Florida: 💻 👗 👡</button>
+    <button id="seattle-bag2">Seattle bag with 💻 🧣 🥾</button>
+    <script>
+      function goBags(label, basics) {
+        // ... 🤖 pre-packing ...
+        let message1 = label + ' Go Bag 🎒 is prepacked with: ' + basics;
+        console.log(message1);
+        function addItemsLater(itemsToAdd) {
+          // ... 🤖 throwing in last minute items ...
+          let message2 = '. Last-minute items include: ' + itemsToAdd;
+          console.log(message1 + message2);
+        }
+        return addItemsLater;
+      }
+      // 🤖 prepacks these bags
+      let seattleBag = goBags('Seattle', '🧥 👢 👚 👖');
+      let floridaBag = goBags('Florida', '🎽 🩳 🩱 👒 🕶');
+      document
+        .getElementById('seattle-bag')
+        .addEventListener('click', function () {
+          seattleBag('📷 📘 🖊 🌂');
+        });
+      document
+        .getElementById('florida-bag')
+        .addEventListener('click', function () {
+          floridaBag('💻 👗 👡');
+        });
+      document
+        .getElementById('seattle-bag2')
+        .addEventListener('click', function () {
+          seattleBag('💻 🧣 🥾');
+        });
+    </script>
+  </body>
+</html>
