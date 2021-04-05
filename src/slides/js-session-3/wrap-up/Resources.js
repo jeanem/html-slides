@@ -41,6 +41,17 @@ function Slide(props) {
           </a>
         </li>
       </ul>
+
+      <h3>Recursion deep dive:</h3>
+
+      <ul>
+        <li>
+          <a href="https://pragprog.com/titles/jwdsal2/a-common-sense-guide-to-data-structures-and-algorithms-second-edition/">
+            <em>A Common-Sense Guide to Data Structures and Algorithms</em> by
+            Jay Wengrow, chapters 10-13
+          </a>
+        </li>
+      </ul>
     </div>
   );
 }
