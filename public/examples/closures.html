@@ -10,10 +10,35 @@
   </head>
 
   <body>
+    <button id="outer-5">outerFive()</button>
+    <button id="outer-11">outerEleven()</button>
     <button id="seattle-bag">Seattle bag with 📷 📘 🖊 🌂</button>
     <button id="florida-bag">Florida: 💻 👗 👡</button>
     <button id="seattle-bag2">Seattle bag with 💻 🧣 🥾</button>
     <script>
+      function wrapValue(n) {
+        let local = n;
+        return () => local;
+      }
+      function outer(n) {
+        function inner() {
+          let innerNumber = n;
+          console.log(innerNumber);
+          return innerNumber;
+        }
+        return inner;
+      }
+      let outerFive = outer(5);
+      let outerEleven = outer(11);
+
+      document.getElementById('outer-5').addEventListener('click', function () {
+        outerFive();
+      });
+      document
+        .getElementById('outer-11')
+        .addEventListener('click', function () {
+          outerEleven();
+        });
       function goBags(label, basics) {
         // ... 🤖 pre-packing ...
         let message1 = label + ' Go Bag 🎒 is prepacked with: ' + basics;

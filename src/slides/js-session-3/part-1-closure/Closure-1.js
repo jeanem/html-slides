@@ -18,7 +18,7 @@ function Slide(props) {
     let innerNumber = n; 
     return innerNumber; 
   }
-  return inner(); 
+  return inner; 
 }`}
         </code>
       </pre>
