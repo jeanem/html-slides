@@ -3,6 +3,8 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
+      <p>From previous deck - Are we using this?</p>
+
       <blockquote>
         <p>
           We’ve seen that % (the remainder operator) can be used to test whether

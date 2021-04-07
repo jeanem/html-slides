@@ -5,18 +5,15 @@ function Slide(props) {
     <div>
       <ul>
         <li>
-          Storing the stack requires memory. If the stack grows too big, the
-          computer will fail with an error such as "out of stack space" or "too
-          much recursion."
+          Storing the stack requires memory. If the stack takes up more space
+          than it had assigned to it such as with an infinite loop or infinite
+          recursion, the program will fail with an error such as "out of stack
+          space," "too much recursion," or "stack overflow."
         </li>
         <li>
-          Loops and recursions (up next) &mdash; always make sure you have a
-          case that will be met, or an exit point.
-        </li>
-        <li>
-          If the stack takes up more space than it had assigned to it such as
-          with an infinite loop or infinite recursion, it results in a "stack
-          overflow" error.
+          When using loops and recursion (up next) &mdash; always make sure you
+          have a case that will be met, or an exit point, to prevent such
+          errors.
         </li>
       </ul>
       <p>
