@@ -3,15 +3,11 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
+      <p>Objectives:</p>
       <ul>
-        <li>Scope</li>
-        <li>Closures</li>
-      </ul>
-      <p>objectives</p>
-      <ul>
-        <li>Sound understanding of scope</li>
-        <li>Ability to create a simple closure</li>
-        <li>Ability to identify practical applications of closures in JS</li>
+        <li>Obtain a sound understanding of scope</li>
+        <li>Identify and understand simple closures</li>
+        <li>Be aware of practical applications of closure in JavaScript</li>
       </ul>
     </div>
   );

@@ -7,7 +7,7 @@ var icons = {
 function Slide(props) {
   return (
     <div>
-      <h2>Where are closures useful?</h2>
+      <h3>Where are closures useful?</h3>
       <ul>
         <li>
           in approximating private variables like those used in other languages
@@ -16,9 +16,9 @@ function Slide(props) {
           callbacks and timers, when you need to access outside data at another
           time
         </li>
-        <h2>
-          What impact does closure have on the JavaScript language itself?
-        </h2>
+      </ul>
+      <h3>What impact does closure have on the JavaScript language itself?</h3>
+      <ul>
         <li>forcing function context</li>
         <li>partially applying functions</li>
         <li>overriding function behavior</li>

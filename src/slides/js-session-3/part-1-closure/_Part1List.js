@@ -27,8 +27,8 @@ const _Part1List = [
     linkTitle: null,
   },
   {
-    title: 'Closures',
-    shortTitle: 'Closures',
+    title: 'Closure',
+    shortTitle: 'Closure',
     directory: 'part-1-closure',
     contentFile: 'Closure-1',
     baseURL: null,
@@ -36,7 +36,7 @@ const _Part1List = [
     linkTitle: null,
   },
   {
-    title: 'Closure example',
+    title: 'Another closure example',
     shortTitle: 'Closure example',
     directory: 'part-1-closure',
     contentFile: 'Closure-2',
@@ -49,16 +49,6 @@ const _Part1List = [
     shortTitle: 'Closure in practice',
     directory: 'part-1-closure',
     contentFile: 'Closure-3',
-    baseURL: null,
-    detailLink: null,
-    linkTitle: null,
-  },
-
-  {
-    title: 'Closure Exercise',
-    shortTitle: 'Closure Exercise',
-    directory: 'part-1-closure',
-    contentFile: 'Exercises',
     baseURL: null,
     detailLink: null,
     linkTitle: null,

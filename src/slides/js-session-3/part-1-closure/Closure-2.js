@@ -12,12 +12,12 @@ function Slide(props) {
       </p>
       <ul>
         <li>
-          The journalist would like to program her robot{' '}
+          the journalist would like to program her robot{' '}
           <span style={icons}>🤖 </span> prepack a set of Go Bags{' '}
-          <span style={icons}>🎒</span> with location-based clothes and gear.{' '}
+          <span style={icons}>🎒</span> with location-based clothes and gear{' '}
         </li>
         <li>
-          She often returns to the same areas so would like multiple
+          she returns to the same areas often so would like multiple
           location-based pre-packed bags, but doesn't want to tell the robot
           which basics to include with every one
         </li>
@@ -26,35 +26,30 @@ function Slide(props) {
           her request
         </li>
       </ul>
-
+      <hr />
+      <h3>Use cases</h3>
       <p>For example she may want </p>
       <ul>
         <li>
-          a Seattle bag <span style={icons}>🎒 + ❄</span>
+          a Seattle bag <span style={icons}>🎒</span> prepacked with an umbrella
+          and other Seattle-specific items <span style={icons}>🌂 ...</span>
         </li>
         <li>
-          prepacked with coat, boots, a top and long pants{' '}
-          <span style={icons}>🧥 👢 👚 👖 </span>
-        </li>
-        <li>
-          and later throw in a camera, notepad and pen{' '}
-          <span style={icons}>📷 📘 🖊</span>{' '}
+          and later throw in a notepad and pen <span style={icons}> 💻</span>{' '}
         </li>
       </ul>
       <p>Or </p>
       <ul>
         <li>
-          a Florida bag <span style={icons}>🎒 + 🌞</span>
+          a Florida bag <span style={icons}>🎒</span> prepacked with sunglasses
+          and other Florida-specific items <span style={icons}>🕶 ...</span>
         </li>
         <li>
-          prepacked with tank top, shorts, swimsuit hat and sunglasses{' '}
-          <span style={icons}>🎽 🩳 🩱 👒 🕶 </span>
-        </li>
-        <li>
-          and later throw in a laptop and evening dress{' '}
-          <span style={icons}>💻 👗 👡</span>{' '}
+          and later throw in a notebook <span style={icons}>📘</span>{' '}
         </li>
       </ul>
+      <hr />
+      <h3>The function</h3>
       <pre>
         <code>
           {`function goBags(label, basics) {
@@ -69,18 +64,18 @@ function Slide(props) {
   return addItemsLater;
 }
 // 🤖 prepacks these bags
-let seattleBag = goBags('Seattle', '🧥 👢 👚 👖');
-let floridaBag = goBags('Florida', '🎽 🩳 🩱 👒 🕶');
+let seattleBag = goBags('Seattle', '🌂 ...');
+let floridaBag = goBags('Florida', '🕶 ...');
 
-seattleBag('📷 📘 🖊 🌂')
-floridaBag('💻 👗 👡')
-seattleBag('💻 🧣 🥾');
+seattleBag('💻');
+floridaBag('📘 ');
+seattleBag('🥾');
 
 `}
         </code>
       </pre>
       <p>
-        <a href="/js-session-3-functions/examples/closures.html" target="_new">
+        <a href="/js-session-3-functions/examples/closure-2.html" target="_new">
           Go Bags function playground
         </a>
       </p>

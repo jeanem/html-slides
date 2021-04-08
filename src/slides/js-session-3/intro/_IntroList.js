@@ -9,15 +9,6 @@ const _IntroList = [
     linkTitle: null,
   },
   {
-    title: 'Setup',
-    shortTitle: 'Setup',
-    directory: 'intro',
-    contentFile: 'Setup',
-    baseURL: null,
-    detailLink: null,
-    linkTitle: null,
-  },
-  {
     title: 'Session Overview',
     shortTitle: 'Session Overview',
     directory: 'intro',

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Closure example 2</title>
+    <meta name="description" content="The HTML5 Herald" />
+    <meta name="author" content="SitePoint" />
+    <style>
+      button {
+        padding: 0.5em;
+        margin-right: 1em;
+        font-size: 1.1em;
+      }
+      .function {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button id="start-packing">
+      1. Prepack Seattle and Florida bags 🎒
+      <br />
+      <span class="function">startPacking();</span>
+    </button>
+    <button id="seattle-bag">
+      2. Add a laptop to a Seattle bag <br />
+      <span class="function">seattleBag('💻');</span>
+    </button>
+    <button id="florida-bag">
+      3. Add notebook to a Florida bag <br />
+      <span class="function">floridaBag('📘');</span>
+    </button>
+    <button id="seattle-bag2">
+      4. Add boots to another Seattle bag <br />
+      <span class="function">seattleBag('🥾');</span>
+    </button>
+    <script>
+      function startPacking() {
+        function goBags(label, basics) {
+          // ... 🤖 pre-packing ...
+          let message1 = label + ' Go Bag 🎒 is prepacked with: ' + basics;
+          console.log(message1);
+          function addItemsLater(itemsToAdd) {
+            // ... 🤖 throwing in last minute items ...
+            let message2 = '. Last-minute items include: ' + itemsToAdd;
+            console.log(message1 + message2);
+          }
+          return addItemsLater;
+        }
+        // 🤖 prepacks these bags
+        let seattleBag = goBags('Seattle', '🌂 ...');
+        let floridaBag = goBags('Florida', '🕶 ...');
+        document
+          .getElementById('seattle-bag')
+          .addEventListener('click', function () {
+            seattleBag('💻 ');
+          });
+        document
+          .getElementById('florida-bag')
+          .addEventListener('click', function () {
+            floridaBag('📘');
+          });
+        document
+          .getElementById('seattle-bag2')
+          .addEventListener('click', function () {
+            seattleBag('🥾');
+          });
+      }
+      document
+        .getElementById('start-packing')
+        .addEventListener('click', function () {
+          startPacking();
+        });
+    </script>
+  </body>
+</html>
