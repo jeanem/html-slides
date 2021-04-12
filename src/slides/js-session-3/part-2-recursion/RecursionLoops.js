@@ -6,7 +6,7 @@ function Slide(props) {
       <ul>
         <li>Recursion is essentially the same as for/while loops.</li>
         <li>
-          In a loop, there are extra variables to track progress (i). With
+          In a loop, there is an extra variables to track progress (i). With
           recursion, an extra variable is not needed (uses the call stack).
         </li>
         <li>Recursion is usually shorter and more elegant than loops.</li>
@@ -43,7 +43,7 @@ countDownFrom(5);
             <code>
               {`
 function countDownFrom(number) {
-  if (number === 0) {
+  if (number <= 0) {
     return;
   }
 
@@ -62,6 +62,27 @@ countDownFrom(5);
           </pre>
         </div>
       </div>
+      <p>
+        Bonus: If you want to see what an infinite recursion looks like, change
+      </p>
+      <pre>
+        <code>
+          {`
+if (number <= 0)
+          `}
+        </code>
+      </pre>
+      <p>in the recursion example to</p>
+      <pre>
+        <code>
+          {`
+if (number === 0)
+          `}
+        </code>
+      </pre>
+      <p>
+        and use a negative number, e.g. <code>countDownFrom(-5);</code>
+      </p>
       <p>
         Example source:
         <a href="https://www.freecodecamp.org/news/quick-intro-to-recursion/">

@@ -11,9 +11,8 @@ function Slide(props) {
           space," "too much recursion," or "stack overflow."
         </li>
         <li>
-          When using loops and recursion (up next) &mdash; always make sure you
-          have a case that will be met, or an exit point, to prevent such
-          errors.
+          When using loops and recursion &mdash; always make sure you have a
+          case that will be met, or an exit point, to prevent such errors.
         </li>
       </ul>
       <p>

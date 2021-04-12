@@ -5,8 +5,9 @@ function Slide(props) {
     <div>
       <ul>
         <li>Call stack</li>
-        <li>Recursion</li>
+        <li>Recursion intro</li>
         <li>Examples</li>
+        <li>Exercise</li>
       </ul>
       <p>Objectives (? - these need work)</p>
       <ul>

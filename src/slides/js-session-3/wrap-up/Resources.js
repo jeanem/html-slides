@@ -42,7 +42,21 @@ function Slide(props) {
         </li>
       </ul>
 
-      <h3>Recursion deep dive:</h3>
+      <h3>Call stack, Recursion resources:</h3>
+      <ul>
+        <li>
+          <a href="https://www.freecodecamp.org/news/quick-intro-to-recursion/">
+            A Quick Intro to Recursion in JavaScript at freeCodeCamp
+          </a>
+        </li>
+        <li>
+          <a href="https://javascript.info/recursion">
+            Recursion and stack at JavaScript.info
+          </a>
+        </li>
+      </ul>
+
+      <h3>Recursion advanced reading:</h3>
 
       <ul>
         <li>

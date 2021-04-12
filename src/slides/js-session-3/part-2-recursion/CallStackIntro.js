@@ -6,8 +6,9 @@ function Slide(props) {
     <div>
       <ul>
         <li>
-          Every time a function is called, the current context is stored at the
-          top of a "call stack" and then the function is carried out.
+          Every time a function is called, the current context (where we're at
+          in the program) is stored at the top of a "call stack" and then the
+          function is carried out.
         </li>
         <li>
           Any functions that are called by that function are added to the top of
