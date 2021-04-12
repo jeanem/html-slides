@@ -23,6 +23,18 @@ function countDownFrom(number) {
 }
 
 countDownFrom(12);
+// 12
+// 11
+// 10
+// 9
+// 8
+// 7
+// 6
+// 5
+// 4
+// 3
+// 2
+// 1
          `}
         </code>
       </pre>
