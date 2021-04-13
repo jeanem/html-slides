@@ -3,17 +3,17 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
-      <p>Recursion overview</p>
       <ul>
-        <li>text</li>
-        <li>text</li>
-        <li>text</li>
+        <li>Call stack</li>
+        <li>Recursion</li>
+        <li>Examples</li>
+        <li>Exercise</li>
       </ul>
-      <p>objectives (?)</p>
+      <p>Objectives (? - these need work)</p>
       <ul>
-        <li>text</li>
-        <li>text</li>
-        <li>text</li>
+        <li>Understand how the call stack works in JavaScript</li>
+        <li>Identify when to use recursion vs looping</li>
+        <li>Recognize recursion in practice</li>
       </ul>
     </div>
   );

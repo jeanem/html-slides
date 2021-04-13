@@ -3,6 +3,12 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
+      <p>
+        From
+        <a href="https://eloquentjavascript.net/03_functions.html#i_jxl1p970Fy">
+          Eloquent JavaScript
+        </a>
+      </p>
       <blockquote>
         <p>
           We’ve seen that % (the remainder operator) can be used to test whether

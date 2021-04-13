@@ -49,6 +49,31 @@ sometimeLater();
 `}
         </code>
       </pre>
+      <pre>
+        <code>
+          {`
+function goBag(neutralColor) {
+  console.log('Pre-pack a 🧳 basics that are the neutral color: ' + neutralColor);
+
+  function addTripSpecificTop (top) {
+    console.log('My Go bag is ready with ' + neutralColor + ' basics and the ' + top + ' top');
+  }
+
+  return addTripSpecificTop;
+}
+
+let grayGoBag = goBag('gray');
+
+grayGoBag('👗');
+grayGoBag('👚');
+
+let taupeGoBag = goBag('taupe');
+
+taupeGoBag('crew neck sweater');
+taupeGoBag('blue striped');
+`}
+        </code>
+      </pre>
     </div>
   );
 }

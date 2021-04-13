@@ -1,30 +1,64 @@
 import React from 'react';
 import Img from '../images/cover.jpg';
+import Debugger from '../images/debugger.png';
+import Sources from '../images/sources.png';
+
 function Slide() {
   return (
     <div>
-      <p>April 20, 2021</p>
-
-      <img src={Img} alt="test" width="25%" align="right" />
+      <img
+        src={Img}
+        alt="Eloquent JavaScript book cover"
+        width="25%"
+        align="right"
+      />
       <p>
         <strong>
           Welcome to the Front-end Tech Book Club! We will begin momentarily.{' '}
         </strong>
       </p>
 
-      <p>
-        In the meantime, please open the following in two separate tabs in your
-        browser
-      </p>
-      <ul>
-        <li>Slide deck:TODO:add link</li>
+      <h3>Your setup for the session:</h3>
+      <ol>
+        <li>open slide deck in one tab: TODO:add link</li>
         <li>
-          Eloquent JavaScript:{' '}
-          <a href="https://eloquentjavascript.net">
-            <strong>https://eloquentjavascript.net</strong>
+          open{' '}
+          <a href="https://eloquentjavascript.net" target="_new">
+            Eloquent JavaScript
           </a>
         </li>
-      </ul>
+        <li>
+          open{' '}
+          <a
+            href="https://www.computerhope.com/issues/ch002153.htm"
+            target="_new"
+          >
+            dev tools on your browser
+          </a>
+        </li>
+        <li>open the Console tab</li>
+        <li>
+          be ready to open the
+          <ul>
+            <li>
+              Debugger tab (Firefox) <br />
+              <img
+                src={Debugger}
+                alt="screenshot of Firefox dev tools with Console and Debugger highlighted"
+              />
+            </li>
+            <li>
+              {' '}
+              OR Sources tab (Chrome)
+              <br />
+              <img
+                src={Sources}
+                alt="screenshot of Firefox dev tools with Console and Debugger highlighted"
+              />
+            </li>
+          </ul>
+        </li>
+      </ol>
     </div>
   );
 }

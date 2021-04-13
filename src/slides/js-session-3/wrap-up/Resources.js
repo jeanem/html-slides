@@ -41,6 +41,31 @@ function Slide(props) {
           </a>
         </li>
       </ul>
+
+      <h3>Call stack, Recursion resources:</h3>
+      <ul>
+        <li>
+          <a href="https://www.freecodecamp.org/news/quick-intro-to-recursion/">
+            A Quick Intro to Recursion in JavaScript at freeCodeCamp
+          </a>
+        </li>
+        <li>
+          <a href="https://javascript.info/recursion">
+            Recursion and stack at JavaScript.info
+          </a>
+        </li>
+      </ul>
+
+      <h3>Recursion advanced reading:</h3>
+
+      <ul>
+        <li>
+          <a href="https://pragprog.com/titles/jwdsal2/a-common-sense-guide-to-data-structures-and-algorithms-second-edition/">
+            <em>A Common-Sense Guide to Data Structures and Algorithms</em> by
+            Jay Wengrow, chapters 10-13
+          </a>
+        </li>
+      </ul>
     </div>
   );
 }
