@@ -20,7 +20,13 @@ function Slide() {
 
       <h3>Your setup for the session:</h3>
       <ol>
-        <li>open slide deck in one tab: TODO:add link</li>
+        <li>
+          open slide deck in one tab:
+          <br />
+          <a href="https://uw-cop-frontend.github.io/js-session-3/">
+            https://uw-cop-frontend.github.io/js-session-3/
+          </a>
+        </li>
         <li>
           open{' '}
           <a href="https://eloquentjavascript.net" target="_new">

@@ -18,8 +18,8 @@ function Slide(props) {
       </p>
       <p>
         Slide deck:{' '}
-        <a href="TODO:add link" target="_new">
-          TODO:add link
+        <a href="https://uw-cop-frontend.github.io/js-session-3/" target="_new">
+          https://uw-cop-frontend.github.io/js-session-3/
         </a>
       </p>
     </div>

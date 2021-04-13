@@ -2,7 +2,7 @@
   "name": "js-session-3",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://uw-frontend-cop.github.io/js-session-3-functions",
+  "homepage": "https://uw-cop-frontend.github.io/js-session-3/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
