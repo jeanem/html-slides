@@ -11,7 +11,7 @@ function Slide(props) {
         <li>A “base case” is the condition that stops recursion.</li>
         <li>
           If it doesn’t stop, it’ll run forever (until the program crashes),
-          just like an infinite loop. (Recall our overview of the call stack.)
+          just like an infinite loop.
         </li>
         <li>
           Functionally similar to looping. Recursive functions are sometimes

@@ -18,9 +18,9 @@ function Slide(props) {
           <code>function a</code> in the call stack.
         </li>
         <li>
-          When the current function returns (finishes), the function is removed
+          When the current function returns (finishes), that function is removed
           from the stack and the current context is used to continue execution
-          where it left off in the last code listing. <br /> <br />
+          where it left off. <br /> <br />
           In our example, when <code>function b</code> completes, it is removed
           from the top of the call stack, and <code>function a</code> is now
           back at the top again.
