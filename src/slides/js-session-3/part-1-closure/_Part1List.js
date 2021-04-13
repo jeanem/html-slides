@@ -19,6 +19,15 @@ const _Part1List = [
   },
   {
     title: 'Bindings and Scopes 2 of 2',
+    shortTitle: 'Scopes examples',
+    directory: 'part-1-closure',
+    contentFile: 'ScopeExamples',
+    baseURL: null,
+    detailLink: null,
+    linkTitle: null,
+  },
+  {
+    title: 'Bindings and Scopes 2 of 2',
     shortTitle: 'Bindings and Scopes 2',
     directory: 'part-1-closure',
     contentFile: 'NestedScope',
