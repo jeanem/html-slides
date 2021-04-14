@@ -9,7 +9,7 @@ const _Part1List = [
     linkTitle: null,
   },
   {
-    title: 'Bindings and Scopes 1 of 2',
+    title: 'Bindings and Scopes 1 of 4',
     shortTitle: 'Bindings and Scopes 1',
     directory: 'part-1-closure',
     contentFile: 'BindingsAndScope',
@@ -17,8 +17,9 @@ const _Part1List = [
     detailLink: null,
     linkTitle: null,
   },
+
   {
-    title: 'Bindings and Scopes 2 of 2',
+    title: 'Bindings and Scopes 3 of 3',
     shortTitle: 'Scopes examples',
     directory: 'part-1-closure',
     contentFile: 'ScopeExamples',
@@ -27,10 +28,10 @@ const _Part1List = [
     linkTitle: null,
   },
   {
-    title: 'Bindings and Scopes 2 of 2',
-    shortTitle: 'Bindings and Scopes 2',
+    title: 'Bindings and Scopes 3 of 3',
+    shortTitle: 'Scopes example 2',
     directory: 'part-1-closure',
-    contentFile: 'NestedScope',
+    contentFile: 'ScopeExamples2',
     baseURL: null,
     detailLink: null,
     linkTitle: null,

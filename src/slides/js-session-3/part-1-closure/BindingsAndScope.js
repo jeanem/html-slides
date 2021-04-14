@@ -11,7 +11,7 @@ function Slide(props) {
       </div>
       <h3>Local</h3>
       <p>
-        Variable created inside a block or function are scoped to that block.
+        Variable created inside a block or function are available to that block.
       </p>
       <h3>Keyword Behavior</h3>
       <ul>
