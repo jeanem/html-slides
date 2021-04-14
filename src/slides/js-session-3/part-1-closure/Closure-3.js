@@ -10,20 +10,34 @@ function Slide(props) {
       <h3>Where are closures useful?</h3>
       <ul>
         <li>
-          in approximating private variables like those used in other languages
-        </li>
-        <li>
           callbacks and timers, when you need to access outside data at another
           time
+          <ul>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#practical_closures">
+                MDN Practical Closures
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          in approximating private variables and methods like those used in
+          other languages
+          <ul>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures">
+                MDN Private Methods with Closure
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
-      <h3>What impact does closure have on the JavaScript language itself?</h3>
-      <ul>
-        <li>forcing function context</li>
-        <li>partially applying functions</li>
-        <li>overriding function behavior</li>
-        <li>immediate functions</li>
-      </ul>
+      <p className="w-Note">
+        Examples in this closure section based on{' '}
+        <a href="https://blog.codeanalogies.com/2018/10/19/javascript-closures-explained-by-mailing-a-package/">
+          JavaScript closures explained by mailing a package
+        </a>
+      </p>
     </div>
   );
 }
