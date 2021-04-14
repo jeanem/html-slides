@@ -63,6 +63,8 @@ function Slide() {
               />
             </li>
           </ul>
+          <code>Esc</code> in both browsers will toggle the Console split screen
+          on and off
         </li>
       </ol>
     </div>

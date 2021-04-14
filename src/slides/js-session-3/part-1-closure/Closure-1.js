@@ -94,7 +94,7 @@ function Slide(props) {
         declared.
       </p>
       <p>
-        <a href="/js-session-3-functions/examples/closure-1.html" target="_new">
+        <a href="/js-session-3/examples/closure-1.html" target="_new">
           Inner-Outer function playground
         </a>
       </p>

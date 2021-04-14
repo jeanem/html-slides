@@ -35,7 +35,7 @@ function Slide(props) {
           and other Seattle-specific items <span style={icons}>🌂 ...</span>
         </li>
         <li>
-          and later throw in a notepad and pen <span style={icons}> 💻</span>{' '}
+          and later throw in a laptop <span style={icons}> 💻</span>{' '}
         </li>
       </ul>
       <p>Or </p>
@@ -75,7 +75,7 @@ seattleBag('🥾');
         </code>
       </pre>
       <p>
-        <a href="/js-session-3-functions/examples/closure-2.html" target="_new">
+        <a href="/js-session-3/examples/closure-2.html" target="_new">
           Go Bags function playground
         </a>
       </p>
