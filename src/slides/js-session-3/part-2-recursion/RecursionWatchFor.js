@@ -1,6 +1,4 @@
 import React from 'react';
-import balancedTree from '../images/balancedTree.png';
-import unbalancedTree from '../images/unbalancedTree.png';
 
 function Slide(props) {
   return (
