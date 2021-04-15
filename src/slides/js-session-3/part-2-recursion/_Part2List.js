@@ -91,6 +91,15 @@ const _Part2List = [
     linkTitle: 'Deep copy object with Depth-First Search',
   },
   {
+    title: 'Additional resources for advanced functions',
+    shortTitle: 'Resources',
+    directory: 'part-2-recursion',
+    contentFile: 'Resources',
+    baseURL: null,
+    detailLink: null,
+    linkTitle: null,
+  },
+  {
     title: 'Recursion Exercise',
     shortTitle: 'Recursion Exercise',
     directory: 'part-2-recursion',

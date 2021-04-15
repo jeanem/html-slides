@@ -3,7 +3,6 @@ import React from 'react';
 function Slide(props) {
   return (
     <div>
-      <h3>TODO: add additional resources as needed</h3>
       <h3>Closure</h3>
 
       <ul>
@@ -22,27 +21,12 @@ function Slide(props) {
 
         <li>
           <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures">
-            Mozilla Developer Network (MDN) on Closures
+            Mozilla Developer Network (MDN) on Closure
           </a>
         </li>
       </ul>
 
-      <h3>Eloquent JavaScript advanced topics:</h3>
-
-      <ul>
-        <li>
-          <a href="https://eloquentjavascript.net/03_functions.html#h_D2Yui+mx6D">
-            The call stack
-          </a>
-        </li>
-        <li>
-          <a href="https://eloquentjavascript.net/03_functions.html#h_jxl1p970Fy">
-            Recursion
-          </a>
-        </li>
-      </ul>
-
-      <h3>Call stack, Recursion resources:</h3>
+      <h3>Call stack, recursion resources:</h3>
       <ul>
         <li>
           <a href="https://www.freecodecamp.org/news/quick-intro-to-recursion/">

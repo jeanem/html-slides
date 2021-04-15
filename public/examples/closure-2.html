@@ -39,21 +39,27 @@
       <span class="function">seattleBag('🥾');</span>
     </button>
     <script>
+      //wrapper function
       function startPacking() {
         function goBags(label, basics) {
           // ... 🤖 pre-packing ...
           let message1 = label + ' Go Bag 🎒 is prepacked with: ' + basics;
           console.log(message1);
+
           function addItemsLater(itemsToAdd) {
             // ... 🤖 throwing in last minute items ...
             let message2 = '. Last-minute items include: ' + itemsToAdd;
             console.log(message1 + message2);
           }
+
           return addItemsLater;
         }
-        // 🤖 prepacks these bags
+
+        // 🤖 prepacks these bags (outer function executed)
         let seattleBag = goBags('Seattle', '🌂 ...');
         let floridaBag = goBags('Florida', '🕶 ...');
+
+        // button click events set up
         document
           .getElementById('seattle-bag')
           .addEventListener('click', function () {
@@ -70,6 +76,7 @@
             seattleBag('🥾');
           });
       }
+      // button click event for wrapper function
       document
         .getElementById('start-packing')
         .addEventListener('click', function () {

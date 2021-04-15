@@ -13,7 +13,7 @@ function Slide(props) {
       <ul>
         <li>
           the journalist would like to program her robot{' '}
-          <span style={icons}>🤖 </span> prepack a set of Go Bags{' '}
+          <span style={icons}>🤖 </span> to prepack a set of Go Bags{' '}
           <span style={icons}>🎒</span> with location-based clothes and gear{' '}
         </li>
         <li>
@@ -56,11 +56,13 @@ function Slide(props) {
   // ... 🤖 pre-packing ...
   let message1 = label + ' Go Bag 🎒 is prepacked with: ' + basics;
   console.log(message1);
+
   function addItemsLater(itemsToAdd) {
     // ... 🤖 throwing in last minute items ...
     let message2 = '. Last-minute items include: ' + itemsToAdd;
     console.log(message1 + message2);
   }
+  
   return addItemsLater;
 }
 // 🤖 prepacks these bags

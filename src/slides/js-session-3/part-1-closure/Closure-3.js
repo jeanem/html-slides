@@ -15,7 +15,7 @@ function Slide(props) {
           <ul>
             <li>
               <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#practical_closures">
-                MDN Practical Closures
+                MDN practical closures
               </a>
             </li>
           </ul>
@@ -26,12 +26,26 @@ function Slide(props) {
           <ul>
             <li>
               <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures">
-                MDN Private Methods with Closure
+                MDN private methods with closure
               </a>
             </li>
           </ul>
         </li>
       </ul>
+      <h3>Performance implications</h3>
+      <ul>
+        <li>
+          Unneeded closures can affect processing speed and memory consumption
+          <ul>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#performance_considerations">
+                MDN performance considerations
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <hr />
       <p className="w-Note">
         Examples in this closure section based on{' '}
         <a href="https://blog.codeanalogies.com/2018/10/19/javascript-closures-explained-by-mailing-a-package/">

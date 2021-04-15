@@ -22,11 +22,13 @@ function Slide(props) {
       <div style={row}>
         <pre style={column}>
           <code>
-            {`function outer(n){ 
+            {`function outer(n){
+
   function inner(){ 
     let innerNumber = n; 
     return innerNumber; 
   }
+
   return inner; 
 }`}
           </code>
