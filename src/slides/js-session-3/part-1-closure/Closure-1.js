@@ -76,11 +76,11 @@ function Slide(props) {
       <h3>Execute the outer function</h3>
       <p>
         execute the outer function with a <code>5</code> passed in and bind it
-        to the variable <code>outerFive</code> to hold it in memory
+        to the variable <code>five</code> to hold it in memory
       </p>
       <pre>
         <code>
-          {`let outerFive = outer(5);
+          {`let five = outer(5);
 `}
         </code>
       </pre>
@@ -88,7 +88,7 @@ function Slide(props) {
       <hr />
       <h3>and at a later time execute the inner function ...</h3>
       <pre>
-        <code>{`outerFive(); //5 `}</code>
+        <code>{`five(); //5 `}</code>
       </pre>
       <p>
         The inner() function can access <code>5</code> because that is what the{' '}

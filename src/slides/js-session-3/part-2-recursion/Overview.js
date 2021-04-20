@@ -9,7 +9,7 @@ function Slide(props) {
         <li>Examples</li>
         <li>Exercise</li>
       </ul>
-      <p>Objectives (? - these need work)</p>
+      <p>Objectives</p>
       <ul>
         <li>Understand how the call stack works in JavaScript</li>
         <li>Identify when to use recursion vs looping</li>
